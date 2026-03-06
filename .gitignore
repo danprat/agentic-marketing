@@ -1,6 +1,9 @@
 # Brand data — contains client/proprietary information
 brands/
 
+# Agent runtime directory
+.agents/
+
 # OS
 .DS_Store
 Thumbs.db
