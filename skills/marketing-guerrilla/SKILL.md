@@ -32,6 +32,8 @@ Ground every tactic in the brand's actual positioning, audience, and goals. Guer
 
 Use agent-browser to identify viral patterns, trending formats, and community opportunities before designing campaigns. Check `./brands/{brand-slug}/sostac/00-auto-discovery.md` for data already collected.
 
+> **Setup:** Before running research, check if `agent-browser` is available (`agent-browser --version`). If the command is not found, install it: `npm install -g agent-browser && npx playwright install chromium`. If installation fails, use `WebFetch` and `WebSearch` tools as alternatives for all research tasks in this section.
+
 **Guerrilla Research:**
 
 ```bash

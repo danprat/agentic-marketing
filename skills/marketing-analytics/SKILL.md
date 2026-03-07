@@ -33,6 +33,8 @@ Ground every recommendation in the brand's actual objectives, channels, and KPIs
 
 Use agent-browser to run live performance audits before making recommendations. Check `./brands/{brand-slug}/sostac/00-auto-discovery.md` for audit data already collected.
 
+> **Setup:** Before running research, check if `agent-browser` is available (`agent-browser --version`). If the command is not found, install it: `npm install -g agent-browser && npx playwright install chromium`. If installation fails, use `WebFetch` and `WebSearch` tools as alternatives for all research tasks in this section.
+
 **Analytics Research:**
 
 ```bash

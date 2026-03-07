@@ -36,6 +36,8 @@ Ground every recommendation in the brand's actual strategy, audience, and budget
 
 Use `agent-browser` to gather live competitor ad data before building campaigns. Start a named session to share context across commands.
 
+> **Setup:** Before running research, check if `agent-browser` is available (`agent-browser --version`). If the command is not found, install it: `npm install -g agent-browser && npx playwright install chromium`. If installation fails, use `WebFetch` and `WebSearch` tools as alternatives for all research tasks in this section.
+
 ### 1. Meta Ad Library -- Competitor Ad Research
 
 ```bash

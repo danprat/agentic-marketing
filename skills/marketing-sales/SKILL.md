@@ -32,6 +32,8 @@ Ground every piece of collateral in the brand's actual customer language, proven
 
 Use `agent-browser` to gather live competitor positioning data before building comparison slides, battle cards, or champion kits. Start a named session to share context across commands.
 
+> **Setup:** Before running research, check if `agent-browser` is available (`agent-browser --version`). If the command is not found, install it: `npm install -g agent-browser && npx playwright install chromium`. If installation fails, use `WebFetch` and `WebSearch` tools as alternatives for all research tasks in this section.
+
 ### 1. Competitor Pricing and Positioning Pages
 
 ```bash

@@ -30,6 +30,8 @@ Ground every recommendation in the brand's actual strategy and positioning. Rete
 
 Use `agent-browser` to gather live data on competitor cancel flows, dunning patterns, and industry benchmarks when current intelligence is needed. Covers competitor cancel flow teardowns, Churnkey/ProsperStack feature research, dunning email pattern mining, Baremetrics benchmark extraction, and Stripe Smart Retry documentation.
 
+> **Setup:** Before running research, check if `agent-browser` is available (`agent-browser --version`). If the command is not found, install it: `npm install -g agent-browser && npx playwright install chromium`. If installation fails, use `WebFetch` and `WebSearch` tools as alternatives for all research tasks in this section.
+
 For full `agent-browser` commands and session workflows, see `./references/research-playbook.md`.
 
 ---

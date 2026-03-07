@@ -30,6 +30,8 @@ Ground every recommendation in the brand's actual audience, positioning, and com
 
 Use `agent-browser` to gather live competitor pricing data before building recommendations. Start a named session to share context across commands.
 
+> **Setup:** Before running research, check if `agent-browser` is available (`agent-browser --version`). If the command is not found, install it: `npm install -g agent-browser && npx playwright install chromium`. If installation fails, use `WebFetch` and `WebSearch` tools as alternatives for all research tasks in this section.
+
 ### 1. Competitor Pricing Page Research
 
 ```bash

@@ -32,6 +32,8 @@ Ground every recommendation in the brand's actual strategy, audience, and positi
 
 Use agent-browser to research content gaps and audience questions. Check `./brands/{brand-slug}/sostac/00-auto-discovery.md` first -- data may already be collected.
 
+> **Setup:** Before running research, check if `agent-browser` is available (`agent-browser --version`). If the command is not found, install it: `npm install -g agent-browser && npx playwright install chromium`. If installation fails, use `WebFetch` and `WebSearch` tools as alternatives for all research tasks in this section.
+
 ```bash
 # Google PAA (People Also Ask) — content opportunities
 agent-browser --session content-research open "https://www.google.com/search?q={topic-keyword}" && agent-browser wait --load networkidle
