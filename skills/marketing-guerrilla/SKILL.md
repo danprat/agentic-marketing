@@ -13,9 +13,10 @@ You are a senior guerrilla marketing strategist and growth hacker with deep expe
 
 Before ANY guerrilla or growth hacking work, read these files in order:
 
-1. `./brands/{brand-slug}/brand-context.md` -- brand identity, audience, USP, voice
-2. `./brands/{brand-slug}/sostac/03-strategy.md` -- target segments, positioning, phasing
-3. `./brands/{brand-slug}/sostac/04-tactics.md` -- channel plan, budget, priorities
+1. `./brands/{brand-slug}/brand-context.md` -- brand identity, audience, USP
+2. `./brands/{brand-slug}/product-marketing-context.md` -- deep positioning, customer language, objections (read if it exists), voice
+3. `./brands/{brand-slug}/sostac/03-strategy.md` -- target segments, positioning, phasing
+4. `./brands/{brand-slug}/sostac/04-tactics.md` -- channel plan, budget, priorities
 
 If SOSTAC files do not exist, warn the user: "No strategic plan found. Guerrilla tactics work best when they amplify a clear strategy. I can proceed with general frameworks, but recommend completing a SOSTAC plan first so every unconventional move serves a strategic purpose."
 

@@ -1,6 +1,6 @@
 ---
 name: marketing-analytics
-description: "Marketing analytics specialist covering tracking setup, dashboards, reporting, attribution modeling, A/B testing, conversion optimization, and data-driven decision making. Use when the user wants to set up analytics tracking, create dashboards, build reports, implement conversion tracking, design A/B tests, analyze campaign performance, set up attribution models, audit existing analytics, or make data-driven marketing decisions. Also triggers for GA4, Google Tag Manager, UTM parameters, conversion rates, marketing ROI, funnel analysis, cohort analysis, or any marketing measurement question."
+description: "Marketing analytics specialist covering tracking setup, dashboards, reporting, attribution modeling, A/B testing and experiment design, conversion optimization, and data-driven decision making. Use when the user wants to set up analytics tracking, create dashboards, build reports, implement conversion tracking, design or set up A/B tests, calculate sample sizes, write test hypotheses, analyze campaign performance, set up attribution models, audit existing analytics, or make data-driven marketing decisions. Also triggers for GA4, Google Tag Manager, UTM parameters, conversion rates, marketing ROI, funnel analysis, cohort analysis, sample size calculation, ICE scoring, experiment roadmap, or any marketing measurement question."
 ---
 
 # Marketing Analytics Specialist
@@ -14,9 +14,10 @@ You are a senior marketing analytics strategist with deep expertise across track
 Before ANY analytics work, read these files in order:
 
 1. `./brands/{brand-slug}/brand-context.md` -- brand identity, audience, USP
-2. `./brands/{brand-slug}/sostac/02-objectives.md` -- goals, KPIs, targets, baselines
-3. `./brands/{brand-slug}/sostac/04-tactics.md` -- channel plan, budget allocation, priorities
-4. `./brands/{brand-slug}/sostac/06-control.md` -- measurement framework, reporting cadence, optimization triggers
+2. `./brands/{brand-slug}/product-marketing-context.md` -- deep positioning, customer language, objections (read if it exists)
+3. `./brands/{brand-slug}/sostac/02-objectives.md` -- goals, KPIs, targets, baselines
+4. `./brands/{brand-slug}/sostac/04-tactics.md` -- channel plan, budget allocation, priorities
+5. `./brands/{brand-slug}/sostac/06-control.md` -- measurement framework, reporting cadence, optimization triggers
 
 If SOSTAC files do not exist, warn the user: "No strategic plan found. Analytics works best when measuring against defined objectives. I can proceed with general best practices, but recommend completing a SOSTAC plan first so every metric ties back to a business goal."
 
@@ -143,6 +144,58 @@ Identify the single metric that best captures customer value. All other metrics 
 
 **Rules**: All lowercase, hyphens not spaces, no special characters, consistent across team. Maintain a shared UTM builder and log. Audit monthly.
 
+### 2.3a Analytics Tool Selection Guide
+
+Before implementing tracking, choose the right tool stack. These are not mutually exclusive — most mature setups combine 2-3.
+
+| Tool | Best For | Pricing Model | Key Strength | When to Use |
+|---|---|---|---|---|
+| **GA4 + GTM** | All web properties | Free | Google ecosystem, ad attribution, SEO integration | Default for any brand with a website. Start here. |
+| **Mixpanel** | Product analytics, user-level events | Freemium / event-based | Funnel analysis, cohort retention, user paths | SaaS or apps where you need to understand *how* users behave inside the product |
+| **Amplitude** | Product analytics at scale | Freemium / MTU-based | Behavioral cohorts, pathfinder, predictive | Larger product teams; deeper behavioral analysis than Mixpanel |
+| **PostHog** | Self-hosted product analytics | Open source / cloud | Full control, feature flags, session replay, A/B testing | Teams wanting self-hosting for privacy/compliance, or wanting analytics + experimentation in one tool |
+| **Segment** | Data routing / CDP | Freemium / MTU-based | Single tracking implementation → multiple destinations | When you need to send the same event data to 5+ tools; acts as a central event bus |
+| **Google Tag Manager** | Tag management | Free | Deploy any tag without code deploys | Manages all tracking tags across GA4, Meta Pixel, LinkedIn, etc. |
+
+**Decision framework:**
+- **Early stage**: GA4 + GTM only. Free, sufficient, no overhead.
+- **Product-led growth**: Add Mixpanel or PostHog for in-product funnel analysis.
+- **Scaling (5+ tools)**: Add Segment as the event router — implement once, route everywhere.
+- **Self-hosted/privacy-first**: PostHog replaces Mixpanel + splits + session replay in one.
+- **Enterprise**: Amplitude or Mixpanel alongside a data warehouse (BigQuery/Snowflake).
+
+### 2.3b Event Naming Convention
+
+Consistent event naming prevents analytics debt. Follow this convention across all tools.
+
+**Format**: `object_action` — lowercase, underscores, no spaces, no hyphens.
+
+```
+object = the thing being acted on (noun)
+action = what happened (past-tense verb)
+```
+
+**Examples:**
+- `user_signed_up` not `SignUp` or `sign-up` or `userSignedUp`
+- `plan_upgraded` not `upgrade` or `planUpgrade`
+- `checkout_started` not `beginCheckout` or `checkout_begin`
+- `form_submitted` not `form_submit` or `formSubmit`
+- `video_played` not `play_video` or `videoPlay`
+
+**Essential properties to include on every event:**
+
+| Property | Type | Example | Purpose |
+|---|---|---|---|
+| `user_id` | string | `u_1234abc` | Link events to users for cohort analysis |
+| `session_id` | string | `s_xyz789` | Group events within a session |
+| `timestamp` | ISO 8601 | `2026-03-07T14:30:00Z` | Precise sequencing |
+| `page_url` | string | `/pricing` | Where the event occurred |
+| `source` / `utm_source` | string | `google` | Traffic attribution |
+| `plan_type` | string | `pro`, `free` | Segment by tier |
+| `environment` | string | `production`, `staging` | Filter dev noise from data |
+
+Document the full event spec before instrumentation. Save as `./brands/{brand-slug}/analytics/tracking/event-tracking-spec.md`.
+
 ### 2.4 Server-Side Tracking
 
 Browser-based tracking loses 20-40% of events due to ad blockers, ITP, and cookie restrictions. Server-side bypasses these limitations.
@@ -255,31 +308,115 @@ For brands spending $50K+/month across 3+ channels. Uses regression to estimate 
 
 ---
 
-## 6. A/B Testing
+## 6. A/B Testing and Experiment Design
 
-### 6.1 Hypothesis Formation
+### 6.1 Test Types
 
-Every test: "If we [change], then [metric] will [improve] by [amount] because [reasoning]." Bad: "Test a new homepage." Good: "If we replace the feature-list hero with a testimonial hero, signup rate will increase 15% because social proof reduces uncertainty."
+| Type | Description | When to Use | Traffic Needed |
+|---|---|---|---|
+| **A/B** | Two versions (control vs variant) | Most tests — clear single change | Lowest |
+| **A/B/n** | Multiple variants simultaneously | Testing 3-4 headline options at once | 2-3x more |
+| **Multivariate (MVT)** | Multiple elements changed in combination | Interaction effects (headline + CTA) | 10x+ more |
+| **Split URL** | Two separate pages, traffic split at server level | Major page redesigns, different layouts | Same as A/B |
+| **Holdout** | Control group excluded from a change | Measuring incrementality of a program | Same as A/B |
 
-### 6.2 Test Design
+Default to A/B. Only use MVT when you have very high traffic (10k+ conversions/month per variant needed).
 
-**Sample Size**: Calculate upfront using baseline conversion rate, minimum detectable effect (10-20% lift), 95% significance, 80% power. **Duration**: Minimum 7 days (day-of-week variation), maximum 4-6 weeks. At least 100 conversions per variant for page tests, 1000+ for smaller changes. **Split**: Default 50/50. Use 90/10 for risky changes.
+### 6.2 Hypothesis Formation
 
-### 6.3 ICE Prioritization
+Structure: "Because [observation/data], we believe [change] will cause [expected outcome] for [audience]. We'll know this when [specific metric moves by X%]."
 
-Score every test idea (1-10): **Impact** (how big if it wins?), **Confidence** (how sure based on data/practice?), **Ease** (how fast/cheap to implement?). ICE = (I + C + E) / 3. Execute highest scores first.
+**Weak:** "Test a new homepage."
+**Strong:** "Because our heatmap shows 70% of visitors don't scroll past the hero, we believe moving the pricing table above the fold will increase free trial signups by 15% for first-time visitors. We'll know this when the sign_up event rate is 15% higher in the variant at 95% confidence."
 
-### 6.4 Analyzing Results
+Every hypothesis needs: observation (data backing the idea), change (specific, one thing), outcome (measurable metric), and success threshold (the lift that makes implementation worth it).
 
-Wait for 95% confidence. Check segment differences. Calculate practical significance (is the lift commercially meaningful?). Document: hypothesis, variants, sample, duration, winner, confidence, lift, next action. Implement winners immediately.
+### 6.3 Sample Size and Duration
 
-### 6.5 Common Pitfalls
+**Calculate before starting.** Never start a test without knowing the required sample.
 
-Stopping early on preliminary results. Testing multiple variables simultaneously. Ignoring seasonality. Underpowered tests (false negatives). Dismissing negative results. Not segmenting (variant may win overall but lose for best customers).
+Quick reference table (95% significance, 80% power):
 
-### 6.6 Testing Roadmap
+| Baseline Conversion | Detectable Lift | Samples Needed Per Variant |
+|---|---|---|
+| 1% | 20% | ~46,000 |
+| 2% | 20% | ~23,000 |
+| 5% | 20% | ~9,000 |
+| 5% | 10% | ~37,000 |
+| 10% | 20% | ~4,500 |
+| 10% | 10% | ~18,000 |
+| 10% | 50% | ~600 |
+| 20% | 20% | ~2,200 |
 
-Quarterly roadmap with ICE-scored priorities. Run 2-4 tests/month depending on traffic. Compound wins: 5% lift per test across 12 tests/year = 80% cumulative improvement.
+Use [Evan Miller's sample size calculator](https://www.evanmiller.org/ab-testing/sample-size.html) or build one from these inputs: baseline rate, minimum detectable effect (MDE), significance (95%), power (80%).
+
+**Duration**: Run for at least 7 days regardless of sample (captures weekly cycles). Maximum 4-6 weeks (seasonality and novelty effects degrade results). If traffic won't hit sample size in 4 weeks, the test is underpowered — either increase MDE or find a higher-volume metric.
+
+**Split**: 50/50 by default. Use 90/10 for high-risk changes (new checkout flow, pricing change) to limit exposure.
+
+### 6.4 Metrics Strategy
+
+Define three metric types before launching:
+
+- **Primary metric**: Directly tied to the hypothesis. This is the decision metric (e.g., signup rate, revenue per visitor). One primary metric only.
+- **Secondary metrics**: Provide context and interpretation support (e.g., if signup rate rises, also watch activation rate to ensure quality isn't dropping).
+- **Guardrail metrics**: Metrics you cannot afford to harm even if the primary wins (e.g., testing a more aggressive upsell modal → guardrail: cancellation rate must not increase).
+
+A test can "win" on primary but fail on guardrails — in that case, it should not be shipped.
+
+### 6.5 ICE Prioritization
+
+Score every test idea 1-10 on three dimensions:
+- **Impact**: How large is the expected lift if this wins? (affects primary KPI)
+- **Confidence**: How much evidence supports this hypothesis? (data, past tests, user research)
+- **Ease**: How fast and cheap to implement and run to significance?
+
+ICE Score = (Impact + Confidence + Ease) / 3
+
+Run highest-ICE tests first. Keep a living ICE-scored backlog in `testing-roadmap-{YYYY-QN}.md`.
+
+### 6.6 Implementation Options
+
+| Approach | How it works | Pros | Cons |
+|---|---|---|---|
+| **Client-side** | JavaScript swaps elements after page load | Fast to deploy, no dev needed (Optimizely, VWO) | Flickering, blocked by ad blockers, slight perf impact |
+| **Server-side** | Variant determined before response is sent | No flicker, more reliable, works in apps | Requires dev involvement, slower to deploy |
+| **Feature flags** | Code-level toggle for experiments | Most robust, works across full stack (LaunchDarkly, Unleash) | Developer dependency for every test |
+
+Default: client-side for marketing page tests. Server-side or feature flags for anything inside the product.
+
+### 6.7 Analyzing Results
+
+**The cardinal rule: do not look at results before reaching sample size.** Peeking and stopping early is the most common cause of false positives. Set a "do not check before" date and stick to it.
+
+After reaching sample:
+1. Check statistical significance (95% threshold)
+2. Check practical significance — is the lift commercially meaningful given implementation cost?
+3. Check secondary and guardrail metrics — did anything else move?
+4. Segment the results — does the winner hold across device types, traffic sources, new vs returning?
+5. Document in the testing roadmap: hypothesis, variants, sample, duration, winner, confidence level, actual lift, segments checked, next action
+
+Ship winners immediately. Archive losers — a failed test is still a learning (document why it failed).
+
+### 6.8 Common Pitfalls
+
+- **Peeking**: Stopping when results "look good" produces 20-50% false positive rates
+- **Simultaneous tests**: Running overlapping tests on the same page contaminate both results unless properly segmented
+- **Ignoring seasonality**: Tests spanning holidays or promotions need longer runtimes to average out
+- **Underpowered tests**: False negatives are as costly as false positives — a real improvement missed
+- **Dismissing negatives**: A negative result is high-confidence information; learn from it
+- **Single segment winners**: A headline that wins for mobile may lose for desktop — always check
+
+### 6.9 Testing Roadmap
+
+Quarterly roadmap structure (save as `testing-roadmap-{YYYY-QN}.md`):
+- Testing capacity: monthly traffic, expected tests/month, tools available
+- Active tests: hypothesis, start date, sample progress, estimated end date
+- Planned tests: ICE-scored backlog
+- Completed tests: results, lift, shipped/not shipped, learning
+- Cumulative impact: revenue or conversion improvement from shipped winners
+
+Compound effect: 5% lift per test, 10 tests/year = 63% cumulative improvement.
 
 ---
 

@@ -14,9 +14,10 @@ You are a senior paid media strategist with deep expertise across Google Ads, Me
 Before ANY paid ads work, read these files in order:
 
 1. `./brands/{brand-slug}/brand-context.md` -- brand identity, audience, USP
-2. `./brands/{brand-slug}/sostac/01-situation.md` -- current state, budget, competitors
-3. `./brands/{brand-slug}/sostac/02-objectives.md` -- goals, KPIs, targets
-4. `./brands/{brand-slug}/sostac/03-strategy.md` -- target segments, positioning, phasing
+2. `./brands/{brand-slug}/product-marketing-context.md` -- deep positioning, customer language, objections (read if it exists)
+3. `./brands/{brand-slug}/sostac/01-situation.md` -- current state, budget, competitors
+4. `./brands/{brand-slug}/sostac/02-objectives.md` -- goals, KPIs, targets
+5. `./brands/{brand-slug}/sostac/03-strategy.md` -- target segments, positioning, phasing
 5. `./brands/{brand-slug}/sostac/04-tactics.md` -- channel plan, paid ads role, budget allocation
 
 Read `./brands/{brand-slug}/sostac/00-auto-discovery.md` if it exists -- auto-discovery may have already gathered Meta Ad Library and Google Transparency data.
@@ -280,10 +281,67 @@ Upload target account lists (CSV). Create matched audience. Layer with seniority
 
 UGC-style scripts: casual tone, face-to-camera, "I found this thing that..." format. Outperforms polished creative 2-3x on Meta and TikTok.
 
-### 6.4 Creative Testing Methodology
+### 6.4 Angle-Based Creative Generation
 
-- **Phase 1 -- Concept Testing**: Test 3-5 different angles/hooks with same offer. Wide targeting. Winner = lowest CPA or highest CTR.
-- **Phase 2 -- Iteration**: Take winning concept, test variations (different hooks, visuals, CTAs, copy length).
+Before writing a single headline, identify 3-5 distinct **angles** for the offer. An angle is the specific lens through which you present the product — each speaks to a different motivation or objection.
+
+**The 5 core angle types:**
+
+| Angle | What It Targets | Example Hook |
+|---|---|---|
+| Pain | The problem they're living with right now | "Still copying data between tools manually?" |
+| Outcome | The result they want | "10x your leads without doubling ad spend" |
+| Social Proof | Evidence others have succeeded | "1,400 teams switched from [Competitor] this year" |
+| Curiosity | Intrigue without revealing the answer | "The metric most marketers ignore (it predicts churn)" |
+| Urgency / Stakes | Cost of inaction | "Every day without this is costing you {outcome}" |
+
+**Process:**
+1. Write 1 headline + 1 primary text per angle before any testing.
+2. Keep the offer, CTA, and landing page constant across angles — only vary the angle.
+3. Test all angles simultaneously in Phase 1 (wide targeting, equal budget split).
+4. Identify the winning angle by lowest CPA or highest CTR after 100+ conversions.
+5. Move to Phase 2: iterate within the winning angle (hook variations, visuals, copy length, CTA).
+6. Move to Phase 3: test winning message across formats (static, carousel, video, UGC).
+
+### 6.5 Platform Character Limit Reference
+
+| Platform | Field | Limit | Notes |
+|---|---|---|---|
+| **Google RSA** | Headline | 30 chars | 15 headlines, pin sparingly |
+| **Google RSA** | Description | 90 chars | 4 descriptions |
+| **Meta** | Primary text | 125 chars visible | More shown behind "See more" |
+| **Meta** | Headline | 40 chars | Above CTA button |
+| **LinkedIn** | Introductory text | 150 chars recommended | 600 chars max |
+| **LinkedIn** | Headline | 70 chars | |
+| **TikTok** | Ad description | 80 chars | Overlaid on video |
+| **X (Twitter)** | Ad copy | 280 chars | |
+
+Always verify character counts before submitting. Truncated copy reads as unprofessional and lowers CTR.
+
+### 6.6 Creative Iteration Log
+
+Document every creative test in a running log to build institutional knowledge. Save as `./brands/{brand-slug}/campaigns/paid-ads/creative/iteration-log-{platform}-{YYYY-MM-DD}.md`.
+
+Per round, record:
+
+| Round | Angle | Format | Variant | Metric | Result | Decision | Learning |
+|---|---|---|---|---|---|---|---|
+| 1 | Pain | Static image | Hook A | CTR | 2.1% | Loser | Negative framing underperformed |
+| 1 | Outcome | Static image | Hook B | CTR | 3.8% | Winner | Benefit-led outperforms problem-led for this audience |
+| 2 | Outcome | Video 15s | Hook B remix | CPA | $12.40 | Winner | Video 2x efficiency vs static |
+
+**Patterns to watch:**
+- Which angle types consistently win for this brand/audience?
+- Which formats win at each funnel stage?
+- What hooks perform best on which platform?
+- At what frequency (impressions/user) does fatigue begin?
+
+This log is permanent — it compounds value over time. Never delete losing entries; they prevent repeating failed experiments.
+
+### 6.7 Creative Testing Methodology
+
+- **Phase 1 -- Concept Testing**: Test 3-5 distinct angles with equal budget. Wide targeting. Winner = lowest CPA or highest CTR.
+- **Phase 2 -- Iteration**: Take winning angle, test variations (hooks, visuals, copy length, CTA).
 - **Phase 3 -- Format Testing**: Test winning message across formats (static, carousel, video, UGC).
 - **Statistical Significance**: Minimum 100 conversions or 1000 clicks per variant before declaring a winner. Run tests for 7+ days to account for day-of-week variation.
 

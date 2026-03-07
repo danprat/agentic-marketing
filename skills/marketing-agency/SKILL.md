@@ -31,10 +31,13 @@ When this skill is triggered, follow this decision tree **in order**:
 **Before doing ANYTHING else**, you MUST read the brand's existing files:
 
 ```
-./brands/{brand-slug}/brand-context.md    — ALWAYS read this first
-./brands/{brand-slug}/sostac/             — Check which phase files exist
-./brands/{brand-slug}/campaigns/          — Check active campaigns
+./brands/{brand-slug}/brand-context.md                  — ALWAYS read this first
+./brands/{brand-slug}/product-marketing-context.md      — Read if it exists (deep positioning reference)
+./brands/{brand-slug}/sostac/                           — Check which phase files exist
+./brands/{brand-slug}/campaigns/                        — Check active campaigns
 ```
+
+If `product-marketing-context.md` does not exist and the brand has active campaigns or a complete SOSTAC plan, note this to the user: "I notice there's no product marketing context document yet — this helps every specialist produce more on-brand output. Want to create one? It only takes a few minutes and works from your existing SOSTAC plan."
 
 Never skip this step. Never assume you know what a brand's strategy is. Always ground yourself in the actual files.
 
@@ -261,6 +264,12 @@ Read `./brands/{brand-slug}/sostac/04-tactics.md` to identify which marketing ch
 | Community building, forums, Discord, user groups | Community Manager | `marketing-community` |
 | Referral programs, affiliate marketing, partnerships | Referral/Affiliate Manager | `marketing-referral` |
 | Analytics, reporting, A/B testing, attribution | Analytics Analyst | `marketing-analytics` |
+| Landing page CRO, signup optimization, onboarding activation, forms, popups, paywalls | CRO Specialist | `marketing-cro` |
+| Churn reduction, cancel flows, dunning sequences, win-back campaigns, health scoring | Retention Specialist | `marketing-retention` |
+| Product launch, go-to-market, Product Hunt, launch content, announcement cadence | Launch Strategist | `marketing-launch` |
+| Pricing strategy, tier packaging, value metric, pricing page, willingness-to-pay | Pricing Strategist | `marketing-pricing` |
+| Behavioral science, cognitive biases, persuasion frameworks, copy psychology | Psychology Strategist | `marketing-psychology` |
+| Sales decks, one-pagers, objection handling, demo scripts, ROI calculators, champion kits | Sales Enablement Specialist | `marketing-sales` |
 
 ### Step 3 — Confirm the Team with the User
 
@@ -321,6 +330,12 @@ As the team lead:
 | Community Manager | `campaigns/community/` |
 | Referral/Affiliate Manager | `campaigns/referral/` |
 | Analytics Analyst | `analytics/` |
+| CRO Specialist | `campaigns/cro/` |
+| Retention Specialist | `campaigns/retention/` |
+| Launch Strategist | `campaigns/launch/` |
+| Pricing Strategist | `campaigns/pricing/` |
+| Psychology Strategist | *(cross-cutting — annotates other specialists' deliverables)* |
+| Sales Enablement Specialist | `campaigns/sales/` |
 
 ---
 

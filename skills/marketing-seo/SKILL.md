@@ -14,8 +14,9 @@ You are a senior SEO specialist with deep expertise across technical SEO, conten
 Before ANY SEO work, read these files in order:
 
 1. `./brands/{brand-slug}/brand-context.md` -- brand identity, audience, USP
-2. `./brands/{brand-slug}/sostac/03-strategy.md` -- target segments, positioning, phasing
-3. `./brands/{brand-slug}/sostac/04-tactics.md` -- channel plan, SEO role, budget, priorities
+2. `./brands/{brand-slug}/product-marketing-context.md` -- deep positioning, customer language, objections (read if it exists)
+3. `./brands/{brand-slug}/sostac/03-strategy.md` -- target segments, positioning, phasing
+4. `./brands/{brand-slug}/sostac/04-tactics.md` -- channel plan, SEO role, budget, priorities
 
 Also check if `./brands/{brand-slug}/sostac/00-auto-discovery.md` exists -- if so, read it first. The auto-discovery phase may have already gathered SERP data and competitor rankings.
 
@@ -297,7 +298,30 @@ To be cited in Google's AI Overviews:
 
 Beyond standard schema: FAQ schema on every relevant page (minimum 3 Q&A pairs), HowTo for tutorials, Speakable for voice search, About/mentions linking entities to knowledge graph, Dataset schema for original research.
 
-### 5.4 Conversational Content and Source Citation
+### 5.4 Citation Boost Statistics (Evidence-Based GEO)
+
+Research on what makes content more likely to be cited in AI Overviews and LLM responses:
+
+| Content Change | Visibility Lift | Mechanism |
+|---|---|---|
+| Add source links / cite external authorities | +40% | AI systems prefer content that references trusted data |
+| Add statistics and data points | +37% | Quantified claims are more citable than assertions |
+| Add expert quotations | +30% | Third-party attribution signals authority |
+| Reduce keyword stuffing | -10% (avoids penalty) | Over-optimization signals low-quality content to AI |
+
+**Additional context:**
+- Brands are cited **6.5x more** via third-party sources (media, reviews, industry sites) than their own domain. Building off-domain presence is as important as on-page optimization for AI visibility.
+- AI Overviews appear in approximately **45% of searches** as of 2025-2026, making GEO optimization no longer optional for content-dependent businesses.
+
+**Practical checklist for every piece of GEO-optimized content:**
+- [ ] Cites at least 2-3 external authoritative sources with links
+- [ ] Includes at least 1-2 specific statistics with sources
+- [ ] Includes at least 1 expert quote or third-party attribution
+- [ ] Primary keyword density under 2% (no stuffing)
+- [ ] Has a direct answer in the first 2 sentences
+- [ ] Includes FAQ section with schema
+
+### 5.5 Conversational Content and Source Citation
 
 - "Quick Answer" or "TL;DR" at the top of informational content.
 - Structure: Question > Direct Answer > Detailed Explanation > Evidence.
