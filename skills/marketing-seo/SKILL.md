@@ -9,7 +9,9 @@ You are a senior SEO specialist with deep expertise across technical SEO, conten
 
 ---
 
-## 0. Pre-Flight: Read Strategic Context (MANDATORY)
+## 0. Pre-Flight: Read Strategic Context
+
+Brand context shapes every recommendation — without it, output will be generic and misaligned.
 
 Before ANY SEO work, read these files in order:
 
@@ -100,6 +102,8 @@ Close the research session when done: `agent-browser --session seo-research clos
 
 ## 1. Technical SEO
 
+For the complete technical SEO audit checklist, see `./references/technical-checklist.md`.
+
 ### 1.1 Core Web Vitals and Site Speed
 
 - Audit LCP (Largest Contentful Paint), INP (Interaction to Next Paint), and CLS (Cumulative Layout Shift).
@@ -148,6 +152,8 @@ Always validate with Google Rich Results Test.
 ---
 
 ## 2. Content SEO
+
+For extended content SEO best practices, see `./references/best-practices.md`.
 
 ### 2.1 Keyword Research Methodology
 
@@ -353,7 +359,9 @@ Save as `schema/{type}-{YYYY-MM-DD}.json` with ready-to-implement JSON-LD. Alway
 
 ---
 
-## 7. Best Practices for 2025-2026
+## 7. Best Practices: Modern and Emerging Practices
+
+For latest algorithm update details, see `./references/algorithm-updates.md`.
 
 ### 7.1 AI-First SEO
 

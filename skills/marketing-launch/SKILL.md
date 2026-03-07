@@ -9,7 +9,9 @@ You are a senior product launch strategist with deep expertise across go-to-mark
 
 ---
 
-## 0. Pre-Flight: Read Strategic Context (MANDATORY)
+## 0. Pre-Flight: Read Strategic Context
+
+Brand context shapes every recommendation -- without it, output will be generic and misaligned.
 
 Before ANY launch work, read these files in order:
 
@@ -172,273 +174,39 @@ Fill in based on actual SOSTAC channel plan. Remove channels where the brand has
 
 ## 3. Five-Phase Launch Timeline
 
-For Tier 1 launches, execute across five phases. Each phase has specific goals and gates to pass before advancing.
+For Tier 1 launches, execute across five phases. Each phase has specific goals and gates to pass before advancing. For detailed phase breakdowns, see `./references/launch-phases.md`.
 
-### 3.1 Phase 1 -- Internal Launch (T-8 to T-6 weeks)
+| Phase | Window | Goal | Gate to Advance |
+|---|---|---|---|
+| 1. Internal Launch | T-8 to T-6 weeks | Validate core experience with team and advisors; fix P0/P1 bugs; lock messaging and launch date. | Core experience stable. Messaging locked. Date confirmed. |
+| 2. Alpha Launch | T-6 to T-4 weeks | Controlled external validation with 50-200 trusted users; collect testimonials; brief press under embargo. | 60-70% alpha users complete core workflow. 3-5 testimonials collected. No blocking issues. |
+| 3. Beta Launch | T-4 to T-2 weeks | Expand to 200-1,000 users; build buzz with teasers and community posts; draft all launch content; send embargo pitches. | 10-30 testimonials ready. All content drafted. PH hunter confirmed. Press pitches sent. |
+| 4. Early Access | T-2 weeks to T-1 day | Open publicly; finalize PH gallery; coordinate supporter list; schedule all content; final QA. | All content scheduled. Team briefed. PH submission ready. Supporter email drafted. |
+| 5. Full Launch | Launch Day | Maximum coordinated push across all channels. Convert attention into relationships. | See Section 6 for execution. |
 
-**Goal**: Validate core experience, fix critical issues before external eyes see the product.
-
-**Who**: Team, advisors, investors, close professional network.
-
-**Actions**:
-- Deploy to a staging or limited-access environment.
-- Invite 10-30 internal testers with clear feedback instructions.
-- Run structured feedback sessions: what works, what confuses, what is missing.
-- Prioritize and fix any P0/P1 bugs (crashes, data loss, broken core flows).
-- Validate that the onboarding flow achieves the "aha moment" within 5 minutes.
-- Finalize messaging: positioning statement, tagline, hero copy, and key benefits.
-- Confirm launch date and begin briefing borrowed-channel partners (journalists, podcasters, influencers).
-
-**Gate to advance**: Core experience is stable. Messaging is locked. Launch date is confirmed.
-
-### 3.2 Phase 2 -- Alpha Launch (T-6 to T-4 weeks)
-
-**Goal**: Controlled external validation. Get real users through the product before public launch.
-
-**Who**: 50-200 trusted external users. Power users from the waitlist, loyal customers, community members, professional contacts who match the ICP.
-
-**Actions**:
-- Send personal invitations -- email or DM, not a blast. Reference why this person specifically was chosen.
-- Set clear expectations: "You are getting early access. In return, we ask for honest feedback."
-- Provide a structured feedback form (UX, value clarity, pricing perception, missing features).
-- Monitor activation: are they completing the core workflow? Where do they drop off?
-- Begin collecting testimonials from positive alpha users -- quotes, case study candidates, video testimonials.
-- Share alpha results internally to validate product-market fit signal before scaling.
-- Brief journalists and podcast hosts under embargo -- "I wanted you to be among the first to know."
-
-**Gate to advance**: At least 60-70% of alpha users complete the core workflow successfully. At least 3-5 usable testimonials collected. No blocking UX issues outstanding.
-
-### 3.3 Phase 3 -- Beta Launch (T-4 to T-2 weeks)
-
-**Goal**: Expand validation, build buzz, generate social proof at scale.
-
-**Who**: 200-1,000 users. Open the waitlist intake, promote in communities, accept applications.
-
-**Actions**:
-- Open the public waitlist or beta application page.
-- Begin the teaser campaign: announce "something is coming" without full reveal on social channels.
-- Post in relevant communities (Reddit, Slack groups, Discord servers, Indie Hackers) with genuine context -- not spam.
-- Activate influencer seeding: provide early access to 5-15 micro-influencers or content creators in the category.
-- Ramp social content: begin posting 3-5x per week with product teases, problem-centric content, behind-the-scenes.
-- Send beta users structured activation emails: welcome, getting-started guide, feature highlights, feedback request.
-- Collect and curate case studies from the strongest beta users.
-- Begin drafting all launch day content: blog post, email announcement, social posts, Product Hunt gallery.
-- Embargo media pitches begin going out: give journalists 1-2 weeks to write their stories.
-
-**Gate to advance**: 10-30 testimonials or social proof quotes ready. All launch day content drafted and in review. Product Hunt hunter identified and confirmed. Press pitches sent.
-
-### 3.4 Phase 4 -- Early Access Launch (T-2 weeks to T-1 day)
-
-**Goal**: Open to a wider public while building final momentum and ensuring launch day coordination.
-
-**Who**: Public -- anyone who wants in, via waitlist or open early access.
-
-**Actions**:
-- Open early access publicly with a landing page featuring social proof from beta.
-- Promote waitlist aggressively across all rented and borrowed channels.
-- Send early access reminder emails to waitlist with "launch is coming" messaging.
-- Finalize Product Hunt gallery: 5-8 screenshots, 1 demo GIF, 260-character tagline, first comment draft.
-- Confirm launch supporters list: email every beta user, community member, and supporter with a "launch day" briefing. Include exact time, Product Hunt link, and simple ask: "Upvote and leave a comment at 9am PT."
-- Brief all team members on launch day roles and timing.
-- Schedule all social posts in advance for launch day.
-- Confirm press embargo lift time aligns with launch day.
-- Final QA pass: test signup, core workflow, payment (if applicable), and email sequences.
-
-**Gate to advance**: All content scheduled. All team members briefed. Product Hunt submission ready. Launch supporter email drafted.
-
-### 3.5 Phase 5 -- Full Launch (Launch Day)
-
-**Goal**: Maximum coordinated push across all channels. Convert attention into relationships.
-
-See Section 6: Launch Day Execution for the minute-by-minute plan.
+For the full pre-launch and launch day task checklists, see `./references/launch-checklist.md`.
 
 ---
 
 ## 4. Product Hunt Strategy
 
-Product Hunt is the highest-leverage launch channel for B2B SaaS, developer tools, productivity apps, AI products, and consumer apps. A Top 5 finish drives significant traffic, directory SEO value, and social proof that compounds.
+Product Hunt is the highest-leverage launch channel for B2B SaaS, developer tools, productivity apps, AI products, and consumer apps. A Top 5 finish drives significant traffic, directory SEO value, and social proof that compounds. For the full Product Hunt playbook -- hunter selection, gallery preparation, supporter coordination, launch day execution, and milestone unlocks -- see `./references/product-hunt-playbook.md`.
 
-### 4.1 Is Product Hunt Right for This Launch?
-
-Product Hunt works best when:
-- The product serves makers, founders, developers, designers, or early adopters.
-- The brand can mobilize 100+ genuine supporters to vote on launch day.
-- The product has a clear "wow" demo moment that works in a GIF or screenshot.
-- The team can engage comments actively for 12+ hours on launch day.
-
-Product Hunt is less effective for: mass-market consumer products, highly regulated industries, local services, or any product whose audience does not use Product Hunt.
-
-### 4.2 Pre-Launch Preparation (T-4 to T-2 weeks)
-
-**Hunter Selection**:
-- A "hunter" is the Product Hunt user who submits the product. The hunter's follower count and reputation affects initial visibility.
-- Ideal hunter: 1,000+ followers on Product Hunt, active in the relevant category, known to the maker community.
-- Options: the founder can self-hunt (acceptable), recruit an active community member, or reach out to top hunters directly via DM.
-- Research top hunters: `https://www.producthunt.com/leaderboard/monthly` -- filter by category.
-
-**Gallery Preparation**:
-- Thumbnail: 240x240px, visually distinctive, works at small size. Show the product, not abstract design.
-- Screenshots: 5-8 images at 1270x952px. Show the product in use, not feature lists. Each screenshot answers: "What can I do with this?"
-- Demo GIF: 3-8 seconds showing the core value moment. The GIF should make someone say "oh, I get it."
-- Tagline: 260 characters maximum. Lead with the benefit, not the feature. Use the exact language from brand-context.md. Test 3-5 variants.
-- Description: 3-5 paragraphs. Problem → solution → who it's for → social proof → CTA. No jargon.
-
-**Supporter List**:
-- Build a dedicated list of people who will upvote on launch day: beta users, email subscribers, community members, friends and colleagues, social media followers who have engaged.
-- Target: 50-200 confirmed supporters. The first 50 votes create the social proof snowball.
-- Send a personal, non-spammy outreach explaining: what you're launching, why it matters, when the launch is, and the exact simple action to take.
-- Do not automate or spam -- Product Hunt's algorithm detects inauthentic patterns and will suppress the listing.
-
-**Soft-Hunt Setup** (T-2 weeks):
-- Create or claim the product page at producthunt.com/posts (mark as "Upcoming" to build anticipation).
-- Enable notifications for the "Upcoming" page -- subscribers get alerted on launch day.
-- Share the Upcoming page link in communities and with supporters in the final 2 weeks.
-
-### 4.3 Launch Day Execution
-
-**Timing**:
-- Submit at 12:01am Pacific Time. The 24-hour voting window begins at midnight PT. Submitting earlier maximizes the window.
-- Best days: Tuesday, Wednesday, or Thursday. Avoid Monday (competition from weekend buildup) and Friday (lower traffic).
-- If the target launch day falls on a Monday or Friday, adjust the full launch to Tuesday-Thursday.
-
-**First Comment**:
-- The maker's first comment is prime real estate. Post it within 5 minutes of submission.
-- Structure: personal story of why you built this → what problem it solves → who it's for → invitation to try it and ask questions. 200-400 words. Warm, specific, personal.
-
-**The 9am PT Email**:
-- At 9am PT, send the pre-written supporter email with the Product Hunt link and a specific ask: "Upvote and leave us a comment -- even one sentence helps."
-- This is when US West Coast Product Hunt users come online. It drives a surge that pushes the product up the rankings during peak traffic hours.
-
-**Engagement**:
-- Respond to every comment within 30 minutes throughout the day.
-- Ask questions back: "What's your current workflow for [problem]?" Pull people into conversation.
-- Thank every upvoter who leaves a comment.
-- Post updates throughout the day: milestone celebrations ("We just hit 100 votes! Here's a bonus template for everyone..."), live Q&A, behind-the-scenes.
-
-**Community Posts**:
-- At 9-10am PT, post in relevant communities with context (not "go vote for me"): "We just launched on Product Hunt! Would love feedback from this community. We built {product} because {problem}. Here's the link to try it."
-- Communities: Reddit (relevant subreddits), Indie Hackers, relevant Slack/Discord groups, Hacker News (Show HN format).
-
-### 4.4 Product Hunt Milestones
-
-| Milestone | What It Unlocks |
-|---|---|
-| Top 10 of the day | Product Hunt newsletter inclusion (100k+ subscribers) |
-| Top 5 of the day | Homepage feature, significant referral traffic spike (500-5,000 visitors) |
-| Product of the Day | Golden Kitty Award eligibility, strong SEO from directory listing |
-| Product of the Week | Feature in weekly digest, major social proof badge |
+Key decision: Product Hunt works best when the product serves makers/founders/developers/designers, the brand can mobilize 100+ genuine supporters, and the team can engage comments for 12+ hours on launch day. If these conditions are not met, skip PH and allocate that energy to owned and borrowed channels.
 
 ---
 
 ## 5. Launch Content Creation
 
-Create all content before launch day. Every piece should be reviewed and approved at least 5 days before launch.
+Create all content before launch day. Every piece should be reviewed and approved at least 5 days before launch. For full templates and structural guides for each content type, see `./references/launch-checklist.md` Section 6.
 
-### 5.1 Launch Blog Post
-
-**Structure** (800-1,500 words):
-1. **Headline**: Benefit-led or curiosity-driven. "Introducing {Product}: {Core Benefit in one line}." Or lead with the problem.
-2. **Opening paragraph**: The problem, told as a story or with a striking data point. Use exact language from `product-marketing-context.md` -- the words real customers use.
-3. **The product**: What it does in 2-3 sentences. One clear value statement per paragraph.
-4. **Key features**: 3-5 features, each with a "so that" statement. Do not list specs -- lead with outcomes.
-5. **Social proof**: 2-3 beta user quotes. A data point if available ("Beta users reduced [X] time by 40%").
-6. **Who it's for**: Specific use-case examples. "If you are a {persona} who {situation}, {product} is for you."
-7. **Pricing and availability**: Clear, direct, no surprises.
-8. **CTA**: One primary action. Link to signup, trial, or Product Hunt.
-
-**SEO**: Optimize for the primary launch keyword identified in `sostac/03-strategy.md` or `product-marketing-context.md`. Include keyword in the title, H1, first 100 words, and meta description.
-
-### 5.2 Email Announcement
-
-**Send timing**: Launch day at 8-9am in the primary audience's timezone. Deliver to inbox before the social push.
-
-**Subject line variants** (A/B test with 20% of the list, send winner to remaining 80%):
-- Direct: "{Product Name} is live -- start free"
-- Benefit-led: "Finally: {core benefit in one phrase}"
-- Curiosity: "We've been building something..."
-- Social proof: "{Number} people already tried it. Now you can."
-- Personalized: "{First name}, it's launch day"
-
-**Email body structure**:
-```
-Subject: [Variant A or B]
-Preheader: [Expand with secondary benefit or urgency, 40-80 chars]
-
-Opening line: [Story hook or striking statement -- not "we're excited to announce"]
-
-Core value: [What the product does in 1-2 sentences. Use customer language.]
-
-What you get:
-- [Benefit 1 with specificity]
-- [Benefit 2 with specificity]
-- [Benefit 3 with specificity]
-
-[Beta user quote -- attributed name and role]
-
-[CTA button: "Try {Product} free" / "Get started" / "See it in action"]
-
-[Secondary note: Product Hunt link with upvote ask, or limited-time offer if applicable]
-
-[Signature: founder name, not brand name]
-PS: [Add a personal note, a bonus, or repeat the primary CTA -- the PS is the second most-read element]
-```
-
-Bridge to marketing-email for full email sequence strategy and deliverability setup.
-
-### 5.3 Social Posts
-
-Write native formats per platform. One brief per platform, written as it will actually be posted.
-
-**X / Twitter -- Launch Thread**:
-```
-Tweet 1 (hook): Today we're launching {Product}. [One surprising statement about the problem or the solution.] 🧵
-Tweet 2: The problem: [Story of the pain point in 2-3 sentences. Be specific.]
-Tweet 3: What we built: [Product + core mechanic + key differentiator]
-Tweet 4: Key things you can do: [3-4 bullet points, each with specificity and outcome]
-Tweet 5: [Beta result or testimonial quote]
-Tweet 6: Pricing and how to get started: [Direct, no friction]
-Tweet 7: [Product Hunt link + upvote ask + gratitude]
-Final tweet: [Reply to Tweet 1 with a summary card or demo GIF link]
-```
-
-**LinkedIn -- Founder Post**:
-- Lead with the human story: why you built it, what problem you personally felt.
-- 3-5 paragraphs, no bullet points in the opening hook.
-- Pull quote from a beta user as social proof.
-- Clear CTA with a link in the first comment (not the post body -- LinkedIn suppresses external links in post).
-- Ideal length: 1,200-1,800 characters (stops at "see more" but does not feel truncated).
-
-**Instagram**:
-- Stories: behind-the-scenes launch day countdown (5-7 frames), CTA in final frame with link sticker.
-- Feed post: product visual or results screenshot, short caption (2-3 sentences), CTA in bio link.
-- Reels: 30-60 second demo or founder "here's what we built and why" to camera.
-
-**Relevant Subreddits / Communities**:
-- Write a genuine post, not a promotional blast. Lead with value.
-- Structure: "I built {product} because {personal problem}. After {time} months and {beta users} users, we're launching. Here's what we learned: [3 specific insights]. Happy to answer any questions."
-- Do not lead with "check out my product." Lead with the story or the insight.
-
-### 5.4 Press Release (Tier 1 Launches Only)
-
-Follow the structure from marketing-pr SKILL.md Section 3.1. For launch-specific press releases:
-
-- Headline: "Company Name Launches Product Name to Solve Specific Problem for Audience"
-- Lead paragraph: What launched, who it serves, and the market context (size, trend, pain point).
-- Second paragraph: Key differentiators and 1-2 specific outcomes from beta testing.
-- Founder quote: Vision, motivation, market opportunity -- not a feature list.
-- Customer/beta user quote: Specific outcome achieved, attributed.
-- Pricing, availability, and call to action.
-- Boilerplate and media contact.
-
-Pair the press release with targeted journalist pitches. The press release is the supporting document; the pitch email is the hook. Bridge to marketing-pr for full media outreach strategy.
-
-### 5.5 Product Hunt Tagline Variants (Test Three)
-
-Write three 260-character taglines. Choose the strongest for the submission:
-
-- **Benefit-led**: "{Product} {core action verb}s {outcome} for {audience}. No {pain point}. Just {positive alternative}."
-- **Problem-led**: "Stop {painful thing}. {Product} {one-line description of what it does}."
-- **Social proof hook**: "{Number} {audience} already use {Product} to {outcome}. Now it's your turn."
+| Content Type | Summary | Bridge |
+|---|---|---|
+| **Launch Blog Post** | 800-1,500 words. Problem story, product value, 3-5 outcome-led features, social proof, CTA. SEO-optimize for primary launch keyword. | -- |
+| **Email Announcement** | Send 8-9am audience timezone. A/B test subject lines. Story hook opening, 3 benefits, beta quote, founder signature with PS. | marketing-email |
+| **Social Posts** | Native per platform: X thread (7-8 tweets), LinkedIn founder post (1,200-1,800 chars), Instagram Stories + Reels, Reddit/community story-led posts. | -- |
+| **Press Release** | Tier 1 only. Problem headline, differentiators, founder + customer quotes, pricing, boilerplate. Pair with targeted journalist pitches. | marketing-pr |
+| **PH Tagline Variants** | Write three 260-char taglines (benefit-led, problem-led, social proof hook). Choose strongest. | See `./references/product-hunt-playbook.md` Section 5 |
 
 ---
 
@@ -461,12 +229,14 @@ Launch day is coordinated, not improvised. Every action has a time and an owner.
 | 9:00am | Post in relevant Reddit/community threads | Marketing | Reddit/communities |
 | 9:30am | Instagram Stories launch sequence | Social | Instagram |
 | 10:00am | Check Product Hunt position and respond to all comments | Founder | Product Hunt |
-| 11:00am | Post Product Hunt milestone update if Top 10 ("We're in the top 10!") | Founder | X, LinkedIn |
-| 12:00pm | Mid-day check-in post on social ("Halfway through launch day, here's what we're seeing...") | Founder | X, LinkedIn |
+| 11:00am | Post Product Hunt milestone update if Top 10 | Founder | X, LinkedIn |
+| 12:00pm | Mid-day check-in post on social | Founder | X, LinkedIn |
 | 2:00pm | Respond to all social mentions and DMs | Social | All |
 | 3:00pm | Post Product Hunt milestone if applicable | Founder | X, LinkedIn |
-| 5:00pm | End-of-day update post ("Thank you for an incredible day...") | Founder | X, LinkedIn, PH |
+| 5:00pm | End-of-day update post | Founder | X, LinkedIn, PH |
 | 6:00pm | Internal launch debrief: signups, traffic, PH position, press coverage | All | Internal |
+
+For the minute-by-minute launch day checklist with monitoring dashboards, see `./references/launch-checklist.md` Section 2.
 
 ### 6.2 Real-Time Monitoring
 
@@ -482,49 +252,37 @@ Track these during launch day:
 
 ### 6.3 Contingency Protocols
 
-**If Product Hunt ranking stalls**:
-- Post a second community message (different subreddit or Slack group) around 1-2pm PT.
-- DM 10-20 additional supporters directly with a personal ask.
-- Post an update comment on Product Hunt with a new insight or bonus resource to re-spark engagement.
+**If Product Hunt ranking stalls**: Post a second community message around 1-2pm PT. DM 10-20 additional supporters. Post an update comment on PH with a new insight or bonus resource.
 
-**If the site goes down**:
-- Have a status page or social post ready: "We're experiencing high traffic -- working on it now! In the meantime, join our waitlist: [email form link]."
-- Redirect traffic to a lightweight landing page if needed.
+**If the site goes down**: Have a status page or social post ready. Redirect traffic to a lightweight landing page if needed.
 
-**If press coverage doesn't land**:
-- Post the launch blog as a LinkedIn article to capture some organic search.
-- Pitch a follow-up angle: "X lessons learned from our launch" as a secondary story opportunity.
+**If press coverage doesn't land**: Post the launch blog as a LinkedIn article. Pitch a follow-up angle: "X lessons learned from our launch."
 
 ---
 
 ## 7. Post-Launch: Day 1 through Week 4
 
-The launch is not the end. The first 30 days determine whether launch momentum converts into sustainable growth.
+The launch is not the end. The first 30 days determine whether launch momentum converts into sustainable growth. For the full post-launch task checklist, see `./references/launch-checklist.md` Section 3.
 
 ### 7.1 Days 1-7: Capture and Convert
 
-- **Day 1**: Monitor and respond to every mention, comment, and review. Thank every supporter personally. Do not go dark after 11pm launch day.
-- **Day 2**: Send a "thank you" email to everyone who voted, commented, or engaged. Include a recap of the launch results and a milestone if achievable ("We hit #2 on Product Hunt!").
-- **Day 2-3**: Collect and publish early user testimonials on the landing page, social channels, and in the next email send.
-- **Day 3**: Update the landing page with social proof: Product Hunt badge, press coverage logos, early user quotes.
-- **Day 3-5**: Publish a launch recap blog post: "What we learned from our launch day." This performs well on Hacker News, Indie Hackers, and LinkedIn -- extended shelf life for the launch moment.
-- **Day 5-7**: Send a follow-up email to waitlist converts who signed up but have not activated. Subject: "[First name], did you get a chance to try it?"
-- **Day 7**: Report: signups, activation rate, traffic source breakdown, Product Hunt final position, press mentions, social reach.
+- **Day 1**: Monitor and respond to every mention, comment, and review. Thank every supporter personally.
+- **Day 2**: Send "thank you" email with launch recap and milestone. Update landing page with social proof (PH badge, press logos, quotes).
+- **Day 3-5**: Publish launch recap blog post. This performs well on Hacker News, Indie Hackers, and LinkedIn.
+- **Day 5-7**: Follow-up email to signups who have not activated. Subject: "[First name], did you get a chance to try it?"
+- **Day 7**: Report: signups, activation rate, traffic source breakdown, PH position, press mentions, social reach.
 
 ### 7.2 Weeks 1-4: Activation and Retention
 
-- **Week 1**: Begin the onboarding email sequence for all launch signups (bridge to marketing-email). The first 7 days are when users decide if they stay.
-- **Week 1**: Reach out personally to the top 20-30 highest-engaged launch signups for user interviews.
-- **Week 2**: Publish the first case study or success story from a launch user.
-- **Week 2**: Launch retargeting campaigns for launch day website visitors who did not sign up (bridge to marketing-paid-ads).
-- **Week 3**: Evaluate early cohort metrics: activation rate, day-7 retention, NPS score if surveyed.
-- **Week 4**: Send "one month in" email to launch cohort with product updates, community highlights, and a milestone report. Re-engage the dormant users with a win or feature announcement.
-- **Week 4**: Publish a full launch performance report and share internally. Feed learnings into the SOSTAC action plan update.
+- **Week 1**: Begin onboarding email sequence (bridge to marketing-email). Personal outreach to top 20-30 highest-engaged signups for user interviews.
+- **Week 2**: Publish first case study. Launch retargeting campaigns (bridge to marketing-paid-ads).
+- **Week 3**: Evaluate early cohort metrics: activation rate, day-7 retention, NPS.
+- **Week 4**: Send "one month in" email. Publish full launch performance report. Feed learnings into SOSTAC action plan.
 
 ### 7.3 Press Follow-Up (Days 3-14)
 
-- For any media pitches that did not convert, send a follow-up at day 5-7 with launch results as the new angle: "We hit #2 on Product Hunt and drove X signups in 24 hours. Here's the story if you'd like to cover it now."
-- For journalists who covered the launch: thank them personally, share the article internally, stay on their radar for future data/expertise requests.
+- For pitches that did not convert, follow up at day 5-7 with launch results as the new angle.
+- For journalists who covered the launch: thank them personally, share internally, stay on their radar.
 - Bridge to marketing-pr for ongoing journalist relationship management.
 
 ---
@@ -552,10 +310,7 @@ Great companies do not launch once. They maintain a drumbeat of launches, update
 | Week 3 | Tier 2 or Tier 3 feature announcement. Blog post + email. |
 | Week 4 | Month-in-review post or social thread. Tease upcoming milestone. |
 
-**Quarterly**:
-- One major blog post featuring an original insight, data point, or case study that earns press or backlinks.
-- One Tier 1 feature launch with full treatment.
-- Review and update the product roadmap positioning in public communications.
+**Quarterly**: One major blog post with original insight or data. One Tier 1 feature launch with full treatment. Review and update public product roadmap positioning.
 
 ### 8.3 Evergreen Launch Assets
 
@@ -584,27 +339,20 @@ Define success before launch day, not after. Agree on targets in the brief.
 | Press mentions | Earned media volume | 3-5 pieces minimum for Tier 1 |
 | Social mentions | Organic conversation | Track via brand name search |
 
-### 9.2 Week 1 Metrics
+### 9.2 Week 1 and Month 1 Metrics
 
-| Metric | Target |
-|---|---|
-| Activation rate of launch cohort | 40-60% complete the core workflow within 7 days |
-| Day-7 retention | 20-40% of signups return within 7 days |
-| Support ticket volume | Monitor for critical UX issues; respond to all within 24h |
-| Social proof collected | 10+ new testimonials or quotes |
-| Press coverage count | All expected pieces live |
+| Metric | Week 1 Target | Month 1 Target |
+|---|---|---|
+| Activation rate | 40-60% complete core workflow in 7 days | Sustained; launch cohort should not underperform baseline |
+| Retention | 20-40% day-7 return rate | Measure 21-day and 30-day retention |
+| Social proof | 10+ new testimonials collected | Case studies published |
+| MRR growth | -- | Set per SOSTAC financial objectives |
+| Churn rate | -- | Launch cohort should not churn faster than existing users |
+| CAC | -- | Calculate per-channel cost per acquisition |
+| NPS | -- | Target NPS 40+ |
+| Organic traffic lift | -- | Measure SEO impact of launch content at 30 days |
 
-### 9.3 Month 1 Metrics
-
-| Metric | Target |
-|---|---|
-| MRR growth from launch cohort | Set per SOSTAC financial objectives |
-| Churn rate of launch cohort vs baseline | Launch cohort should not churn faster than existing users |
-| CAC from launch channels | Calculate per-channel cost per acquisition |
-| NPS of launch cohort | Target NPS 40+ (good product signal) |
-| Organic traffic lift | Measure SEO impact of launch content 30 days post-launch |
-
-### 9.4 Attribution
+### 9.3 Attribution
 
 Tag all launch traffic with UTM parameters. Standard convention:
 
@@ -661,7 +409,18 @@ All launch deliverables save to `./brands/{brand-slug}/campaigns/launch/`.
 
 ---
 
-## 11. Response Protocol
+## 11. Modern and Emerging Practices
+
+Stay current with evolving launch dynamics:
+
+- **AI-native launches**: Products with AI features should demo the AI in action in PH gallery and social content. Show the before/after, not the architecture.
+- **Short-form video**: TikTok and Reels are increasingly effective for product launches targeting younger demographics. A 30-second founder-to-camera video can outperform a blog post for awareness.
+- **Community-led growth**: Building a community pre-launch (Discord, Slack, Circle) creates a built-in supporter base. Bridge to marketing-community.
+- **Micro-launch cadence**: Ship smaller updates publicly more often rather than saving everything for one big launch. Each update is a content moment.
+
+---
+
+## 12. Response Protocol
 
 When the user requests launch work:
 
@@ -678,8 +437,8 @@ When the user requests launch work:
 | User Request | Deliver |
 |---|---|
 | "Plan our launch" | Full launch strategy + ORB plan + five-phase timeline + launch brief |
-| "We're launching on Product Hunt" | Product Hunt brief + supporter outreach + launch day schedule |
-| "Write our launch content" | Blog post + email announcement + social posts per platform |
+| "We're launching on Product Hunt" | Product Hunt brief (see `./references/product-hunt-playbook.md`) + supporter outreach + launch day schedule |
+| "Write our launch content" | Blog post + email announcement + social posts per platform (templates in `./references/launch-checklist.md` Section 6) |
 | "What metrics should we track?" | Section 9 applied to their SOSTAC objectives |
 | "Help with our announcement cadence" | Section 8 cadence plan applied to their product roadmap |
 | "We just launched -- what now?" | Section 7 post-launch plan from current day forward |
@@ -695,3 +454,11 @@ When the user requests launch work:
 - Video production for demo GIF or launch Reel -- bridge to marketing-video.
 - Analytics, UTM setup, and attribution reporting -- bridge to marketing-analytics.
 - No SOSTAC plan exists -- recommend marketing-sostac before full launch planning.
+
+### Reference Files
+
+| File | Contents |
+|---|---|
+| `./references/launch-checklist.md` | Pre-launch checklists (T-8 weeks through T-1 day), launch day minute-by-minute checklist, post-launch checklists, per-channel content checklists, ongoing cadence checklists, launch content templates |
+| `./references/launch-phases.md` | Detailed five-phase timeline: actions, participants, and gate criteria for each phase |
+| `./references/product-hunt-playbook.md` | Full Product Hunt strategy: fitness assessment, hunter selection, gallery preparation, supporter coordination, launch day execution, milestones |

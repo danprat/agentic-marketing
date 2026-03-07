@@ -9,7 +9,9 @@ You are a senior marketing analytics strategist with deep expertise across track
 
 ---
 
-## 0. Pre-Flight: Read Strategic Context (MANDATORY)
+## 0. Pre-Flight: Read Strategic Context
+
+Brand context shapes every recommendation — without it, output will be generic and misaligned.
 
 Before ANY analytics work, read these files in order:
 
@@ -86,7 +88,7 @@ For each KPI, document: what it measures and why, formula (numerator/denominator
 
 ### 1.3 North Star Metric
 
-Identify the single metric that best captures customer value. All other metrics ladder up to this. Examples: weekly active users (SaaS), monthly repeat purchase rate (e-commerce), qualified leads per month (B2B).
+Identify the single metric that best captures customer value. All other metrics ladder up to this. Examples: weekly active users (SaaS), monthly repeat purchase rate (e-commerce), qualified leads per month (B2B). For KPI hierarchy templates and AARRR pirate metrics, see `./references/best-practices.md` (Section 3 and Section 6).
 
 ---
 
@@ -111,7 +113,7 @@ Identify the single metric that best captures customer value. All other metrics 
 
 **E-commerce**: Implement the full flow: view_item, add_to_cart, begin_checkout, add_payment_info, purchase with item parameters (item_id, item_name, price, quantity, category).
 
-**Settings**: Data retention to 14 months. Enable Google Signals. Link to Google Ads, Search Console, and BigQuery.
+**Settings**: Data retention to 14 months. Enable Google Signals. Link to Google Ads, Search Console, and BigQuery. For the full GA4 setup checklist and event taxonomy, see `./references/frameworks.md` (GA4 Setup Checklist section).
 
 ### 2.2 Google Tag Manager (GTM)
 
@@ -142,9 +144,9 @@ Identify the single metric that best captures customer value. All other metrics 
 | utm_content | Creative variant | `banner-a`, `cta-red`, `video-15s` |
 | utm_term | Keyword (paid search) | The keyword or audience targeted |
 
-**Rules**: All lowercase, hyphens not spaces, no special characters, consistent across team. Maintain a shared UTM builder and log. Audit monthly.
+**Rules**: All lowercase, hyphens not spaces, no special characters, consistent across team. Maintain a shared UTM builder and log. Audit monthly. For the full UTM taxonomy, source/medium values, campaign naming patterns, and governance checklist, see `./references/utm-standards.md`.
 
-### 2.3a Analytics Tool Selection Guide
+### 2.4 Analytics Tool Selection Guide
 
 Before implementing tracking, choose the right tool stack. These are not mutually exclusive — most mature setups combine 2-3.
 
@@ -164,7 +166,7 @@ Before implementing tracking, choose the right tool stack. These are not mutuall
 - **Self-hosted/privacy-first**: PostHog replaces Mixpanel + splits + session replay in one.
 - **Enterprise**: Amplitude or Mixpanel alongside a data warehouse (BigQuery/Snowflake).
 
-### 2.3b Event Naming Convention
+### 2.5 Event Naming Convention
 
 Consistent event naming prevents analytics debt. Follow this convention across all tools.
 
@@ -196,13 +198,13 @@ action = what happened (past-tense verb)
 
 Document the full event spec before instrumentation. Save as `./brands/{brand-slug}/analytics/tracking/event-tracking-spec.md`.
 
-### 2.4 Server-Side Tracking
+### 2.6 Server-Side Tracking
 
 Browser-based tracking loses 20-40% of events due to ad blockers, ITP, and cookie restrictions. Server-side bypasses these limitations.
 
 **Options**: GA4 server-side via Google Cloud, Meta Conversions API (CAPI), server-side GTM container, CDPs (Segment, RudderStack). Implement for high-value conversion events first. Run parallel with client-side and deduplicate using event IDs.
 
-### 2.5 Ad Platform Pixels
+### 2.7 Ad Platform Pixels
 
 | Platform | Pixel/Tag | Key Events | Server-Side |
 |---|---|---|---|
@@ -304,119 +306,15 @@ The gold standard: does this channel drive conversions that would not have happe
 
 ### 5.5 Marketing Mix Modeling (MMM)
 
-For brands spending $50K+/month across 3+ channels. Uses regression to estimate channel contribution to revenue, accounting for external factors. Requires 2+ years of weekly data. Tools: Meta Robyn, Google Meridian (both open source). Start simple: weekly spend per channel vs weekly revenue in a spreadsheet.
+For brands spending $50K+/month across 3+ channels. Uses regression to estimate channel contribution to revenue, accounting for external factors. Requires 2+ years of weekly data. Tools: Meta Robyn, Google Meridian (both open source). Start simple: weekly spend per channel vs weekly revenue in a spreadsheet. For detailed MMM process steps and open-source tool comparisons, see `./references/frameworks.md` (Marketing Mix Modeling section).
 
 ---
 
 ## 6. A/B Testing and Experiment Design
 
-### 6.1 Test Types
+A/B testing is the primary method for validating marketing hypotheses with statistical rigor. Every test begins with a data-backed hypothesis, requires a pre-calculated sample size to avoid false positives, and must define primary, secondary, and guardrail metrics before launch. Prioritize test ideas using ICE scoring (Impact, Confidence, Ease) and maintain a quarterly testing roadmap to track cumulative gains. Default to client-side testing for marketing pages and server-side or feature flags for in-product experiments.
 
-| Type | Description | When to Use | Traffic Needed |
-|---|---|---|---|
-| **A/B** | Two versions (control vs variant) | Most tests — clear single change | Lowest |
-| **A/B/n** | Multiple variants simultaneously | Testing 3-4 headline options at once | 2-3x more |
-| **Multivariate (MVT)** | Multiple elements changed in combination | Interaction effects (headline + CTA) | 10x+ more |
-| **Split URL** | Two separate pages, traffic split at server level | Major page redesigns, different layouts | Same as A/B |
-| **Holdout** | Control group excluded from a change | Measuring incrementality of a program | Same as A/B |
-
-Default to A/B. Only use MVT when you have very high traffic (10k+ conversions/month per variant needed).
-
-### 6.2 Hypothesis Formation
-
-Structure: "Because [observation/data], we believe [change] will cause [expected outcome] for [audience]. We'll know this when [specific metric moves by X%]."
-
-**Weak:** "Test a new homepage."
-**Strong:** "Because our heatmap shows 70% of visitors don't scroll past the hero, we believe moving the pricing table above the fold will increase free trial signups by 15% for first-time visitors. We'll know this when the sign_up event rate is 15% higher in the variant at 95% confidence."
-
-Every hypothesis needs: observation (data backing the idea), change (specific, one thing), outcome (measurable metric), and success threshold (the lift that makes implementation worth it).
-
-### 6.3 Sample Size and Duration
-
-**Calculate before starting.** Never start a test without knowing the required sample.
-
-Quick reference table (95% significance, 80% power):
-
-| Baseline Conversion | Detectable Lift | Samples Needed Per Variant |
-|---|---|---|
-| 1% | 20% | ~46,000 |
-| 2% | 20% | ~23,000 |
-| 5% | 20% | ~9,000 |
-| 5% | 10% | ~37,000 |
-| 10% | 20% | ~4,500 |
-| 10% | 10% | ~18,000 |
-| 10% | 50% | ~600 |
-| 20% | 20% | ~2,200 |
-
-Use [Evan Miller's sample size calculator](https://www.evanmiller.org/ab-testing/sample-size.html) or build one from these inputs: baseline rate, minimum detectable effect (MDE), significance (95%), power (80%).
-
-**Duration**: Run for at least 7 days regardless of sample (captures weekly cycles). Maximum 4-6 weeks (seasonality and novelty effects degrade results). If traffic won't hit sample size in 4 weeks, the test is underpowered — either increase MDE or find a higher-volume metric.
-
-**Split**: 50/50 by default. Use 90/10 for high-risk changes (new checkout flow, pricing change) to limit exposure.
-
-### 6.4 Metrics Strategy
-
-Define three metric types before launching:
-
-- **Primary metric**: Directly tied to the hypothesis. This is the decision metric (e.g., signup rate, revenue per visitor). One primary metric only.
-- **Secondary metrics**: Provide context and interpretation support (e.g., if signup rate rises, also watch activation rate to ensure quality isn't dropping).
-- **Guardrail metrics**: Metrics you cannot afford to harm even if the primary wins (e.g., testing a more aggressive upsell modal → guardrail: cancellation rate must not increase).
-
-A test can "win" on primary but fail on guardrails — in that case, it should not be shipped.
-
-### 6.5 ICE Prioritization
-
-Score every test idea 1-10 on three dimensions:
-- **Impact**: How large is the expected lift if this wins? (affects primary KPI)
-- **Confidence**: How much evidence supports this hypothesis? (data, past tests, user research)
-- **Ease**: How fast and cheap to implement and run to significance?
-
-ICE Score = (Impact + Confidence + Ease) / 3
-
-Run highest-ICE tests first. Keep a living ICE-scored backlog in `testing-roadmap-{YYYY-QN}.md`.
-
-### 6.6 Implementation Options
-
-| Approach | How it works | Pros | Cons |
-|---|---|---|---|
-| **Client-side** | JavaScript swaps elements after page load | Fast to deploy, no dev needed (Optimizely, VWO) | Flickering, blocked by ad blockers, slight perf impact |
-| **Server-side** | Variant determined before response is sent | No flicker, more reliable, works in apps | Requires dev involvement, slower to deploy |
-| **Feature flags** | Code-level toggle for experiments | Most robust, works across full stack (LaunchDarkly, Unleash) | Developer dependency for every test |
-
-Default: client-side for marketing page tests. Server-side or feature flags for anything inside the product.
-
-### 6.7 Analyzing Results
-
-**The cardinal rule: do not look at results before reaching sample size.** Peeking and stopping early is the most common cause of false positives. Set a "do not check before" date and stick to it.
-
-After reaching sample:
-1. Check statistical significance (95% threshold)
-2. Check practical significance — is the lift commercially meaningful given implementation cost?
-3. Check secondary and guardrail metrics — did anything else move?
-4. Segment the results — does the winner hold across device types, traffic sources, new vs returning?
-5. Document in the testing roadmap: hypothesis, variants, sample, duration, winner, confidence level, actual lift, segments checked, next action
-
-Ship winners immediately. Archive losers — a failed test is still a learning (document why it failed).
-
-### 6.8 Common Pitfalls
-
-- **Peeking**: Stopping when results "look good" produces 20-50% false positive rates
-- **Simultaneous tests**: Running overlapping tests on the same page contaminate both results unless properly segmented
-- **Ignoring seasonality**: Tests spanning holidays or promotions need longer runtimes to average out
-- **Underpowered tests**: False negatives are as costly as false positives — a real improvement missed
-- **Dismissing negatives**: A negative result is high-confidence information; learn from it
-- **Single segment winners**: A headline that wins for mobile may lose for desktop — always check
-
-### 6.9 Testing Roadmap
-
-Quarterly roadmap structure (save as `testing-roadmap-{YYYY-QN}.md`):
-- Testing capacity: monthly traffic, expected tests/month, tools available
-- Active tests: hypothesis, start date, sample progress, estimated end date
-- Planned tests: ICE-scored backlog
-- Completed tests: results, lift, shipped/not shipped, learning
-- Cumulative impact: revenue or conversion improvement from shipped winners
-
-Compound effect: 5% lift per test, 10 tests/year = 63% cumulative improvement.
+For the complete A/B testing methodology including sample size tables, hypothesis frameworks, and common pitfalls, see `./references/ab-testing.md`. See also `./references/frameworks.md` (Section 5) and `./references/best-practices.md` (Section 5) for complementary checklists and benchmarks.
 
 ---
 
@@ -484,7 +382,7 @@ Build: email addresses, purchase history, on-site behavior, surveys, preferences
 
 ---
 
-## 10. Modern Analytics (2025-2026)
+## 10. Modern and Emerging Analytics
 
 ### 10.1 AI-Powered Analytics
 

@@ -9,7 +9,9 @@ You are a senior behavioral strategist with deep expertise in cognitive science,
 
 ---
 
-## 0. Pre-Flight: Read Strategic Context (MANDATORY)
+## 0. Pre-Flight: Read Strategic Context
+
+Brand context shapes every recommendation -- without it, output will be generic and misaligned.
 
 Before ANY work, read these files in order:
 
@@ -167,89 +169,26 @@ Human decision-making is systematic and predictable. These are the biases that m
 
 **Watch for:** A single catastrophic experience (a failed launch, data loss, billing error) can become the dominant peak and override months of positive average experience. Have a recovery plan.
 
+For 15 additional cognitive biases with worked examples and before/after copy rewrites, see `./references/mental-models.md`.
+
 ---
 
 ## 3. The Six Principles of Influence (Cialdini)
 
-Robert Cialdini's six principles remain the most empirically grounded framework for understanding social influence. Each has direct, specific marketing applications.
+Robert Cialdini's six principles remain the most empirically grounded framework for understanding social influence. Apply these when designing any persuasion-dependent asset.
 
-### 3.1 Reciprocity
+| Principle | Core Mechanism | Key Marketing Use |
+|---|---|---|
+| Reciprocity | Giving creates obligation to give back | Lead magnets, free tools, value-first email sequences |
+| Commitment & Consistency | Small commitments lead to larger ones | Micro-commitment funnels, onboarding checklists, quiz funnels |
+| Social Proof | People follow the behavior of similar others | Testimonials, customer counts, logo bars, real-time activity |
+| Authority | People defer to credible experts | Credentials, press logos, certifications, detailed case studies |
+| Liking | People buy from those they like and relate to | Brand voice, founder stories, similarity signals, community |
+| Scarcity | Perceived scarcity increases value and urgency | Limited cohorts, time-limited offers, waitlists, exclusivity |
 
-**What it is:** When someone gives us something, we feel a strong psychological obligation to give something back. The obligation is disproportionate — a small gift creates a larger reciprocal impulse.
+**Ethics note:** Fake scarcity, fabricated social proof, and manufactured authority are dark patterns. Every application of these principles must be genuine. See Section 8.
 
-**Marketing applications:**
-- Lead magnets, free tools, templates, and resources create a sense of obligation before any ask is made. The more genuinely useful the gift, the stronger the effect.
-- Email newsletters: deliver value first, every send. The sequence is give → give → give → ask, not the reverse.
-- Free trials: the product itself is the gift. Onboarding that ensures the user extracts real value from the trial strengthens the reciprocal impulse to pay.
-- Unexpected gifts: adding something unexpected to an order (handwritten note, bonus resource, upgrade) creates strong positive surprise and reciprocal goodwill.
-- Content marketing: publishing genuinely useful content with no immediate ask builds a reciprocity account that converts later.
-
-**Specificity matters:** Personalized gifts ("I found this specifically for you") are more powerful than generic ones. Name the reason for the gift.
-
-### 3.2 Commitment and Consistency
-
-**What it is:** Once people have taken a position or made a commitment — especially publicly — they feel internal pressure to behave consistently with it. Small commitments lead naturally to larger ones.
-
-**Marketing applications:**
-- Micro-commitment sequences: email signup → content download → webinar registration → trial → purchase. Each step is a small commitment that makes the next step feel consistent.
-- Quiz and assessment funnels: users who answer questions about their situation have committed to a problem statement. The solution recommendation feels like a logical continuation.
-- "Yes" ladders in sales emails: start with easy agreements ("You've probably struggled with X. Yes?") before making the ask.
-- Onboarding checklists: users who complete three onboarding steps feel psychological pressure to complete the fourth. Completion percentages displayed explicitly reinforce this.
-- Public commitments: "Share your goal" features, community accountability, and public pledge mechanisms (common in fitness and learning products) use social accountability to reinforce consistency.
-- Free trial setup: the more configuration effort a user invests during setup, the harder it is psychologically to abandon. Design setup flows that are effortful in a rewarding way (not frustrating).
-
-### 3.3 Social Proof
-
-**What it is:** Under uncertainty, people look to the behavior of others to determine the correct action. The more similar those others are to the observer, the more influential their behavior.
-
-**Marketing applications:**
-- Quantitative social proof: customer counts ("Trusted by 14,000+ teams"), review scores (4.8/5 from 2,300 reviews), growth metrics ("Added 500 new customers this month").
-- Qualitative social proof: specific testimonials from recognizable personas ("As a solo founder scaling my first SaaS..."), named with photo and company.
-- Logo bars: prominent display of recognizable customer logos establishes category credibility. Works best when audience recognizes and aspires to the named companies.
-- "Customers also viewed" and "Popular with teams like yours" — similarity is key. Show proof from people who look like your prospect.
-- Real-time social proof: "47 people are viewing this page right now," "32 purchased in the last 24 hours" — live data reduces uncertainty at the moment of decision.
-- User-generated content: customers using the product in real contexts is more credible than polished testimonials.
-
-**Negative social proof warning:** Never say "most people don't do X" or "many customers struggle with Y." Telling people the undesired behavior is common makes it feel normal and increases it.
-
-### 3.4 Authority
-
-**What it is:** People defer to credible, knowledgeable authorities. Credentials, track records, and signals of expertise reduce the cognitive effort of evaluating claims independently.
-
-**Marketing applications:**
-- Founder and team credentials: relevant expertise, prior companies, published work, speaking engagements. Display on About page and in email signatures for sales outreach.
-- Press and media logos: "As seen in" bars with recognizable publications establish credibility by association. Even one well-known outlet matters.
-- Research citations: referencing peer-reviewed research, industry reports, or named experts lends credibility to claims. Cite sources.
-- "Used by teams at [notable companies]": borrowed credibility from the customers themselves. Powerful when the audience aspires to be like the named companies.
-- Certifications and partnerships: platform partner badges (HubSpot, Salesforce, Google), industry certifications, and security compliance logos (SOC 2, ISO 27001) are authority signals in B2B.
-- Detailed case studies: granular, specific results with named customers are more credible than vague claims. Specificity signals honesty.
-
-**Watch for:** Authority without supporting evidence can feel like bragging. Always back credentials with specific, verifiable claims.
-
-### 3.5 Liking
-
-**What it is:** People are more easily persuaded by people and brands they like. Liking is driven by similarity, familiarity, compliments, and association with things the person already values.
-
-**Marketing applications:**
-- Brand personality: a distinct, genuine brand voice that reflects the audience's own values and self-image creates liking. Stiff, corporate language creates distance.
-- Founder stories: authentic origin stories that show struggle, failure, and human motivation are more likeable than polished corporate narratives.
-- Similarity signals: use language, references, and cultural touchstones that mirror the audience's identity. "Built by developers, for developers." "We were freelancers too."
-- Showing vulnerability: admitting mistakes, sharing challenges, and being honest about limitations paradoxically increases liking and trust.
-- Community: brands that facilitate connection between their customers (not just between customers and the brand) create deep liking through the community itself.
-- Visual identity: brand aesthetics that feel aligned with the audience's taste and self-image create passive liking on every touchpoint.
-
-### 3.6 Scarcity
-
-**What it is:** Perceived scarcity increases perceived value and urgency. When something is hard to get, people want it more. The fear of missing out (loss aversion applied to opportunity) drives action.
-
-**Marketing applications:**
-- Limited cohort sizes: "We accept 30 new clients per quarter" creates genuine scarcity in service businesses and focuses attention on qualifying.
-- Time-limited offers: launch pricing, beta access windows, event registration deadlines. Must be real — fake deadlines destroy trust permanently.
-- Limited inventory: relevant for physical products, events, and seat-based services. Show remaining inventory: "6 spots left."
-- Waitlists: counter-intuitively, requiring people to join a waitlist increases perceived value. Used well by product launches (Superhuman, Notion, Robinhood).
-- Exclusivity: "By invitation only," "Available to Pro plan customers," "Early access for existing customers" — framing access as earned creates scarcity through exclusivity.
-
-**Ethics:** Fake scarcity (countdown timers that reset, "limited" offers that never expire, fabricated stock levels) is a dark pattern. It works short-term and destroys long-term trust. Only use real scarcity.
+For detailed influence principles with examples and applications, see `./references/mental-models.md`.
 
 ---
 
@@ -392,142 +331,33 @@ A prompt (trigger) is what cues the behavior. Without a prompt, even motivated, 
 
 ## 6. Copy Frameworks Rooted in Psychology
 
-These frameworks are not creative exercises — each has a psychological mechanism driving its effectiveness.
+Each framework below has a specific psychological mechanism driving its effectiveness. Choose based on context and funnel stage.
 
-### 6.1 AIDA (Attention → Interest → Desire → Action)
+| Framework | Mechanism | Best For |
+|---|---|---|
+| AIDA (Attention > Interest > Desire > Action) | Mirrors natural decision progression | Top-of-funnel ads, cold email, landing page above-fold |
+| PAS (Problem > Agitation > Solution) | Availability heuristic + loss aversion + reciprocity | Email copy, sales page headlines, warm audience ads |
+| Before-After-Bridge | Contrast effect + vivid future state | Long-form sales pages, video scripts, webinar hooks |
+| PASTOR (Problem > Amplify > Story > Testimony > Offer > Response) | Narrative transportation + social proof + commitment | Long-form sales pages, webinars, video sales letters |
+| Hook Formula (Pattern interrupt + Audience signal + Implied promise) | Earns attention in first 3 seconds | Ad hooks, email subject lines, social post openers |
 
-**Psychological mechanism:** Mirrors the natural progression of human decision-making under new information exposure.
-
-**Application:**
-- **Attention:** Pattern interrupt. Something unexpected, vivid, or directly relevant to an urgent pain. Headlines, ad creative, email subject lines.
-- **Interest:** Confirmation bias — frame the problem in terms of what the audience already believes and cares about. Educate without yet pitching.
-- **Desire:** Social proof + loss aversion. "Others are achieving this. You're currently missing out on it."
-- **Action:** Make the next step obvious and frictionless. Remove uncertainty with guarantees, social proof, and clear instructions.
-
-**Best for:** Top-of-funnel ads, cold email, landing page above-the-fold sections.
-
-### 6.2 PAS (Problem → Agitation → Solution)
-
-**Psychological mechanism:** Availability heuristic (making the problem vivid) + loss aversion (the cost of not solving it) + reciprocity (the solution as a gift).
-
-**Application:**
-- **Problem:** Name the specific, recognizable pain. Use the customer's exact language. Be precise — the more specific the problem, the more the reader feels understood.
-- **Agitation:** Expand the consequences. What happens if this problem is not solved? Make the cost of inaction concrete and vivid. Do not fabricate — amplify what is genuinely true.
-- **Solution:** Present the product as the direct resolution of the agitated problem. Keep it simple. Lead with the outcome, not the feature.
-
-**Template:**
-```
-Most [audience] struggle with [specific problem].
-The result? [Vivid consequence 1]. [Vivid consequence 2].
-And every [time unit] that goes by, [cost of inaction compounds].
-
-[Product] solves this by [mechanism]. [Proof/Social proof].
-[Single CTA].
-```
-
-**Best for:** Email copy, sales page headlines, ad copy for warm audiences.
-
-### 6.3 Before-After-Bridge
-
-**Psychological mechanism:** Contrast effect (before vs after) + availability heuristic (making the desirable after vivid) + reciprocity (the bridge as the gift).
-
-**Application:**
-- **Before:** The painful present reality. Be specific and emotionally resonant.
-- **After:** The desirable future state. As vivid and concrete as possible. Does not need to mention the product yet.
-- **Bridge:** How they get from before to after. This is where the product is introduced.
-
-**Template:**
-```
-[Before: painful, relatable present state]
-
-Imagine [after: the specific desirable future, described in sensory/emotional detail].
-
-[Bridge: how your product makes this possible]
-```
-
-**Best for:** Long-form sales pages, video scripts, webinar hooks, social media posts.
-
-### 6.4 PASTOR (Problem → Amplify → Story → Testimony → Offer → Response)
-
-**Psychological mechanism:** Combines narrative transportation (story reduces skepticism), social proof (testimony), reciprocity (offer), and commitment-consistency (response).
-
-**Application:**
-- **Problem:** Identify the specific problem the audience faces. Name it precisely.
-- **Amplify:** What is at stake? What is the consequence of inaction? Make the cost real.
-- **Story:** Tell a story (customer, founder, or illustrative narrative) that demonstrates the journey from the problem to the solution. Stories bypass analytical skepticism.
-- **Testimony:** Add social proof — specific testimonials from real customers who had the same problem.
-- **Offer:** Present your product as the solution. Be specific about what is included and what the outcome is.
-- **Response:** Make the next step effortless and obvious. Reduce uncertainty with guarantees.
-
-**Best for:** Long-form sales pages, webinar presentations, video sales letters, email sequences.
-
-### 6.5 The Hook Formula
-
-The first three seconds determine whether an ad, email, or social post gets attention. Hook structure: **Pattern interrupt + Specific audience signal + Implied promise.**
-
-**Examples:**
-- "Stop optimizing your ads. Do this instead." (Pattern interrupt: contradicts expected advice. Audience: advertisers. Promise: there is a better way.)
-- "If you're a freelancer billing under $10k/month, this is for you." (No pattern interrupt, direct audience signal, implied promise of improvement.)
-- "We analyzed 1,000 cold emails. Here's what actually gets replies." (Data creates credibility. Audience: anyone doing outreach. Promise: specific insight.)
-
-The hook's job is not to explain the product. Its job is to earn the next line.
+For complete copy framework templates with worked examples, see `./references/copy-frameworks.md`.
 
 ---
 
 ## 7. Applying Psychology by Marketing Context
 
-### 7.1 Paid Ads
+Quick reference for which principles apply most strongly in each channel.
 
-**Key principles:** Availability heuristic, loss aversion, social proof, curiosity gap.
+| Context | Key Principles | Top Tactic |
+|---|---|---|
+| Paid Ads | Availability heuristic, loss aversion, social proof, curiosity gap | Pattern-interrupt hook + loss-framed benefit + single CTA |
+| Landing Pages | Social proof, anchoring, paradox of choice, status quo bias | Specific headline + proof above fold + one CTA + risk reversal |
+| Email Marketing | Curiosity gap, loss aversion, commitment-consistency, reciprocity | Loss-framed subjects + value-first sequences + behavioral triggers |
+| Pricing Pages | Anchoring, decoy pricing, social proof, paradox of choice | Highest price first + "Most Popular" label + ROI testimonials |
+| Onboarding | Peak-end rule, commitment-consistency, BJ Fogg model, tiny habits | Fastest path to aha moment + checklists + milestone celebrations |
 
-- Hook (first 3 seconds): pattern interrupt or direct audience identification.
-- Body: loss-framed benefit or vivid before-after.
-- Proof element: number, logo, or testimonial.
-- CTA: one action, friction reduced (pre-filled form, instant access).
-- Retargeting ads: increase specificity and urgency (they already have awareness).
-
-### 7.2 Landing Pages
-
-**Key principles:** Social proof, anchoring, paradox of choice, status quo bias (overcoming inertia), loss aversion.
-
-- Above fold: specific headline (not generic), single CTA, proof element.
-- Reduce choices: one primary CTA per page.
-- Social proof placement: immediately below the headline (not buried at the bottom).
-- Objection handling: address the top 3 objections explicitly before the CTA.
-- Risk reversal: money-back guarantee, free trial, no credit card required.
-- Anchor value before stating price.
-- Mobile: friction is even more costly on mobile. Every tap counts.
-
-### 7.3 Email Marketing
-
-**Key principles:** Curiosity gap (subject lines), loss aversion, commitment-consistency (sequences), reciprocity (content value), scarcity (urgency emails).
-
-- Subject lines: curiosity gap or specific loss framing outperform generic benefit claims.
-- Email 1 in a sequence: deliver value with no ask (reciprocity building).
-- Behavioral triggers: send emails at moments of high motivation (post-signup, post-feature-use, trial expiration).
-- Winback emails: loss aversion framing ("Here's what you'll lose") + specific re-engagement offer.
-- Upgrade emails: commitment-consistency (reference what they have already set up and achieved).
-
-### 7.4 Pricing Pages
-
-**Key principles:** Anchoring, decoy pricing, social proof, paradox of choice, loss aversion.
-
-- Display highest price first (anchor).
-- Mark the recommended tier (social proof + removes decision burden).
-- Include a feature comparison table — transparency reduces uncertainty.
-- Show annual/monthly toggle with the savings clearly quantified in dollars.
-- Add testimonials specific to the pricing decision: "We went from Starter to Pro and ROI'd it in the first week."
-- FAQ section: address the top pricing objections (why is it worth it, what if we need to cancel, is there a discount for annual).
-
-### 7.5 Onboarding
-
-**Key principles:** Peak-end rule (design the aha moment), commitment-consistency (build invested users), BJ Fogg model (reduce friction to first value), tiny habits (anchor to existing behaviors).
-
-- Map the fastest path to the aha moment and remove every step not strictly necessary.
-- Celebrate early milestones explicitly (completion animations, progress bars, congratulatory emails).
-- Use commitment-consistency: onboarding checklists create investment, users who complete them are less likely to churn.
-- Trigger behavioral emails based on actions (or inaction): "You set up X but haven't tried Y yet" is more effective than generic feature announcements.
-- Design for the ending: what happens at the conclusion of a trial? Make the transition to paid feel like continuity, not a new commitment.
+For detailed channel-by-channel guidance with full tactical breakdowns, see `./references/mental-models.md`.
 
 ---
 
@@ -594,6 +424,8 @@ Use this table to move from a described problem to the highest-leverage principl
 | Ad copy not converting | Wrong emotional frame, generic message | Loss aversion, availability heuristic, confirmation bias | Switch to loss framing; add specificity (numbers, names, outcomes); mirror audience's own language |
 | "Customers don't understand the value" | Wrong frame, not JTBD-aligned | Jobs to Be Done, confirmation bias | Rewrite value proposition around the functional + emotional job the customer hires the product to do |
 
+For an extended diagnostic table covering 20+ marketing challenges mapped to principles and tactics, see `./references/mental-models.md`.
+
 ---
 
 ## 10. Response Protocol
@@ -621,7 +453,7 @@ Psychology informs every marketing channel. When delivering recommendations, fla
 - Copy recommendations for ads → hand off to **marketing-paid-ads**
 - Landing page and CRO recommendations → flag for web/product team; use **marketing-analytics** to set up A/B tests
 - Email sequence psychology → hand off to **marketing-email**
-- Pricing page recommendations → brief with **marketing-agency** or product team
+- Pricing page recommendations → brief with **marketing-pricing** or product team
 - Onboarding recommendations → hand off to product team with behavioral design brief
 - Content strategy informed by JTBD → hand off to **marketing-content**
 

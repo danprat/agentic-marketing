@@ -560,3 +560,42 @@ Based on competitive analysis:
 | Need competitive price benchmarks | Competitive analysis (Research Mode) | 1-2 days | Free (agent-browser) |
 | Enough traffic to test | A/B price test (in-product) | 4-8 weeks for significance | Development time only |
 | Quick gut-check, limited budget | WTP interviews (5-7 customers) | 1 week | $250-$700 (incentives) |
+
+---
+
+## 6. Freemium vs Free Trial: Detailed Decision Framework
+
+### 6.1 Decision Matrix
+
+| Factor | Points to Freemium | Points to Free Trial |
+|---|---|---|
+| Acquisition cost | High CAC -- freemium spreads word organically | Lower CAC -- paid or content acquisition |
+| Product virality | Built-in network effects or viral sharing | No natural virality |
+| Activation complexity | Simple -- users reach value in minutes | Complex -- requires setup or configuration |
+| Value clarity | Value is immediate and obvious | Value becomes clear after sustained use |
+| Support cost | Low -- product is self-serve | Higher -- free users may demand support |
+| Business model | Volume play, monetize through expansion | Conversion play, quality > quantity |
+| Competitor behavior | Competitors have freemium -- table stakes | Competitors use free trials |
+
+### 6.2 Freemium Design Rules
+
+If choosing freemium:
+- The free tier must deliver genuine value (not a crippled demo). Users who get value stay; users who do not, churn.
+- Gate on the value metric: free users get 100 contacts, 3 projects, 500 API calls -- not 10 days.
+- Make the upgrade path visible within the product: trigger upgrade prompts at the limit, not before.
+- Track free-to-paid conversion rate. Healthy range: 2-5% for consumer, 5-15% for SMB SaaS.
+- Design for viral loops: free users share, invite, embed, or publish -- which drives new signups.
+
+### 6.3 Free Trial Design Rules
+
+If choosing free trial:
+- **Length**: 7, 14, or 30 days. Match trial length to time-to-value. If users reach the "aha moment" in 3 days, a 30-day trial delays conversion.
+- **Credit card required vs not**: CC required reduces trial starts by ~50% but improves paid conversion by 2-3x. Net result depends on conversion rate and traffic volume. Test both.
+- **Trial experience**: Full product access during trial (or access to the "Professional" tier). Crippled trials create negative impressions.
+- **Trial email sequence**: Day 0 (welcome), Day 3 (tips to get value fast), Day 7 (key feature highlight), Day 10 (conversion push), Day 13 (urgency / final reminder). See marketing-email skill for sequence design.
+- **Expiry behavior**: Trial end should show a clear upgrade screen, not lock users out with no explanation. Show what they accomplished during the trial and what they would lose.
+
+### 6.4 Hybrid Approaches
+
+- **Freemium + time-limited trial of paid features**: Start on free tier, activate a 14-day trial of Pro features automatically, then revert to free. This shows the value of paid before the user decides.
+- **Freemium with usage-based monetization**: Free up to a usage limit; pay-as-you-go beyond that. No forced upgrade; just pay for what you use. Works well for developer tools.

@@ -9,7 +9,9 @@ You are a senior retention strategist with deep expertise across cancel flow des
 
 ---
 
-## 0. Pre-Flight: Read Strategic Context (MANDATORY)
+## 0. Pre-Flight: Read Strategic Context
+
+Brand context shapes every recommendation -- without it, output will be generic and misaligned.
 
 Before ANY retention work, read these files in order:
 
@@ -26,62 +28,9 @@ Ground every recommendation in the brand's actual strategy and positioning. Rete
 
 ## Research Mode: Live Competitive & Benchmark Intelligence
 
-Use `agent-browser` to gather live data on competitor cancel flows, dunning patterns, and industry benchmarks when current intelligence is needed. Start a named session to share context across commands.
+Use `agent-browser` to gather live data on competitor cancel flows, dunning patterns, and industry benchmarks when current intelligence is needed. Covers competitor cancel flow teardowns, Churnkey/ProsperStack feature research, dunning email pattern mining, Baremetrics benchmark extraction, and Stripe Smart Retry documentation.
 
-### 1. Competitor Cancel Flow Research
-
-```bash
-# Examine a competitor's cancellation experience (requires having an account or trial)
-agent-browser --session retention-research open "https://{competitor}.com/settings/cancel" && agent-browser wait --load networkidle && agent-browser wait 2000
-agent-browser screenshot ./brands/{brand-slug}/analytics/retention/competitor-cancel-flow-{competitor}.png
-agent-browser get text body
-# Look for: exit survey questions, offer types, pause options, friction tactics, UX tone
-```
-
-### 2. Industry Cancel Flow Examples (Churnkey Blog & Case Studies)
-
-```bash
-agent-browser --session retention-research open "https://churnkey.co/blog" && agent-browser wait --load networkidle && agent-browser wait 2000
-agent-browser get text body
-# Extract: save rates benchmarks, offer types that work by industry, UX best practices
-```
-
-### 3. Dunning Email Examples & Patterns (Really Good Emails)
-
-```bash
-agent-browser --session retention-research open "https://reallygoodemails.com/emails/type/dunning" && agent-browser wait --load networkidle && agent-browser wait 3000
-agent-browser get text body
-# Extract: subject line patterns, tone (urgent vs friendly), CTA patterns, timing notes
-```
-
-### 4. Retention Benchmark Data (Baremetrics Open Benchmarks)
-
-```bash
-agent-browser --session retention-research open "https://baremetrics.com/benchmarks" && agent-browser wait --load networkidle && agent-browser wait 3000
-agent-browser get text body
-# Extract: median churn rates by ARR band, trial conversion rates, MRR growth rates
-```
-
-### 5. ProsperStack / Churnkey Feature Research
-
-```bash
-agent-browser --session retention-research open "https://prosperstack.com/features" && agent-browser wait --load networkidle
-agent-browser get text body
-# Extract: cancel flow capability comparison, pricing signals, integration options
-
-agent-browser --session retention-research open "https://churnkey.co/features" && agent-browser wait --load networkidle
-agent-browser get text body
-```
-
-### 6. Stripe Smart Retries Documentation
-
-```bash
-agent-browser --session retention-research open "https://stripe.com/docs/billing/revenue-recovery" && agent-browser wait --load networkidle && agent-browser wait 2000
-agent-browser get text body
-# Extract: Smart Retry logic, card updater, dunning configuration options
-```
-
-Close the research session when done: `agent-browser --session retention-research close`
+For full `agent-browser` commands and session workflows, see `./references/research-playbook.md`.
 
 ---
 
@@ -124,12 +73,9 @@ Target: above 100% (expansion exceeds churn). Best-in-class SaaS: 120-140%.
 
 ### 1.3 Cohort Retention Analysis
 
-Run retention curves by signup cohort (monthly or quarterly). Key questions:
-- Which cohorts have the steepest early drop-off? (Indicates onboarding failure)
-- Which cohorts flatten out and retain long-term? (Indicates product-market fit segment)
-- Is retention improving or worsening across recent cohorts? (Indicates product or go-to-market trends)
+Run retention curves by signup cohort (monthly or quarterly) to identify onboarding failures, product-market fit segments, and trend direction. Always segment by plan tier, acquisition channel, activation status, and geography.
 
-Present as a cohort retention table: rows = signup month, columns = months since signup (M0-M24), cells = % of original cohort still active.
+For the full cohort table template, interpretation guide, and segmentation methodology, see `./references/benchmarks.md` Section 1.
 
 ### 1.4 Identifying Churn Causes
 
@@ -166,38 +112,13 @@ A well-designed cancel flow saves 25-35% of customers who intend to cancel. It i
 ### 2.1 Cancel Flow Architecture
 
 ```
-Customer clicks "Cancel" button
-        |
-        v
-[Pause Gate -- Optional]
-Ask: "Would a pause work instead of cancelling?"
-If yes --> offer 1-3 month pause, confirm, exit flow
-If no --> proceed
-        |
-        v
-[Exit Survey -- Required]
-"Before you go, help us understand why..."
-4-6 reason options (see Section 2.2)
-        |
-        v
-[Dynamic Offer -- Reason-matched]
-Match offer to selected cancellation reason
-(see Section 2.3)
-        |
-        v
-[Offer Response]
-    Accept --> Confirm save, thank customer, update billing/plan
-    Decline --> Continue to confirmation
-        |
-        v
-[Confirmation Page]
-Graceful exit: data export, community, support
-Restate what they'll lose (no guilt, factual)
-        |
-        v
-[Post-Cancel Sequence]
-Win-back email sequence starts (Section 5)
+Cancel button --> [Pause Gate] --> [Exit Survey (4-6 reasons)] --> [Dynamic Offer (reason-matched)]
+  --> Accept: confirm save, update billing/plan
+  --> Decline: [Confirmation Page] graceful exit (data export, community, support)
+  --> [Post-Cancel Sequence] win-back emails start (Section 5)
 ```
+
+See `./references/cancel-flow-templates.md` for full confirmation page copy, post-cancel email, and offer decision tree.
 
 ### 2.2 Exit Survey Design
 
@@ -517,64 +438,21 @@ Beyond the standard time-based sequence, trigger win-back outreach on specific e
 
 ### 6.1 Retention Dashboard Metrics
 
-Track these metrics weekly or monthly depending on business size. Build a single retention dashboard that surfaces all key numbers in one view.
+Track these core metrics weekly or monthly: monthly customer churn rate, gross MRR churn rate, net revenue retention, cancel flow impression rate, save rate, offer acceptance rate, dunning recovery rate, win-back rate (90d), MRR saved per month, and health score distribution. For the complete metrics dashboard specification with formulas, healthy targets, and alert thresholds, see `./references/benchmarks.md` Section 2.
 
-| Metric | Formula | Healthy Target | Alert Threshold |
-|---|---|---|---|
-| Monthly customer churn rate | Customers lost / Customers at start | Under 2% | Above 4% |
-| Gross MRR churn rate | MRR lost / Starting MRR | Under 1.5% | Above 3% |
-| Net Revenue Retention | (Start MRR + Expansion - Contraction - Churn) / Start MRR | Above 100% | Below 90% |
-| Cancel flow impression rate | Customers seeing flow / Customers cancelling | 80%+ | Below 60% |
-| Save rate | Customers saved / Customers who saw flow | 25-35% | Below 15% |
-| Offer acceptance rate | Offers accepted / Offers shown | 15-25% | Below 10% |
-| Dunning recovery rate | Payments recovered / Payments failed | 50-60% | Below 30% |
-| Win-back rate (90d) | Reactivations / Total churned | 10-15% | Below 5% |
-| MRR saved per month | Sum of MRR from saves + dunning recovery | Varies by plan pricing | Baseline from Month 1 |
-| Health score distribution | % Green / Yellow / Red | 70%+ Green | Under 50% Green |
+### 6.2 Industry Benchmarks by Business Type
 
-### 6.2 Industry Benchmarks by Business Type (2025-2026)
-
-| Business Type | Monthly Churn | Annual Churn | NRR Target |
-|---|---|---|---|
-| SMB SaaS | 2-5% | 22-46% | 90-100% |
-| Mid-market SaaS | 1-2% | 12-22% | 100-115% |
-| Enterprise SaaS | 0.5-1% | 6-11% | 110-140% |
-| Consumer subscription | 5-8% | 46-64% | 80-95% |
-| E-commerce subscription box | 6-10% | 54-70% | 80-90% |
-
-**Context note**: These are averages. Best-in-class performers in each category beat these numbers significantly. Use them as a floor, not a ceiling.
+Benchmarks vary significantly by segment (SMB SaaS, mid-market, enterprise, consumer subscription, e-commerce subscription box). Use them as a floor, not a ceiling. For the full industry benchmarks table with monthly churn, annual churn, and NRR targets by business type, see `./references/benchmarks.md` Section 3.
 
 ### 6.3 Leading vs Lagging Indicators
 
-**Lagging indicators** (tell you what happened -- use for reporting):
-- Monthly churn rate
-- MRR lost to churn
-- Win-back rate
-
-**Leading indicators** (tell you what is about to happen -- use for intervention):
-- Health score distribution (% of accounts in Yellow/Red)
-- Activation rate for new signups (leading indicator of future churn in 30-90 days)
-- NPS score trends
-- Failed payment volume
-- Average days since last login across customer base
-
-Build alerts on leading indicators. By the time lagging indicators move, churn has already happened.
-
-### 6.4 Retention Reporting Cadence
-
-| Report | Frequency | Audience | Content |
-|---|---|---|---|
-| Retention dashboard | Weekly | Retention team, CS | All metrics, health distribution, MRR saved |
-| Churn analysis | Monthly | Leadership | Churn rate, reasons breakdown, cohort curves, actions taken |
-| Dunning recovery report | Weekly | Finance, CS | Payments failed, recovery rate, outstanding balance |
-| Cancel flow performance | Monthly | Product, CS | Impression rate, save rate, offer acceptance by type |
-| Win-back campaign report | Monthly | Marketing | Emails sent, open/click rates, reactivations, MRR recovered |
+Lagging indicators (churn rate, MRR lost, win-back rate) tell you what happened -- use for reporting. Leading indicators (health score distribution, activation rate, NPS trends, failed payment volume, average days since last login) tell you what is about to happen -- use for intervention. Build alerts on leading indicators. For the full indicator framework and retention reporting cadence (weekly and monthly reports by audience), see `./references/benchmarks.md` Sections 4-5.
 
 ---
 
 ## 7. Deliverables
 
-All retention deliverables save to `./brands/{brand-slug}/campaigns/retention/`.
+All retention deliverables save to `./brands/{brand-slug}/campaigns/retention/` with an `assets/` subdirectory for screenshots and CSV exports.
 
 | Deliverable | Filename | Key Sections |
 |---|---|---|
@@ -584,21 +462,6 @@ All retention deliverables save to `./brands/{brand-slug}/campaigns/retention/`.
 | Dunning Sequence | `dunning-sequence-{YYYY-MM-DD}.md` | Retry logic, email sequence (all 6 emails), grace period policy, high-value escalation steps |
 | Win-Back Campaign | `winback-campaign-{YYYY-MM-DD}.md` | Segment definitions, email sequence (3-4 emails), offer strategy, event-based trigger plan |
 | Retention Dashboard Spec | `retention-dashboard-{YYYY-MM-DD}.md` | Metric definitions, data sources, alert thresholds, reporting cadence |
-
-### File Organisation
-
-```
-./brands/{brand-slug}/campaigns/retention/
-  churn-diagnosis-{YYYY-MM-DD}.md
-  cancel-flow-{YYYY-MM-DD}.md
-  health-scoring-{YYYY-MM-DD}.md
-  dunning-sequence-{YYYY-MM-DD}.md
-  winback-campaign-{YYYY-MM-DD}.md
-  retention-dashboard-{YYYY-MM-DD}.md
-  assets/
-    competitor-cancel-flow-{competitor}.png
-    cohort-retention-{YYYY-MM}.csv
-```
 
 ---
 

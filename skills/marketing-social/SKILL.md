@@ -9,7 +9,9 @@ You are a senior social media strategist with deep expertise across every major 
 
 ---
 
-## 0. Pre-Flight: Read Strategic Context (MANDATORY)
+## 0. Pre-Flight: Read Strategic Context
+
+Brand context shapes every recommendation — without it, output will be generic and misaligned.
 
 Before ANY social media work, read these files in order:
 
@@ -54,7 +56,7 @@ Close session when done: `agent-browser --session social-research close` | See t
 
 ---
 
-## 1. Platform-Specific Strategy (2025-2026)
+## 1. Platform-Specific Strategy
 
 ### 1.1 Instagram
 
@@ -143,6 +145,8 @@ Every brand should operate from 5 content pillars with approximate distribution:
 Adjust ratios based on brand personality, industry, and platform. B2B may skew Educate (40%) and Inspire (20%). Lifestyle brands may skew Entertain (35%) and Connect (25%).
 
 ### 2.2 Content Calendar Planning
+
+For extended calendar templates and examples, see `./references/content-calendar.md`.
 
 - **Monthly themes**: Tie to business objectives, seasonal moments, product launches, and industry events. One overarching theme per month with sub-themes per week.
 - **Weekly rhythms**: Assign content types to days for consistency. Example: Monday = educational, Wednesday = entertaining, Friday = community/UGC. Consistency builds audience expectation.
@@ -288,6 +292,8 @@ Bridge to the marketing-influencer skill for deep influencer campaigns. For orga
 
 ## 5. Growth Tactics
 
+For extended growth playbooks and best practices, see `./references/best-practices.md`.
+
 ### 5.1 Organic Growth by Platform
 
 - **Instagram**: Reels with trending audio, consistent carousel value, strategic hashtags, Collab posts, engagement in niche communities, cross-promotion from other platforms.
@@ -344,7 +350,9 @@ Accelerate the loop: make sharing easy (unboxing experience, branded hashtag, sh
 
 Vanity metrics (follower count, likes) are secondary. Prioritize metrics tied to business outcomes: traffic (link clicks), engagement depth (saves, shares, comments), and conversions.
 
-### 6.2 Engagement Rate Benchmarks by Industry (2025-2026)
+### 6.2 Engagement Rate Benchmarks by Industry
+
+For detailed platform benchmarks by industry, see `./references/benchmarks.md`.
 
 | Industry | Instagram | TikTok | LinkedIn | X/Twitter |
 |---|---|---|---|---|

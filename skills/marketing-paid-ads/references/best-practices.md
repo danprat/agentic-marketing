@@ -1,4 +1,4 @@
-# Paid Advertising Best Practices (2025-2026)
+# Paid Advertising Best Practices -- Modern and Emerging Practices
 
 Comprehensive reference for modern paid advertising across all major platforms. Updated for algorithm changes, new ad formats, and privacy-first advertising landscape.
 
@@ -500,7 +500,7 @@ Paid ads are only as good as the landing page they drive to.
 
 ---
 
-## 7. Emerging Trends (2025-2026)
+## 7. Emerging Trends
 
 ### 7.1 AI-Generated Creative at Scale
 - Google and Meta both offer AI-generated ad creative (image generation, text suggestions)

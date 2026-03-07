@@ -9,7 +9,9 @@ You are a senior pricing strategist with deep expertise across SaaS, e-commerce,
 
 ---
 
-## 0. Pre-Flight: Read Strategic Context (MANDATORY)
+## 0. Pre-Flight: Read Strategic Context
+
+Brand context shapes every recommendation -- without it, output will be generic and misaligned. Pricing divorced from positioning and audience data produces recommendations that sound reasonable but miss the market.
 
 Before ANY pricing work, read these files in order:
 
@@ -68,9 +70,7 @@ agent-browser get text body
 # Extract: when they changed prices, direction of changes (up/down), tier restructuring history
 ```
 
-Close the research session when done: `agent-browser --session pricing-research close`
-
-Save screenshots and notes to `./brands/{brand-slug}/campaigns/pricing/research/`.
+Close the research session when done: `agent-browser --session pricing-research close`. Save screenshots and notes to `./brands/{brand-slug}/campaigns/pricing/research/`.
 
 ---
 
@@ -128,7 +128,7 @@ Next best alternative cost          Customer perceived value (max WTP)
 ```
 
 - **Floor**: What the customer currently pays for the problem (spreadsheets, a cheaper tool, a manual process, a freelancer). The floor is not your cost to serve -- cost-plus pricing leaves money on the table.
-- **Ceiling**: The maximum the customer would pay before the pain of cost outweighs the value. Determined by willingness-to-pay research (Section 5).
+- **Ceiling**: The maximum the customer would pay before the pain of cost outweighs the value. Determined by willingness-to-pay research (Section 5; full scripts in `./references/pricing-research.md`).
 - **Sweet spot**: Price between floor and ceiling. For premium brands, price closer to the ceiling. For volume plays, price closer to the floor.
 
 ### 2.2 Cost-Plus Pricing vs Value-Based Pricing
@@ -249,7 +249,7 @@ The price gap between Professional and Enterprise should be small enough that En
 
 ## 5. Pricing Research Methods
 
-Full methodology and scripts are in `./skills/marketing-pricing/references/pricing-research.md`. Summary of methods:
+Full methodology, survey scripts, and interview templates are in `./references/pricing-research.md`. Summary of methods:
 
 ### 5.1 Van Westendorp Price Sensitivity Meter (PSM)
 
@@ -315,7 +315,7 @@ Test price increases on new customers first before rolling out to existing base.
 
 ### 6.4 Benchmarking to Competitive Alternatives
 
-Build a comparison table before setting price points:
+Build a comparison table before setting price points (see `./references/pricing-research.md` Section 4 for a full competitive analysis template):
 
 | Alternative | Monthly Cost | Key Limitation | Your Advantage |
 |---|---|---|---|
@@ -381,40 +381,13 @@ Below the tier cards: a collapsible or full feature comparison table. Rules:
 
 ## 8. Freemium vs Free Trial Decision Framework
 
-### 8.1 Decision Matrix
+| Model | Best When | Key Design Rule | Healthy Conversion |
+|---|---|---|---|
+| Freemium | High CAC, viral product, simple activation | Gate on value metric (contacts, projects), not time | 2-5% consumer, 5-15% SMB SaaS |
+| Free Trial | Lower CAC, complex setup, value emerges over time | Match trial length to time-to-value; full product access | CC required: 2-3x higher conversion but ~50% fewer starts |
+| Hybrid | Both viral loops and complex value | Free tier + time-limited trial of Pro features, then revert | Combines acquisition breadth with conversion depth |
 
-| Factor | Points to Freemium | Points to Free Trial |
-|---|---|---|
-| Acquisition cost | High CAC -- freemium spreads word organically | Lower CAC -- paid or content acquisition |
-| Product virality | Built-in network effects or viral sharing | No natural virality |
-| Activation complexity | Simple -- users reach value in minutes | Complex -- requires setup or configuration |
-| Value clarity | Value is immediate and obvious | Value becomes clear after sustained use |
-| Support cost | Low -- product is self-serve | Higher -- free users may demand support |
-| Business model | Volume play, monetize through expansion | Conversion play, quality > quantity |
-| Competitor behavior | Competitors have freemium -- table stakes | Competitors use free trials |
-
-### 8.2 Freemium Design Rules
-
-If choosing freemium:
-- The free tier must deliver genuine value (not a crippled demo). Users who get value stay; users who do not, churn.
-- Gate on the value metric: free users get 100 contacts, 3 projects, 500 API calls -- not 10 days.
-- Make the upgrade path visible within the product: trigger upgrade prompts at the limit, not before.
-- Track free-to-paid conversion rate. Healthy range: 2-5% for consumer, 5-15% for SMB SaaS.
-- Design for viral loops: free users share, invite, embed, or publish -- which drives new signups.
-
-### 8.3 Free Trial Design Rules
-
-If choosing free trial:
-- **Length**: 7, 14, or 30 days. Match trial length to time-to-value. If users reach the "aha moment" in 3 days, a 30-day trial delays conversion.
-- **Credit card required vs not**: CC required reduces trial starts by ~50% but improves paid conversion by 2-3x. Net result depends on conversion rate and traffic volume. Test both.
-- **Trial experience**: Full product access during trial (or access to the "Professional" tier). Crippled trials create negative impressions.
-- **Trial email sequence**: Day 0 (welcome), Day 3 (tips to get value fast), Day 7 (key feature highlight), Day 10 (conversion push), Day 13 (urgency / final reminder). See marketing-email skill for sequence design.
-- **Expiry behavior**: Trial end should show a clear upgrade screen, not lock users out with no explanation. Show what they accomplished during the trial and what they would lose.
-
-### 8.4 Hybrid Approaches
-
-- **Freemium + time-limited trial of paid features**: Start on free tier, activate a 14-day trial of Pro features automatically, then revert to free. This shows the value of paid before the user decides.
-- **Freemium with usage-based monetization**: Free up to a usage limit; pay-as-you-go beyond that. No forced upgrade; just pay for what you use. Works well for developer tools.
+For detailed decision matrices, freemium design rules, free trial design rules (length, CC-required trade-offs, trial email sequences, expiry behavior), and hybrid approach patterns, see `./references/pricing-research.md` Section 6.
 
 ---
 
@@ -439,7 +412,7 @@ Indicators that pricing is too low and an increase is warranted:
 5. **Offer a lock-in option**: Let existing customers prepay at the old price for 12 months. This generates upfront cash and softens the transition.
 6. **Monitor churn weekly** during the transition. If churn spikes above 2x baseline, pause and reassess.
 
-Full email communication templates are in `./skills/marketing-pricing/references/pricing-research.md`.
+Full email communication templates are in `./references/pricing-research.md` Section 3.
 
 ### 9.3 Price Increase Sizing and Frequency
 
@@ -452,41 +425,9 @@ Full email communication templates are in `./skills/marketing-pricing/references
 
 ## 10. Pricing for Different Segments
 
-### 10.1 SMB Pricing
+For segment-specific pricing strategies (SMB, Mid-Market, Enterprise) and special discount programs (nonprofits, startups, education, volume), see `./references/segment-pricing.md`.
 
-- Self-serve purchase with no sales involvement.
-- Monthly billing with credit card as default; annual as the savings option.
-- Price points under $500/mo per account to stay under typical expense approval thresholds.
-- Simple, transparent pricing -- customers do not want to "contact sales."
-- Short free trial (7-14 days) or freemium with clear upgrade path.
-- Automated onboarding and in-product help -- no dedicated support resources.
-
-### 10.2 Mid-Market Pricing
-
-- Product-led (user tries first) with sales-assisted close.
-- Annual contracts as default; multi-year discounts available.
-- Price range: $500-$5,000/mo. May require procurement approval.
-- Demo and onboarding support included.
-- Custom implementation available as paid add-on.
-- Volume discounts for seat count negotiation.
-
-### 10.3 Enterprise Pricing
-
-- Sales-led: "Contact us" or "Talk to enterprise team" on pricing page.
-- Custom pricing per deal; no public price point.
-- Annual or multi-year contracts.
-- Must include: SSO/SAML, advanced security controls, audit logs, data export, custom SLA, dedicated customer success manager (CSM), invoicing (not just credit card).
-- Procurement requirements: security review, vendor questionnaire, data processing agreement (DPA), legal review cycle.
-- Implementation and onboarding as a packaged service (paid or included).
-- Executive business reviews (EBRs) quarterly.
-
-### 10.4 Segment-Specific Discounting
-
-- **Nonprofits**: 20-30% discount. Requires verification (501c3 or equivalent).
-- **Startups / early-stage**: Startup program with 50-90% discount for 12 months. Drives adoption at companies before they scale. Requires verification (less than 2 years old, under funding threshold).
-- **Education / students**: Separate pricing page; 50%+ discount. Drives brand familiarity for future buyers.
-- **Annual prepay**: 15-25% discount. Standard.
-- **Volume / bulk**: Negotiated for mid-market and enterprise. Typical: 10% off at 25 seats, 20% at 50, 30%+ at 100+.
+**Quick reference**: SMB is self-serve under $500/mo; Mid-Market is sales-assisted at $500-$5,000/mo with annual contracts; Enterprise is sales-led with custom pricing, SSO/SAML, and procurement requirements.
 
 ---
 
@@ -546,13 +487,13 @@ When the user requests pricing work:
 3. **Run Research Mode** if competitive data is needed: scrape competitor pricing pages with `agent-browser` before recommending price points.
 4. **Deliver specific recommendations**: Named tiers, specific price points, specific feature gates -- not "consider a three-tier model." Real pricing decisions.
 5. **Produce the deliverable**: Write the pricing strategy doc and pricing page copy to `./brands/{brand-slug}/campaigns/pricing/`.
-6. **Recommend research next steps**: If price points are uncertain, prescribe the right research method from Section 5 and link to the reference scripts in `./skills/marketing-pricing/references/pricing-research.md`.
+6. **Recommend research next steps**: If price points are uncertain, prescribe the right research method from Section 5 and link to the reference scripts in `./references/pricing-research.md` (includes method selection quick-reference in Section 5).
 
 ### When to Escalate
 
 - Conversion rate optimization on the pricing page (button placement, page speed, UX testing) -- route to CRO / web specialist.
 - Pricing communications via email drip to existing customers -- use marketing-email skill for sequence design.
 - Competitive intelligence beyond pricing (ad creative, SEO strategy) -- route to marketing-paid-ads or marketing-seo skill.
-- Legal review of pricing terms, contracts, or refund policies -- flag for legal counsel, not a marketing deliverable.
-- Financial modeling of pricing change impact on ARR / LTV -- recommend finance team involvement alongside pricing strategy.
+- Legal review of pricing terms, contracts, or refund policies -- flag for legal counsel.
+- Financial modeling of pricing change impact on ARR / LTV -- recommend finance team involvement.
 - Full go-to-market launch of a new pricing model -- route to marketing-sostac skill for SOSTAC plan update.

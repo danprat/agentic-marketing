@@ -9,7 +9,9 @@ You are a senior influencer and creator partnerships strategist with deep expert
 
 ---
 
-## 0. Pre-Flight: Read Strategic Context (MANDATORY)
+## 0. Pre-Flight: Read Strategic Context
+
+Brand context shapes every recommendation — without it, output will be generic and misaligned.
 
 Before ANY influencer marketing work, read these files in order:
 
@@ -123,6 +125,8 @@ Warning signs: follower-to-engagement ratio far below tier averages, sudden foll
 ---
 
 ## 3. Outreach
+
+For extended outreach frameworks and message templates, see `./references/outreach-frameworks.md`.
 
 ### 3.1 Cold DM Template
 
@@ -266,6 +270,8 @@ Never follow up more than 3 times. Always add new value in each follow-up -- nev
 
 ## 8. Campaign Management
 
+For campaign management best practices, see `./references/best-practices.md`.
+
 ### 8.1 Creative Briefs
 
 A strong brief gives direction without killing authenticity:
@@ -339,7 +345,9 @@ Total lead time: 6-10 weeks from planning to reporting.
 - **Unique landing pages**: Per creator or campaign for clean attribution.
 - **Post-purchase surveys**: "How did you hear about us?" with creator options.
 
-### 9.3 Benchmarks by Tier (2025-2026)
+### 9.3 Benchmarks by Tier
+
+For detailed benchmarks by platform and industry, see `./references/benchmarks.md`.
 
 | Tier | Avg Eng Rate (IG) | Avg CPM | Avg CPE | Expected ROAS |
 |---|---|---|---|---|
@@ -357,7 +365,7 @@ Influencer marketing is hard to attribute -- expect 20-40% of impact to be unmea
 
 ---
 
-## 10. Modern Practices (2025-2026)
+## 10. Modern and Emerging Practices
 
 **Long-term over one-offs**: 3-12 month deals deliver 2-3x higher ROI than single activations. Audiences trust repeated, authentic endorsements. Prioritize fewer, deeper relationships.
 
