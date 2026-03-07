@@ -1,6 +1,6 @@
 ---
 name: marketing-seo
-description: "SEO specialist skill covering technical SEO, content SEO, local SEO, link building, and AI search optimization (GEO). Use when the user wants to improve search rankings, audit SEO, create SEO content, fix technical SEO issues, optimize for Google AI Overviews, build backlinks, do keyword research, improve site speed, optimize schema markup, or any search engine related marketing task. Also triggers for questions about organic search traffic, SERP rankings, or search visibility."
+description: "SEO specialist skill covering technical SEO, content SEO, local SEO, link building, programmatic SEO (pSEO), and AI search optimization (GEO). Use when the user wants to improve search rankings, audit SEO, create SEO content, fix technical SEO issues, plan programmatic SEO systems, design template-driven search pages for catalogs or location pages, optimize for Google AI Overviews, build backlinks, do keyword research, improve site speed, optimize schema markup, or handle any search engine related marketing task. Also triggers for questions about organic search traffic, SERP rankings, search visibility, scaled landing pages, directory SEO, or pSEO guardrails and indexation."
 ---
 
 # SEO Specialist
@@ -359,6 +359,16 @@ Save as `seo-action-plan-{YYYY-MM}.md` with: month's focus (aligned to SOSTAC ob
 
 Save as `schema/{type}-{YYYY-MM-DD}.json` with ready-to-implement JSON-LD. Always include implementation notes: where to place the code, how to test, how to verify in GSC.
 
+### 6.5 Programmatic SEO Framework Pack
+
+Save pSEO deliverables under `programmatic-seo/` when the user is planning scaled SEO page systems.
+
+Produce these files as needed:
+- `programmatic-seo/pseo-opportunity-map-{YYYY-MM-DD}.md` -- page families, search patterns, business value, source data, uniqueness levers, and major risks.
+- `programmatic-seo/pseo-template-spec-{page-type}-{YYYY-MM-DD}.md` -- URL pattern, target intent, required fields, content blocks, schema, internal linking rules, and indexation policy.
+- `programmatic-seo/pseo-launch-checklist-{YYYY-MM-DD}.md` -- sampling plan, QA gates, sitemap/canonical rules, analytics setup, and rollback triggers.
+- `programmatic-seo/pseo-monitoring-plan-{YYYY-MM-DD}.md` -- KPIs by template family, prune thresholds, refresh cadence, and ownership.
+
 ---
 
 ## 7. Best Practices: Modern and Emerging Practices
@@ -403,12 +413,16 @@ For latest algorithm update details, see `./references/algorithm-updates.md`.
 
 ### 7.6 Programmatic SEO at Scale
 
-For large catalogs, multi-location businesses, or data-driven content:
-- Template-based page generation with unique, valuable content per page.
-- Dynamic internal linking based on entity relationships.
-- Automated schema markup generation.
-- Quality guardrails: every programmatic page must pass minimum content quality. Thin pages get deindexed.
-- Monitor index coverage closely.
+Use pSEO when the brand has a repeatable search pattern, reliable structured data, and a realistic way to make each page genuinely useful. Strong fits include integrations, directories, large catalogs, multi-location service pages, comparison hubs, template libraries, and statistics pages. Weak fits include pages that only swap a city, keyword, or SKU with no added value.
+
+Before recommending pSEO:
+- Confirm the page family has repeated search demand and clear business value.
+- Map one keyword cluster to one template family so templates do not cannibalize each other.
+- Define URL, canonical, sitemap, and noindex rules before generation.
+- Specify what makes each page unique: proprietary data, local context, reviews, examples, comparisons, FAQs, or expert commentary.
+- Launch in controlled batches, review indexation and performance by template family, and prune weak cohorts quickly.
+
+For the full operating framework -- qualification, page archetypes, data contracts, template specs, internal linking, launch QA, monitoring, and pruning -- read `./references/programmatic-seo-framework.md`.
 
 ---
 
@@ -432,6 +446,11 @@ For large catalogs, multi-location businesses, or data-driven content:
     brief-{slug}.md
   schema/
     {type}-{YYYY-MM-DD}.json
+  programmatic-seo/
+    pseo-opportunity-map-{YYYY-MM-DD}.md
+    pseo-template-spec-{page-type}-{YYYY-MM-DD}.md
+    pseo-launch-checklist-{YYYY-MM-DD}.md
+    pseo-monitoring-plan-{YYYY-MM-DD}.md
   link-building/
     backlink-analysis-{YYYY-MM-DD}.md
     outreach-tracker.md
@@ -454,7 +473,7 @@ For large catalogs, multi-location businesses, or data-driven content:
 When the user requests SEO work:
 
 1. **Read brand context and SOSTAC** (Section 0). Always.
-2. **Clarify scope**: Which discipline? Technical audit, keyword research, content optimization, link building, local SEO, AI search, or full strategy?
+2. **Clarify scope**: Which discipline? Technical audit, keyword research, content optimization, programmatic SEO, link building, local SEO, AI search, or full strategy?
 3. **Assess current state**: Check `./brands/{brand-slug}/content/seo/` for prior deliverables.
 4. **Deliver actionable output**: Specific, implementable recommendations -- never vague advice.
 5. **Save deliverables**: Write all outputs to the appropriate location under `./brands/{brand-slug}/content/seo/`.
