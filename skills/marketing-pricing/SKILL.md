@@ -443,7 +443,53 @@ For segment-specific pricing strategies (SMB, Mid-Market, Enterprise) and specia
 
 ---
 
-## 12. Deliverables
+## 12. Ethics: Persuasion Without Manipulation
+
+Pricing psychology relies on cognitive biases—anchoring, decoy effects, charm pricing, loss framing. These techniques influence perception and can cross into manipulation. This section defines the ethical line.
+
+### 12.1 Ethical Pricing Practices
+
+Ethical pricing helps customers make decisions aligned with their genuine needs. The customer who buys should feel the value was worth the cost.
+
+- **Genuine anchoring**: Original prices were actually offered. Competitor comparisons are accurate. Problem cost anchors are verifiable.
+- **Honest tier differentiation**: Each tier genuinely serves the customer type described. Feature gates exist because they create value for the target segment—not to force upgrades.
+- **Transparent pricing**: Prices are visible before signup. No hidden fees. Trial terms are clear. Add-on costs are disclosed upfront.
+- **Fair expansion**: Usage-based pricing correlates with customer value. Overage charges are predictable. Customers can monitor their spend.
+- **Honest discounts**: "Save $X" is calculated from a genuine original price. Annual discounts represent real savings vs. monthly.
+- **Clear cancellation**: Easy to cancel, no dark patterns. Customers know what they're buying and can leave without friction.
+
+### 12.2 Dark Patterns to Avoid
+
+| Pattern | Description | Why It Harms |
+|---|---|---|
+| Fake anchors | "Was $999" when that price was never actually charged | Deceptive; FTC enforcement risk for false advertising |
+| Hidden add-ons | Core features require expensive add-ons not shown until checkout | Churn, chargebacks, trust destruction |
+| Drip pricing | Base price displayed, mandatory fees added at checkout | Regulatory violations in many jurisdictions |
+| Confusing tiers | Deliberately complex packaging to prevent comparison | Decision paralysis, buyer's remorse, churn |
+| False scarcity | "Only 5 spots at this price" when price never changes | Trust destruction when discovered |
+| Hidden auto-renewal | Annual renewal charged without clear disclosure | Chargebacks, regulatory risk |
+| Cancellation friction | Multiple steps, guilt language, deliberate obstacles to cancel | Reputation damage, regulatory risk |
+| Misleading comparisons | Cherry-picked features to appear superior to competitors | Erodes credibility when fact-checked |
+
+### 12.3 The Long-Term Case for Ethics
+
+Dark patterns extract revenue in the short term and destroy customer lifetime value in the long term. The customer who feels deceived:
+- Churns at the first opportunity
+- Demands refunds and leaves reviews
+- Warns others in their network
+- Never upgrades or expands
+
+The customer who feels the pricing is fair:
+- Retains and expands usage
+- Refers colleagues
+- Upgrades willingly when it makes sense
+- Becomes an advocate
+
+Before implementing any pricing technique, ask: **If the customer understood exactly how the pricing was structured, would they still feel it was fair?** If no, redesign the pricing.
+
+---
+
+## 13. Deliverables
 
 All pricing deliverables save to `./brands/{brand-slug}/campaigns/pricing/`.
 

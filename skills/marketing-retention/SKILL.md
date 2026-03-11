@@ -493,6 +493,21 @@ If starting a retention programme from scratch, implement in this sequence:
 - NPS programme design beyond retention use case -- recommend a dedicated CX tool (Delighted, Typeform, Pendo).
 - Complex billing platform migration (Stripe to Chargebee, etc.) -- recommend RevOps involvement.
 
+### Bidirectional Escalation Signals
+
+Retention work surfaces signals that should trigger other specialists. When analysis or intervention reveals:
+
+| Signal Detected | Escalate To | Reason |
+|---|---|---|
+| Cohort analysis showing churn concentrated at specific point | marketing-analytics | "Deep cohort analysis needed for pattern identification" |
+| Exit survey indicating pricing/positioning mismatch | marketing-pricing | "Pricing structure causing voluntary churn" |
+| High churn from leads acquired via specific channel | marketing-paid-ads | "Traffic source quality issue" |
+| Win-back indicating product knowledge gap | marketing-content | "Educational content gap for re-engagement" |
+| Cancellation patterns linked to onboarding drop-off | marketing-cro | "Onboarding activation failure leading to later churn" |
+| Email deliverability affecting dunning effectiveness | marketing-email | "Dunning emails not reaching users" |
+
+When escalating from retention, provide: the specific cohort or segment affected, churn reason category (voluntary/involuntary/implicit), quantified impact (MRR at risk), and any pattern in timing or trigger.
+
 
 ---
 

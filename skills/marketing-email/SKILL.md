@@ -450,6 +450,51 @@ Save to `./brands/{brand-slug}/content/email/cold-outbound-{campaign-name}-{YYYY
 
 ---
 
+## 12. Ethics: Persuasion Without Manipulation
+
+Email marketing runs on psychological techniques—subject line curiosity, urgency, scarcity, FOMO, personalization. These tools convert but can cross into manipulation. This section defines the ethical line.
+
+### 12.1 Ethical Email Practices
+
+Ethical email helps subscribers make decisions aligned with their interests. The subscriber who acts should be glad they did.
+
+- **Genuine scarcity**: "48 hours left" means 48 hours. Limited spots are actually limited. The offer truly expires.
+- **Real urgency**: Time-sensitive emails reference actual deadlines (trial expiry, cart hold, genuine offer end)—not fabricated pressure.
+- **Honest subject lines**: The email delivers on the subject line promise. "Your account" emails are about the account—not a sales pitch in disguise.
+- **Clear unsubscribe**: One-click unsubscribe, honored within 24 hours. Preference centers over forced opt-outs.
+- **Transparent senders**: Clear "from" name and reply address. No misleading sender names.
+- **Truthful content**: Testimonials are real. Statistics are verifiable. Claims are accurate.
+
+### 12.2 Dark Patterns to Avoid
+
+| Pattern | Description | Why It Harms |
+|---|---|---|
+| Fake urgency | "Last chance" emails for evergreen offers | Destroys trust; trains subscribers to ignore deadlines |
+| Misleading subject lines | Clickbait that doesn't match content | High open rates, low trust, spam complaints |
+| Hidden unsubscribe | Buried in tiny text, multiple clicks required | Regulatory violations (CAN-SPAM, GDPR), reputation damage |
+| Fake personalization | "Your exclusive offer" sent to entire list | Erodes the value of real personalization |
+| Guilt-trip opt-outs | "Are you sure you want to miss out?" guilt language | Creates resentment, not retention |
+| Fake social proof | "Join 10,000 others" with fabricated numbers | Trust destruction when discovered |
+| Manipulative FOMO | "Everyone's talking about this" with no basis | Trains subscribers to distrust your communications |
+
+### 12.3 The Long-Term Case for Ethics
+
+Dark patterns boost metrics in the short term and destroy sender reputation in the long term. The subscriber who feels manipulated:
+- Marks as spam (damages deliverability for everyone)
+- Unsubscribes with frustration
+- Leaves negative reviews
+- Never opens future emails
+
+The subscriber who feels well-served:
+- Opens consistently
+- Clicks and converts
+- Forwards to friends
+- Becomes a referral source
+
+Before sending any email, ask: **If the subscriber understood every technique used, would they still feel respected?** If no, rewrite the email.
+
+---
+
 ## 13. Actionable Outputs and Deliverables
 
 All email marketing deliverables save to `./brands/{brand-slug}/content/email/`.
@@ -489,6 +534,21 @@ When the user requests email marketing work:
 - SMS and push notification strategy -- flag as multi-channel extension, recommend unified tool (Klaviyo, Brevo, Customer.io).
 - Complex CRM integration or data architecture -- recommend developer involvement.
 - No website or product yet -- recommend foundational setup before email marketing.
+
+### Bidirectional Escalation Signals
+
+Email work surfaces signals that should trigger other specialists. When analysis reveals:
+
+| Signal Detected | Escalate To | Reason |
+|---|---|---|
+| Low deliverability despite technical compliance | marketing-pr | "Reputation issue requiring PR/brand work" |
+| High unsubscribe rate on specific content type | marketing-content | "Content relevance or quality gap" |
+| Engagement drop after specific campaign | marketing-analytics | "Attribution and cohort analysis needed" |
+| Win-back sequence showing product-related exits | marketing-retention | "Retention intervention needed before email can help" |
+| Lead magnet conversion declining | marketing-cro | "Landing page or form optimization needed" |
+| Segment showing high intent but not converting | marketing-sales | "Sales enablement for high-intent segment" |
+
+When escalating from email, provide: the specific metric change, affected segment, sequence or campaign context, and any pattern in timing or trigger.
 
 
 ---

@@ -162,6 +162,62 @@ When the user asks to refresh or update:
 4. Update the "Last updated" date.
 5. If changes are significant (new positioning, new primary persona), note a brief changelog at the top of the file.
 
+---
+
+## 7. Staleness Detection and Freshness Signals
+
+### 7.1 Document Freshness Header
+
+Every `product-marketing-context.md` must include a freshness header at the top:
+
+```markdown
+---
+last_updated: YYYY-MM-DD
+next_review: YYYY-MM-DD (quarterly from last_updated)
+validation_status: current | needs_review | stale
+---
+```
+
+**Validation status definitions**:
+- `current`: Updated within the last 90 days, no major market changes flagged
+- `needs_review`: 90+ days since update, or downstream specialist has flagged a gap
+- `stale`: 180+ days since update, or major market change detected (new competitor, pricing change, repositioning)
+
+### 7.2 When Downstream Specialists Should Flag Staleness
+
+Marketing specialists reading this document should flag for refresh when:
+
+| Signal | What It Looks Like | Action |
+|---|---|---|
+| Customer language mismatch | Copy using phrases from §9 gets poor response | Flag §9 for refresh with new customer interviews |
+| Competitor not in document | Lost deal to competitor not in §4 | Flag §4 for competitive update |
+| Proof point outdated | Customer achievement in §11 no longer impressive | Flag §11 for fresh case study data |
+| Objection not covered | New objection appearing in sales calls not in §6 | Flag §6 for objection expansion |
+| Persona doesn't match | Leads from target persona not converting | Flag §3 for persona validation |
+| Market shift | New regulation, technology, or trend affecting positioning | Flag entire document for strategic review |
+
+**How to flag**: When working in any specialist skill, if `product-marketing-context.md` seems misaligned with reality, add a comment to the output: "**Note:** The product-marketing-context.md may need updating — [specific signal observed]. Consider running the product-marketing-context skill to refresh."
+
+### 7.3 Quarterly Review Trigger
+
+Every 90 days, the document should be reviewed. Set a calendar reminder or add to the brand's recurring tasks. The review process:
+
+1. **Quick scan** (15 min): Read the document. Note anything that feels outdated.
+2. **Sales and support check**: Ask for recent customer language, new objections, and fresh proof points from customer-facing teams.
+3. **Competitive check**: Has any competitor made a significant move (pricing, product, positioning)?
+4. **Update if needed**: If 2+ sections have meaningful changes, run the update process (Section 6).
+5. **Refresh the dates**: Update `last_updated` and `next_review` even if no changes made — this signals the document is actively maintained.
+
+### 7.4 Automatic Staleness Indicators
+
+The document becomes `stale` automatically when:
+- 180+ days since `last_updated`
+- Major product change (new core feature, significant pricing change, market expansion)
+- Company pivot or rebrand
+- New funding round or acquisition
+
+When stale, downstream specialists should explicitly recommend refreshing the document before proceeding with major campaign work.
+
 
 ---
 

@@ -372,11 +372,30 @@ Score 80+ = thriving. 60-80 = healthy. 40-60 = needs attention. Below 40 = criti
 ### 8.3 Business Impact Metrics
 
 The metrics that justify the community to leadership:
-- **Support deflection**: Questions answered in community that would have been support tickets. Track volume and calculate cost savings.
-- **Revenue attribution**: Members vs non-members on LTV, churn rate, upsell rate, and NPS. Community members typically show 2-4x higher LTV.
-- **Product feedback velocity**: Feature requests, bug reports, and beta test participation originating from community.
-- **Acquisition contribution**: New customers who joined the community before purchasing. Track community-to-customer conversion.
-- **NPS lift**: Compare NPS of community members vs non-members. Healthy communities add 10-30 points to NPS.
+
+**Support Deflection**: Questions answered in community that would have been support tickets. Track volume and calculate cost savings. Formula: `(Community answers to support-type questions) × (Cost per support ticket)`. Target: 10-30% of support volume deflected for mature communities.
+
+**Retention Rate Lift**: Compare retention rates of community members vs non-members. This is the most important business metric for retention-focused communities. Formula: `(Retention rate of community members) - (Retention rate of non-members)`. Track monthly. Healthy communities show 15-40% relative retention improvement. Example: if non-member retention is 70% and member retention is 85%, that's a 21% relative lift (15/70).
+
+**Revenue and LTV Impact**: Members vs non-members on LTV, churn rate, upsell rate, and NPS. Community members typically show 2-4x higher LTV. Track: average revenue per member vs non-member, expansion revenue attributed to community engagement, churn rate differential.
+
+**Referral K-Factor Contribution**: Community members as a referral source. Track the viral coefficient (K-factor) from community-invite mechanics. Formula: `(Invites sent per active member) × (Invite acceptance rate)`. Target K-factor: 0.3-0.5 from community alone. Each community member who invites 1 person with 40% acceptance = K-factor of 0.4. Monitor: unique referral links used, member-to-member invites, "how did you hear about us" attribution.
+
+**Acquisition Contribution**: New customers who joined the community before purchasing. Track community-to-customer conversion rate. Formula: `(Customers who were community members first) / (Total new customers)`. Target: 15-30% for community-led brands. Attribution window: 90 days from community join to purchase.
+
+**NPS Lift**: Compare NPS of community members vs non-members. Healthy communities add 10-30 points to NPS. Run separate NPS surveys for community members and general customer base.
+
+**Time-to-Value Acceleration**: Do community members reach their first success moment faster? Compare onboarding completion rates and time-to-first-value between members and non-members. Community often accelerates activation by 20-40%.
+
+**Business Impact Summary Table**:
+| Metric | How to Measure | Target Range | Business Value |
+|---|---|---|---|
+| Retention lift | Cohort comparison (member vs non) | 15-40% relative improvement | Direct revenue retention |
+| LTV multiplier | LTV member / LTV non-member | 2-4x higher | Revenue expansion |
+| Support deflection | Community answers × ticket cost | 10-30% volume reduction | Cost savings |
+| Referral K-factor | Invites × acceptance rate | 0.3-0.5 | Organic acquisition |
+| Community-to-customer | Attribution tracking | 15-30% of new customers | Acquisition channel |
+| NPS lift | Segmented surveys | +10-30 points | Satisfaction + advocacy |
 
 ### 8.4 Reporting Cadence
 

@@ -319,7 +319,51 @@ File structure:
 
 ---
 
-## 9. Response Protocol
+## 9. Ethics: Persuasion Without Manipulation
+
+CRO relies on psychological techniques—urgency, social proof, loss framing, friction reduction. These tools are powerful and can be misused. This section defines the ethical line.
+
+### 9.1 Ethical CRO Practices
+
+Ethical optimization helps visitors make decisions that align with their genuine interests. The converted customer should be glad they converted.
+
+- **Genuine urgency**: Time-limited offers actually expire. "2 spots left" means two spots. Countdowns do not reset.
+- **Real social proof**: Testimonials from actual customers with verifiable outcomes. Customer counts are accurate.
+- **Honest friction reduction**: Removing obstacles to help users do something that benefits them—streamlining signup, clarifying value, reducing cognitive load.
+- **Transparent pricing**: No hidden fees revealed only at checkout. Trial terms are clear before the user enters payment info.
+- **Clear CTA language**: The button describes what actually happens next. "Start Free Trial" starts a free trial—not a hidden paid subscription.
+
+### 9.2 Dark Patterns to Avoid
+
+| Pattern | Description | Why It Harms |
+|---|---|---|
+| Fake scarcity | Countdown timers that reset; inventory numbers fabricated | Destroys trust when discovered; FTC enforcement risk |
+| Hidden fees | Price revealed after form submission or at final step | Chargebacks, churn, regulatory risk |
+| Forced continuity | Free trial auto-converts to paid without clear disclosure | Negative reviews, chargebacks, legal exposure |
+| Roach motel | Easy to sign up, deliberately difficult to cancel | Social media backlash, churn anger |
+| Confirmshaming | "No thanks, I don't want more customers" opt-out labels | Creates resentment, not conversion |
+| Misdirection | Visual design that hides the option the user actually wants | Short-term gain, long-term brand damage |
+| Trick questions | Confusing language that tricks users into opting in | Trust destruction, potential legal liability |
+
+### 9.3 The Long-Term Case for Ethics
+
+Dark patterns convert in the short term and destroy brands in the long term. The user who feels manipulated:
+- Churns at the first opportunity
+- Leaves negative reviews
+- Warns others
+- Never refers
+
+The user who feels well-served:
+- Retains and expands
+- Reviews positively
+- Refers others
+- Becomes an advocate
+
+Before implementing any CRO technique, ask: **If the customer understood exactly what was happening, would they still feel well-served?** If the answer is no, do not implement it.
+
+---
+
+## 10. Response Protocol
 
 When the user requests CRO work:
 

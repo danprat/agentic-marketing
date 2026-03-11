@@ -367,6 +367,21 @@ For every media opportunity, prepare: **Core message** (1 sentence -- the single
 
 **Creator PR**: Industry creators (YouTubers, newsletter operators, podcast hosts) often drive more traffic and trust than traditional media in niches. Lead with a story, not a sales pitch. Bridge to marketing-influencer for paid partnerships.
 
+**AI Search and PR (GEO)**: Generative Engine Optimization is the practice of ensuring your brand and coverage appear in AI-generated answers from ChatGPT, Perplexity, Google AI Overviews, and Claude. PR directly influences AI citations.
+
+- **Coverage becomes AI training data**: Every placement in a reputable publication becomes a citation source for AI models. Prioritize placements in authoritative, frequently-cited outlets even over high-traffic niche sites.
+- **Brand entity building**: AI models associate entities (brands, people, concepts). Consistent brand mentions across authoritative press strengthen your brand entity, increasing the likelihood AI answers will cite or reference your brand.
+- **Press release optimization for GEO**: Write clear, quotable statements with definitive facts and statistics. AI models extract and cite verbatim text. Include structured data in digital press releases. Publish on your own press page with schema markup (NewsArticle, Organization).
+- **Thought leader citations**: Executive bylines and expert quotes in press become citation sources. When AI answers "who is an expert in [topic]," consistent press mentions establish that association.
+- **Original data as AI citation magnet**: Data studies and research reports (Section 5.1) are highly cited by AI models because they contain unique information unavailable elsewhere. This is the single most effective PR tactic for GEO.
+
+**GEO metrics for PR**:
+- AI citation frequency: How often does your brand appear in AI answers in your category?
+- Share of AI mentions vs competitors: Track how often AI answers reference your brand vs competitors.
+- Track Perplexity and ChatGPT referral traffic: Monitor analytics for traffic from AI platforms.
+
+Bridge to marketing-seo for technical GEO implementation. PR provides the authoritative mentions; SEO provides the structured data and entity optimization.
+
 ---
 
 ## 12. Outputs and Deliverables

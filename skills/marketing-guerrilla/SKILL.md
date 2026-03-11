@@ -363,6 +363,54 @@ Score each risk category 1-5 (1 = negligible, 5 = severe). Score potential rewar
 - **Scraping for outreach**: Check terms of service and local data regulations. Prefer opt-in sources.
 - **Aggressive retargeting**: Legal but can feel invasive. Cap frequency. Respect opt-outs immediately.
 
+### 6.3 Mandatory Legal Review Triggers
+
+The following tactics **require legal review before execution**. Do not proceed without sign-off:
+
+| Tactic Category | Why Legal Review Is Required |
+|---|---|
+| Any public event, stunt, or installation | Permits, liability, insurance, local regulations |
+| Competitor trademark usage (even in comparison) | Trademark law varies by jurisdiction; risk of lawsuit |
+| User-generated content campaigns | Rights, permissions, disclosure requirements |
+| Contests, sweepstakes, giveaways | Gambling laws, disclosure requirements, international variations |
+| Ambush marketing near events | Exclusion zones, trademark, unfair competition laws |
+| Physical guerrilla tactics (stickers, projections, chalk) | Property laws, local ordinances, permit requirements |
+| Referral and affiliate programs | FTC disclosure, privacy laws, anti-spam compliance |
+| Claims about competitors | Defamation, false advertising, Lanham Act risk |
+| Controversy marketing touching social issues | Brand risk, potential boycott, legal exposure |
+| Any tactic involving minors | COPPA, additional consent requirements |
+
+**Legal review process**: Before executing any tactic in the above categories: (1) Document the concept in a stunt brief or campaign concept. (2) Flag the legal review requirement. (3) Do not execute until legal counsel has approved or provided mitigation requirements. (4) Document the approval in the campaign file.
+
+### 6.4 Pre-Execution Governance Checklist
+
+Before executing any guerrilla campaign, run through this checklist:
+
+| Governance Check | Required Action |
+|---|---|
+| **Legal review needed?** | Check §6.3. If yes, stop and get approval. |
+| **Risk assessment complete?** | Complete §5.1 matrix. Any risk above 3 requires mitigation. |
+| **Platform terms checked?** | Verify tactic doesn't violate platform ToS (Amazon, Meta, Google, TikTok, etc.). |
+| **Screenshot test?** | Would you be embarrassed if this appeared on the front page of a major publication? |
+| **Competitor response scenario?** | Could a competitor use this against you? How would you respond? |
+| **Crisis plan ready?** | If this backfires, what is the immediate response? |
+| **Insurance coverage?** | For physical stunts, is liability insurance in place? |
+| **Permissions documented?** | For UGC, testimonials, or third-party content, are rights secured in writing? |
+
+**If any governance check fails or is unclear**: Pause execution and resolve the issue before proceeding. The short-term gain of a guerrilla tactic is never worth long-term brand or legal damage.
+
+### 6.5 Risk Escalation Path
+
+When risk assessment reveals high scores (3+) in any category:
+
+1. **Pause execution** — do not proceed with the current plan
+2. **Document the risk** — write up the specific concern and potential impact
+3. **Seek mitigation** — redesign the tactic to reduce risk, or add safeguards
+4. **Escalate to decision-maker** — for reputational risk scores of 4+, require founder/CMO approval
+5. **Re-score after mitigation** — confirm the revised approach reduces risk to acceptable levels
+
+**The principle**: Guerrilla marketing rewards creativity and speed, but high-risk tactics executed without governance can destroy brands overnight. When in doubt, get approval.
+
 ---
 
 ## 7. Measuring Guerrilla Impact

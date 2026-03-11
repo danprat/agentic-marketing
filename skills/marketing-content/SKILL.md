@@ -423,7 +423,34 @@ Calculators, assessments, quizzes, configurators, and interactive infographics g
 
 Serve different content by segment: industry, role, funnel stage, behavior, geography. Implement through dynamic website blocks, segmented email, personalized resource hubs, smart CTAs.
 
-### 13.4 Content at Scale
+### 13.4 AI Search Optimization (GEO)
+
+Generative Engine Optimization (GEO) is the practice of optimizing content to appear in AI-generated answers from ChatGPT, Perplexity, Google AI Overviews, and Claude. Traditional SEO focuses on ranking in a list of links. GEO focuses on being the source AI models cite.
+
+**Why it matters**: AI search is growing 10-15% monthly. By 2026, an estimated 30-40% of searches will include AI-generated answers. Content that ranks #1 in traditional search may be invisible in AI answers if not optimized for citation.
+
+**How AI models select sources to cite**:
+- **Authoritative expertise**: E-E-A-T signals (Experience, Expertise, Authoritativeness, Trustworthiness) matter even more. AI models prioritize content from recognized experts and authoritative domains.
+- **Clear, quotable statements**: AI favors content it can quote verbatim. Write definitional sentences, clear statistics, and concise explanations. Avoid hedging language ("might," "could," "possibly") when making factual claims.
+- **Structured data and schema**: FAQ schema, HowTo schema, Article schema, and Organization schema help AI parse your content accurately. Bridge to marketing-seo for implementation.
+- **Citation-friendly formatting**: Numbered lists, clear H2/H3 headers, definition-style paragraphs, and data tables are easier for AI to extract and cite.
+- **Freshness signals**: AI models track content update dates. Regularly update cornerstone content. Display "Last updated" dates prominently.
+
+**GEO-specific tactics**:
+- Write definitive answers to common questions in your niche. AI models cite sources that provide complete, authoritative answers.
+- Create comparison and "vs" content. "X vs Y" queries are increasingly answered by AI.
+- Publish original data and research. AI models prioritize unique data they cannot find elsewhere.
+- Optimize for conversational queries. AI search queries are longer and more conversational than traditional search. Write content that answers full questions, not just keywords.
+- Build brand entity recognition. AI models associate entities (brands, people, concepts). Consistent brand mentions across authoritative sites increase citation likelihood.
+
+**GEO metrics to track**:
+- AI citation frequency: How often does your brand/content appear in AI-generated answers? (Manual testing or tools like Profound, Brand Authority).
+- Share of AI answer: What percentage of AI answers in your niche cite your content?
+- Referral traffic from AI: Track Perplexity, ChatGPT, and Claude referral traffic in analytics.
+
+Bridge to marketing-seo for technical GEO implementation (schema, structured data, entity optimization). GEO is most effective when combined with strong traditional SEO fundamentals.
+
+### 13.5 Content at Scale
 
 For high-volume brands: establish editorial guidelines and templates, build a content ops workflow (brief > assign > draft > review > publish > promote), use a CMS with editorial calendar features, create modular content, maintain a library organized by pillar, funnel stage, and format.
 
@@ -489,6 +516,21 @@ When the user requests content marketing work:
 - Paid content promotion -- route to marketing-paid-ads.
 - PR outreach for research or thought leadership -- route to PR specialist.
 - No brand presence yet -- recommend foundational setup before content marketing.
+
+### Bidirectional Escalation Signals
+
+Content work surfaces signals that should trigger other specialists. When analysis reveals:
+
+| Signal Detected | Escalate To | Reason |
+|---|---|---|
+| Content driving traffic but not conversions | marketing-cro | "Conversion path optimization needed" |
+| High-value topic requiring nurture depth | marketing-email | "Content should be adapted into email sequence" |
+| Research/data with PR potential | marketing-pr | "Data study has earned media opportunity" |
+| Content gaps in specific funnel stage | marketing-analytics | "Funnel analysis to identify priority content" |
+| Lead magnet with declining conversion | marketing-cro | "Landing page optimization needed" |
+| Thought leadership with speaking/podcast potential | marketing-pr | "Speaker placement opportunity" |
+
+When escalating from content, provide: the specific content piece or topic cluster, performance metrics (traffic, engagement, conversion), audience segment insights, and the strategic objective it serves.
 
 
 ---

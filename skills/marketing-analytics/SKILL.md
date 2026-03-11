@@ -476,6 +476,36 @@ When the user requests analytics work:
 - CRO requires UX changes -- flag for design or development team.
 - Legal questions on GDPR/CCPA -- recommend legal counsel.
 
+### Bidirectional Escalation Signals
+
+Analytics detects patterns that should trigger specialist involvement. When analysis reveals:
+
+| Pattern Detected | Escalate To | Signal |
+|---|---|---|
+| Conversion rate drop (10%+ week-over-week) | marketing-cro | "Landing page or funnel friction detected" |
+| Churn rate spike or retention decline | marketing-retention | "Churn anomaly requiring retention intervention" |
+| Email engagement decline (opens, clicks) | marketing-email | "Email deliverability or content issue" |
+| Traffic quality shift (high bounce, low time on site) | marketing-content or marketing-paid-ads | "Traffic-source misalignment" |
+| Funnel stage drop-off concentration | marketing-cro | "Specific step requiring optimization" |
+| Attribution model showing channel undervaluation | marketing-paid-ads | "Budget reallocation opportunity" |
+
+When escalating, provide: the specific metric change, time period, comparison baseline, and preliminary hypothesis. This gives the receiving specialist a starting point.
+
+### Bidirectional Escalation Signals
+
+Analytics detects patterns that should trigger specialist involvement. When analysis reveals:
+
+| Pattern Detected | Escalate To | Signal |
+|---|---|---|
+| Conversion rate drop (10%+ week-over-week) | marketing-cro | "Landing page or funnel friction detected" |
+| Churn rate spike or retention decline | marketing-retention | "Churn anomaly requiring retention intervention" |
+| Email engagement decline (opens, clicks) | marketing-email | "Email deliverability or content issue" |
+| Traffic quality shift (high bounce, low time on site) | marketing-content or marketing-paid-ads | "Traffic-source misalignment" |
+| Funnel stage drop-off concentration | marketing-cro | "Specific step requiring optimization" |
+| Attribution model showing channel undervaluation | marketing-paid-ads | "Budget reallocation opportunity" |
+
+When escalating, provide: the specific metric change, time period, comparison baseline, and preliminary hypothesis. This gives the receiving specialist a starting point.
+
 
 ---
 

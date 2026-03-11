@@ -325,6 +325,28 @@ Great product/content --> Customer shares UGC --> Brand reposts UGC
 
 Accelerate the loop: make sharing easy (unboxing experience, branded hashtag, share prompts), reward sharers (features, discounts), respond to every piece of UGC.
 
+### 5.6 AI Search and Social Content (GEO)
+
+Social content is increasingly indexed and cited by AI search engines. Google AI Overviews, Perplexity, and ChatGPT now surface TikTok videos, YouTube content, Reddit threads, and LinkedIn posts directly in answers.
+
+**Why it matters**: Social-first AI citations bypass traditional SEO entirely. A TikTok explaining a concept can appear in an AI answer without any blog post or website.
+
+**Platforms with highest AI citation potential**:
+- **YouTube**: Long-form and Shorts are heavily indexed. Video transcripts become AI source material. Optimize titles, descriptions, and spoken content for conversational queries.
+- **TikTok**: Increasingly cited for tutorials, reviews, and explainers. Clear, educational content with strong hooks gets surfaced. Use on-screen text and captions—AI transcribes and indexes these.
+- **Reddit**: High authority for AI models. Reddit threads frequently appear in AI Overviews. Participate authentically (per Section 1.9). Avoid promotional posts—AI and users both penalize them.
+- **LinkedIn**: Professional and B2B content is indexed. Thought leadership posts with clear frameworks and definitions get cited.
+- **X/Threads**: Real-time and conversational content may be indexed. Focus on authoritative, shareable statements.
+
+**Social GEO tactics**:
+- Create definitive explainers on your expertise. 60-second TikTok tutorials with clear spoken definitions and on-screen text are prime AI citation candidates.
+- Optimize for conversational queries. AI search queries are questions. Structure social content to answer complete questions directly.
+- Use captions and on-screen text. AI transcribes video and indexes text overlays. Every word is searchable.
+- Build cross-platform authority. AI models associate consistent messaging across YouTube, TikTok, LinkedIn, and Reddit with authoritative expertise.
+- Track AI referral traffic. Monitor analytics for Perplexity, ChatGPT, and Google AI Overview referral traffic to understand what social content is being cited.
+
+Bridge to marketing-seo for entity optimization and brand authority signals. Social GEO works best when combined with strong traditional SEO and PR presence.
+
 ---
 
 ## 6. Analytics
