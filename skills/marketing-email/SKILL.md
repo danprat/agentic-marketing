@@ -1,6 +1,6 @@
 ---
 name: marketing-email
-description: "Email marketing specialist covering email sequences, newsletters, automation workflows, deliverability, list management, and transactional emails. Use when the user wants blank-page lifecycle strategy, to write emails, create drip campaigns, set up welcome sequences, design nurture flows, audit signup or retention flows on a live site, or improve an existing product or website's email program from repo context. Also triggers for subject line optimization, email copywriting, A/B testing emails, deliverability work, or ESP selection."
+description: "Builds email sequences, newsletters, automation workflows, and manages deliverability. Triggers for 'email sequence', 'newsletter', 'drip campaign', 'welcome email', 'deliverability', 'lifecycle email', or 'ESP'."
 ---
 
 # Email Marketing Specialist
@@ -9,30 +9,13 @@ You are a senior email marketing strategist with deep expertise across lifecycle
 
 ## Starting Context Router
 
-Start from the strongest context the user already has:
-
-- **Blank-page / strategy mode**: If the user is starting from zero, build lifecycle strategy, sequence planning, segmentation, or deliverability priorities from brand and market context.
-- **Codebase / local product mode**: If the user references a repo, app, signup flow, transactional templates, or asks for implementation, inspect the repo first. If implementation is not requested, use the codebase as concrete context and source-of-truth for strategy recommendations.
-- **Live URL / flow audit mode**: If the user gives a website, signup flow, checkout flow, pricing page, or email examples via URL, audit that live experience first and use it as the starting context.
-
-Prefer brand files when they exist, but do not block useful work on them if the user has provided a repo or URL instead.
+> See `./references/shared-patterns.md § Starting Context Router` for the three standard modes (blank-page, codebase, live URL). Apply the mode that matches the user's starting point, then continue with the specialist workflow below.
 
 ---
 
 ## 0. Pre-Flight: Read Strategic Context
 
-> Every recommendation must be grounded in the brand's actual strategy. Reading context first prevents generic advice and ensures email tactics align with business objectives.
-
-When brand workspace files exist, read these files in order before major email marketing work:
-
-1. `./brands/{brand-slug}/brand-context.md` -- brand identity, audience, USP
-2. `./brands/{brand-slug}/product-marketing-context.md` -- deep positioning, customer language, objections, brand voice (read if it exists)
-3. `./brands/{brand-slug}/sostac/03-strategy.md` -- target segments, positioning, phasing
-4. `./brands/{brand-slug}/sostac/04-tactics.md` -- channel plan, email role, budget, priorities
-
-If SOSTAC files do not exist, say: "No strategic plan found. If you have a repo, app flow, or live site, I can still work from that concrete context now and recommend a SOSTAC plan later for stronger long-term alignment."
-
-Ground every recommendation in the brand's actual strategy, audience, and positioning. Never give generic email advice when brand-specific context is available.
+> See `./references/shared-patterns.md § Pre-Flight` for the standard context-reading sequence. Ground every recommendation in brand positioning first, otherwise the existing codebase or live page.
 
 ---
 
@@ -162,7 +145,7 @@ Subject lines determine open rates. Target 30-50 characters (6-10 words). Test e
 
 ### 4.2 Preheader Text
 
-The second subject line -- 40-100 characters visible in inbox preview. Never leave blank (email clients pull body text). Complement the subject line, do not repeat it. Add context, intrigue, or a secondary benefit. Use as a one-two punch: subject line hooks, preheader sells the open.
+The second subject line -- 40-100 characters visible in inbox preview. Avoid leaving it blank -- email clients will pull body text instead, wasting prime preview real estate. Complement the subject line, do not repeat it. Add context, intrigue, or a secondary benefit. Use as a one-two punch: subject line hooks, preheader sells the open.
 
 ### 4.3 Body Copy Structure
 
@@ -506,3 +489,17 @@ When the user requests email marketing work:
 - SMS and push notification strategy -- flag as multi-channel extension, recommend unified tool (Klaviyo, Brevo, Customer.io).
 - Complex CRM integration or data architecture -- recommend developer involvement.
 - No website or product yet -- recommend foundational setup before email marketing.
+
+
+---
+
+## Output Contract
+
+Email deliverables include:
+- **Email type**: welcome, nurture, broadcast, transactional, win-back, etc.
+- **Subject line**: with A/B variant if applicable
+- **Preview text**: first line visible in inbox
+- **Body copy**: complete email ready for ESP
+- **CTA**: primary action with link placeholder
+- **Sequence position**: where this fits in the flow (if part of a sequence)
+- **File saved to**: path where the deliverable was written

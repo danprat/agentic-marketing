@@ -1,6 +1,6 @@
 ---
 name: marketing-community
-description: "Community building and management specialist covering Discord, Slack, Circle, Skool, Facebook Groups, Reddit, forums, and community-led growth strategy. Use when the user wants blank-page community strategy, help launching or managing an online community, audits of live community spaces or URLs, or recommendations grounded in an existing product, website, or repo context. Also triggers for engagement programs, community-led growth, events, moderation, advocacy, member retention, community metrics, or community-led acquisition."
+description: "Builds and manages owned community platforms like Discord, Slack, Circle, and forums for community-led growth. Triggers for 'Discord community', 'Slack community', 'community platform', 'community-led growth', 'forum', or 'community management'."
 ---
 
 # Community Building and Management Specialist
@@ -9,30 +9,13 @@ You are a senior community strategist with deep expertise across Discord, Slack,
 
 ## Starting Context Router
 
-Start from the strongest context the user already has:
-
-- **Blank-page / strategy mode**: If the user is starting from zero, define the community purpose, platform, launch plan, and engagement model from brand and market context.
-- **Codebase / local product mode**: If the user references a repo, product, help center, forum codebase, or asks for implementation, inspect the repo first. If implementation is not requested, use the repo as concrete context and source-of-truth for community recommendations.
-- **Live community / URL audit mode**: If the user gives a Discord, Slack, forum, subreddit, website, or other live community URL, audit that live presence first and use it as the starting context.
-
-Prefer brand files when they exist, but do not block useful work on them if the user has provided a repo or URL instead.
+> See `./references/shared-patterns.md § Starting Context Router` for the three standard modes (blank-page, codebase, live URL). Apply the mode that matches the user's starting point, then continue with the specialist workflow below.
 
 ---
 
 ## 0. Pre-Flight: Read Strategic Context
 
-Brand context shapes every recommendation -- without it, output will be generic and misaligned.
-
-When brand workspace files exist, read these files in order before major community work:
-
-1. `./brands/{brand-slug}/brand-context.md` -- brand identity, audience, USP
-2. `./brands/{brand-slug}/product-marketing-context.md` -- deep positioning, customer language, objections (read if it exists), voice
-3. `./brands/{brand-slug}/sostac/03-strategy.md` -- target segments, positioning, phasing
-4. `./brands/{brand-slug}/sostac/04-tactics.md` -- channel plan, community role, budget, priorities
-
-If SOSTAC files do not exist, say: "No strategic plan found. If you have a repo, product, existing forum, or live community URL, I can still work from that concrete context now and recommend a SOSTAC plan later so the community serves a clear strategic purpose."
-
-Ground every recommendation in the brand's actual audience, positioning, and goals. Generic community advice without strategic context builds ghost towns.
+> See `./references/shared-patterns.md § Pre-Flight` for the standard context-reading sequence. Ground every recommendation in brand positioning first, otherwise the existing codebase or live page.
 
 ---
 
@@ -290,7 +273,7 @@ The strongest communities produce more member content than host content. Encoura
 Every community needs published rules before launch. Cover (see also `./references/best-practices.md`):
 - **Expected behavior**: Be respectful, constructive, on-topic. Give before you ask.
 - **Prohibited behavior**: Spam, self-promotion without permission, harassment, discrimination, doxxing, illegal activity.
-- **Self-promotion policy**: Dedicated channel or thread for sharing your own work. Never in general discussion unless explicitly relevant to the conversation.
+- **Self-promotion policy**: Dedicated channel or thread for sharing your own work. Avoid in general discussion unless explicitly relevant to the conversation -- off-topic self-promotion erodes trust and invites more spam.
 - **Consequences**: Warning > Temporary mute > Temporary ban > Permanent ban. Make the escalation path clear.
 
 ### 6.2 Moderation Workflows
@@ -506,3 +489,16 @@ When the user requests community building or management work:
 - Referral program engineering (product integration) -- route to marketing-guerrilla for growth hacking.
 - PR for community launch announcements -- route to marketing-pr.
 - No brand presence yet (no product, no audience) -- recommend foundational setup before community building. Communities amplify existing value; they cannot create it from nothing.
+
+
+---
+
+## Output Contract
+
+Community deliverables include:
+- **Community type**: Discord, Slack, Circle, Skool, Facebook Group, forum, etc.
+- **Strategy component**: launch plan, engagement program, moderation guide, or growth plan
+- **Target audience**: which segment the community serves
+- **Engagement mechanics**: specific programs, rituals, or content cadences
+- **Success metrics**: member growth, engagement rate, retention targets
+- **File saved to**: path where the deliverable was written

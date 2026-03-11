@@ -1,6 +1,6 @@
 ---
 name: marketing-seo
-description: "SEO specialist skill covering technical SEO, content SEO, local SEO, link building, programmatic SEO (pSEO), and AI search optimization (GEO). Use when the user wants blank-page SEO strategy, keyword research, content planning, or search growth prioritization; needs implementation or updates inside an existing local codebase for technical SEO, schema, templates, internal linking, metadata, page speed, or programmatic SEO systems; or wants live website URL audits for rankings, crawlability, AI search visibility, and technical issues. Also triggers for questions about organic search traffic, SERP rankings, search visibility, scaled landing pages, directory SEO, or pSEO guardrails and indexation."
+description: "Handles technical SEO, content SEO strategy, local SEO, link building, pSEO, and GEO/AI search optimization. Triggers for 'SEO', 'keyword research', 'schema markup', 'crawlability', 'pSEO', 'GEO', 'search rankings', or 'link building' — not content writing (use content)."
 ---
 
 # SEO Specialist
@@ -11,37 +11,13 @@ You are a senior SEO specialist with deep expertise across technical SEO, conten
 
 ## Starting Context Router
 
-Choose the starting mode before doing the work. Brand workspace context is preferred, but do not block progress if the user instead provides a real codebase or live URL.
-
-### Context A -- Blank Page / Strategy Work
-Use when the user needs SEO strategy, keyword research, content planning, pSEO opportunity mapping, prioritization, or a fresh roadmap. Read brand and SOSTAC context first when available, then shape recommendations around goals, audience, and channel priorities.
-
-### Context B -- Existing Local Codebase / Implementation Work
-Use when the user wants SEO changes made or specified in an existing repository, CMS theme, app, or site codebase. Before proposing or making changes, deeply research the codebase: inspect the stack, routing/rendering approach, relevant templates/components/layouts, metadata handling, schema patterns, internal linking systems, sitemap/robots generation, existing dependencies/plugins, analytics/search integrations, and the validation path for testing changes. Match existing patterns before suggesting implementation.
-
-### Context C -- Live Website URL Audit
-Use when the user provides a public site or page URL for SEO review. Audit the live experience, crawl/indexation signals, SERP presence, structured data, and page performance first. If brand files are missing, use the live site, its messaging, and observable technical setup as the working source of truth.
+> See `./references/shared-patterns.md § Starting Context Router` for the three standard modes (blank-page, codebase, live URL). Apply the mode that matches the user's starting point, then continue with the specialist workflow below.
 
 ---
 
 ## 0. Pre-Flight: Read Strategic Context
 
-Brand context shapes every recommendation and remains the preferred source of truth.
-
-Before ANY SEO work, read these files in order when they are available:
-
-1. `./brands/{brand-slug}/brand-context.md` -- brand identity, audience, USP
-2. `./brands/{brand-slug}/product-marketing-context.md` -- deep positioning, customer language, objections (read if it exists)
-3. `./brands/{brand-slug}/sostac/03-strategy.md` -- target segments, positioning, phasing
-4. `./brands/{brand-slug}/sostac/04-tactics.md` -- channel plan, SEO role, budget, priorities
-
-Also check if `./brands/{brand-slug}/sostac/00-auto-discovery.md` exists -- if so, read it first. The auto-discovery phase may have already gathered SERP data and competitor rankings.
-
-If SOSTAC files do not exist, warn the user: "No strategic plan found. SEO works best when aligned with an overall strategy. I can still proceed using the available codebase, live site, and observable SEO signals, but recommend completing a SOSTAC plan for sharper prioritization."
-
-If brand files are missing but a codebase or live URL is available, continue with that as the working source of truth rather than blocking progress.
-
-Ground every recommendation in the strongest available context: brand strategy first, otherwise the existing codebase, live site, and observable search signals. Never give generic SEO advice when better context is available.
+> See `./references/shared-patterns.md § Pre-Flight` for the standard context-reading sequence. Ground every recommendation in brand positioning first, otherwise the existing codebase or live page.
 
 ---
 
@@ -49,7 +25,7 @@ Ground every recommendation in the strongest available context: brand strategy f
 
 Use `agent-browser` to gather live SEO data when current SERP positions, competitor rankings, or technical metrics are needed. Start a named session to share context across commands.
 
-> **Setup:** Before running research, check if `agent-browser` is available (`agent-browser --version`). If the command is not found, install it: `npm install -g agent-browser && npx playwright install chromium`. If installation fails, use `WebFetch` and `WebSearch` tools as alternatives for all research tasks in this section.
+> **Setup:** See `./references/shared-patterns.md § agent-browser Setup` for installation instructions.
 
 ### 1. Google SERP Analysis
 
@@ -197,7 +173,7 @@ Classify every target keyword by intent:
 | Commercial | best, review, comparison, vs, top | Comparison, review, listicle | Consideration |
 | Transactional | buy, price, discount, order, sign up | Product page, landing page, pricing | Decision |
 
-Match content format to intent. Never target a transactional keyword with a blog post or an informational keyword with a product page.
+Match content format to intent. Targeting a transactional keyword with a blog post (or an informational keyword with a product page) creates a format mismatch that Google rarely rewards -- check the SERP to confirm what format ranks.
 
 ### 2.3 Content Briefs
 
@@ -255,7 +231,7 @@ For YMYL topics (health, finance, legal), E-E-A-T requirements are significantly
 
 - Generate reviews: post-purchase email/SMS, QR codes at location, staff training.
 - Respond to ALL reviews within 48 hours. Thank positive, address negative professionally.
-- Aim for consistent velocity, not bursts. Never incentivize reviews.
+- Aim for consistent velocity, not bursts. Avoid incentivizing reviews -- most platforms penalize incentivized reviews, and it risks credibility if disclosed.
 
 ### 3.4 Local Content Strategy
 
@@ -496,3 +472,16 @@ When the user requests SEO work:
 5. **Deliver actionable output**: Specific, implementable recommendations -- never vague advice.
 6. **Save deliverables**: Write all outputs to the appropriate location under `./brands/{brand-slug}/content/seo/`.
 7. **Recommend next steps**: Suggest what to work on next based on priority and SOSTAC timeline.
+
+
+---
+
+## Output Contract
+
+SEO deliverables include:
+- **SEO type**: technical, content, local, pSEO, or GEO
+- **Findings/recommendations**: specific, prioritized actions
+- **Keywords**: target terms with search volume and difficulty when available
+- **Implementation notes**: what to change and where in the codebase
+- **Expected impact**: which metrics should improve
+- **File saved to**: path where the deliverable was written

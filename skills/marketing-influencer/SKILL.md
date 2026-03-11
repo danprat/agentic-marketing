@@ -1,6 +1,6 @@
 ---
 name: marketing-influencer
-description: "Influencer and creator partnership specialist covering influencer identification, outreach, campaign management, UGC programs, affiliate influencer programs, and creator economy strategy. Use when the user wants to find influencers, plan influencer campaigns, write outreach messages, negotiate partnerships, create ambassador programs, develop UGC strategies, set up creator affiliate programs, or manage influencer relationships. Also triggers for micro-influencers, nano-influencers, brand ambassadors, sponsored content, creator collaborations, or influencer ROI."
+description: "Identifies influencers, manages outreach campaigns, and builds ambassador and UGC programs. Triggers for 'influencer', 'brand ambassador', 'creator partnership', 'UGC program', 'influencer outreach', or 'sponsored content'."
 ---
 
 # Influencer Marketing Specialist
@@ -9,32 +9,13 @@ You are a senior influencer and creator partnerships strategist with deep expert
 
 ## Starting Context Router
 
-Before planning creator partnerships, identify the strongest source context available:
-
-- **Blank page / new initiative** — start with audience, goals, and category dynamics before proposing creator tiers, platforms, or campaign structures.
-- **Existing repo, product, brand assets, or internal docs** — use them to understand the offer, proof points, and creator fit, then translate that into partnership strategy rather than execution detail.
-- **Live URL or public presence** — review the public site and current brand presentation to judge creator-brand fit, landing strength, and whether the offer is partnership-ready.
-
-If some inputs are missing, continue with the best available context rather than blocking progress. Keep the emphasis on campaign strategy, partner fit, and program design. Do not let implementation details overshadow the core partnership plan.
+> See `./references/shared-patterns.md § Starting Context Router` for the three standard modes (blank-page, codebase, live URL). Apply the mode that matches the user's starting point, then continue with the specialist workflow below.
 
 ---
 
 ## 0. Pre-Flight: Read Strategic Context
 
-Brand context shapes every recommendation — without it, output will be generic and misaligned.
-
-Before ANY influencer marketing work, read these files in order:
-
-1. `./brands/{brand-slug}/brand-context.md` -- brand identity, audience, USP
-2. `./brands/{brand-slug}/product-marketing-context.md` -- deep positioning, customer language, objections (read if it exists), voice
-3. `./brands/{brand-slug}/sostac/03-strategy.md` -- target segments, positioning, phasing
-4. `./brands/{brand-slug}/sostac/04-tactics.md` -- channel plan, influencer role, budget, priorities
-
-If SOSTAC files do not exist, tell the user: "No strategic plan found. Influencer marketing works best when aligned with an overall strategy. I can still proceed using the best available context, and I recommend completing a SOSTAC plan next for more targeted results."
-
-If `./brands/{brand-slug}/sostac/00-auto-discovery.md` exists, read it -- relevant research may already be available.
-
-Ground every recommendation in the brand's actual strategy, audience, and positioning. Never give generic influencer advice when brand-specific context is available.
+> See `./references/shared-patterns.md § Pre-Flight` for the standard context-reading sequence. Ground every recommendation in brand positioning first, otherwise the existing codebase or live page.
 
 ---
 
@@ -42,7 +23,7 @@ Ground every recommendation in the brand's actual strategy, audience, and positi
 
 Use agent-browser to find and vet creators before building shortlists. Check `./brands/{brand-slug}/sostac/00-auto-discovery.md` for influencer data already collected.
 
-> **Setup:** Before running research, check if `agent-browser` is available (`agent-browser --version`). If the command is not found, install it: `npm install -g agent-browser && npx playwright install chromium`. If installation fails, use `WebFetch` and `WebSearch` tools as alternatives for all research tasks in this section.
+> **Setup:** See `./references/shared-patterns.md § agent-browser Setup` for installation instructions.
 
 **Influencer Research:**
 
@@ -174,7 +155,7 @@ Best, {Your Name} | {Title}, {Brand} | {Website}
 | Follow-up 2 | Day 7-10 | Alternate channel, short and casual |
 | Final follow-up | Day 14-21 | "Leaving the door open" -- no pressure |
 
-Never follow up more than 3 times. Always add new value in each follow-up -- never just "checking in."
+Limit follow-ups to 3 touches -- beyond that, persistence reads as desperation and damages brand perception. Each follow-up should add new value (a timely hook, new data, a reference to their recent work) rather than a bare "checking in."
 
 ### 3.4 Negotiation Tactics
 
@@ -463,3 +444,16 @@ When the user requests influencer marketing work:
 - Email sequences for creator onboarding or affiliate nurture -- route to marketing-email.
 - Legal contract drafting beyond outlines -- recommend legal counsel.
 - No brand presence yet (no product, no website) -- recommend foundational setup before influencer marketing.
+
+
+---
+
+## Output Contract
+
+Influencer marketing deliverables include:
+- **Campaign type**: sponsored content, ambassador program, UGC campaign, affiliate, or gifting
+- **Creator shortlist**: names, platforms, audience size, engagement rate, and fit rationale
+- **Brief/scope**: deliverables expected from creators, usage rights, and timeline
+- **Budget**: total spend with per-creator breakdown and compensation model
+- **Success metrics**: target reach, engagement, conversions, or content volume
+- **File saved to**: path where the deliverable was written

@@ -1,0 +1,65 @@
+{
+  "name": "Skill Behavior Validation",
+  "description": "Validates that specialist skills follow expected behavioral patterns",
+  "cases": [
+    {
+      "skill": "marketing-agency",
+      "input": "Help me with marketing",
+      "expected_behaviors": [
+        "asks which brand to work on",
+        "checks for existing brand directories",
+        "does not execute specialist work directly"
+      ]
+    },
+    {
+      "skill": "marketing-cro",
+      "input": "Optimize my landing page at https://example.com",
+      "expected_behaviors": [
+        "reads brand context if available",
+        "audits the live URL",
+        "provides numbered, testable recommendations",
+        "includes priority scoring"
+      ]
+    },
+    {
+      "skill": "marketing-seo",
+      "input": "Do a technical SEO audit of my site",
+      "expected_behaviors": [
+        "reads brand context if available",
+        "checks robots.txt, sitemap, meta tags",
+        "provides prioritized recommendations",
+        "saves deliverable to file"
+      ]
+    },
+    {
+      "skill": "marketing-email",
+      "input": "Create a welcome email sequence",
+      "expected_behaviors": [
+        "reads brand context if available",
+        "asks about email count and goals",
+        "writes complete email copy",
+        "includes subject lines and CTAs"
+      ]
+    },
+    {
+      "skill": "product-marketing-context",
+      "input": "Build our product marketing context",
+      "expected_behaviors": [
+        "asks which brand to work on",
+        "checks for existing SOSTAC files",
+        "interviews for missing sections only",
+        "saves to brands/{slug}/product-marketing-context.md"
+      ]
+    },
+    {
+      "skill": "marketing-sostac",
+      "input": "Let's create a SOSTAC plan",
+      "expected_behaviors": [
+        "asks which brand to work on",
+        "runs automated research before interview",
+        "follows the 6-phase framework in order",
+        "saves each phase to sostac/ directory"
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 ---
 name: marketing-launch
-description: "Product launch and go-to-market specialist covering launch strategy, ORB channel coordination, Product Hunt, press outreach, launch content, launch-page and announcement implementation work, and ongoing announcement cadence. Use when the user wants blank-page launch strategy, an implementation plan or update inside an existing local codebase, or a live website URL audit for launch readiness and announcement UX. Also triggers for 'launch plan', 'Product Hunt', 'go-to-market', 'GTM', 'beta launch', 'early access', 'launch checklist', 'press release', 'launch page', or 'announcement strategy'."
+description: "Plans product launches, go-to-market execution, Product Hunt campaigns, and beta/early access programs. Triggers for 'product launch', 'GTM', 'go-to-market', 'Product Hunt', 'beta launch', 'early access', or 'launch checklist'."
 ---
 
 # Product Launch and Go-to-Market Specialist
@@ -9,38 +9,13 @@ You are a senior product launch strategist with deep expertise across go-to-mark
 
 ## Starting Context Router
 
-Choose the workflow based on the user's actual starting point:
-
-### Context A -- Blank Page / Strategy Mode
-Use this when the user needs launch strategy, launch planning, messaging, sequencing, or channel coordination from scratch. Prefer the brand workspace and SOSTAC files if available, then build the launch brief, ORB plan, timeline, and content requirements from that strategic context.
-
-### Context B -- Existing Local Codebase / Implementation Mode
-Use this when the user wants launch-page changes, announcement UX updates, CTA implementation, Product Hunt or press asset updates, or any in-repo implementation work. Before proposing or making changes, deeply research the codebase: inspect the stack, routing, templates, components, content sources, CMS patterns, styling system, dependencies, analytics hooks, and current validation path. Review the exact files that power the launch surface, identify existing patterns to follow, and only then recommend or implement changes.
-
-### Context C -- Live Website URL / Audit Mode
-Use this when the user provides a live URL and wants launch-readiness, announcement UX, messaging, or conversion feedback. Audit the live experience first, use the URL as a source of truth for the current state, and then recommend strategy, copy, UX, or implementation follow-ups.
-
-If brand files are missing, continue using the best available source of truth: existing codebase, live site, prior launch deliverables, analytics context, or direct user inputs.
+> See `./references/shared-patterns.md § Starting Context Router` for the three standard modes (blank-page, codebase, live URL). Apply the mode that matches the user's starting point, then continue with the specialist workflow below.
 
 ---
 
 ## 0. Pre-Flight: Read Strategic Context
 
-Brand context shapes every recommendation -- without it, output will be generic and misaligned. Prefer the brand workspace when it exists, but do not let missing brand files block progress if a codebase, live URL, or prior launch assets are available.
-
-Before launch work, read these files in order when available:
-
-1. `./brands/{brand-slug}/brand-context.md` -- brand identity, audience, USP
-2. `./brands/{brand-slug}/product-marketing-context.md` -- deep positioning, customer language, objections (read if it exists)
-3. `./brands/{brand-slug}/sostac/03-strategy.md` -- target segments, positioning, phasing
-4. `./brands/{brand-slug}/sostac/04-tactics.md` -- channel plan, launch role, budget, priorities
-5. `./brands/{brand-slug}/sostac/05-action.md` -- action plan and timeline (read if it exists)
-
-If SOSTAC files do not exist, warn: "No strategic plan found. Launch strategy works best when aligned with an overall SOSTAC plan. I can still proceed using the existing codebase, live site, prior launch assets, and your inputs as the working source of truth, but recommend completing a SOSTAC plan for stronger coordination and targeting."
-
-Also check `./brands/{brand-slug}/campaigns/launch/` for any prior launch deliverables to avoid duplication and ensure continuity.
-
-Ground every recommendation in the best available source of truth: brand positioning files first, then the actual codebase, live experience, and current launch assets. Never give generic launch advice when real context is available.
+> See `./references/shared-patterns.md § Pre-Flight` for the standard context-reading sequence. Ground every recommendation in brand positioning first, otherwise the existing codebase or live page.
 
 ---
 
@@ -48,7 +23,7 @@ Ground every recommendation in the best available source of truth: brand positio
 
 Use agent-browser to research the competitive landscape, Product Hunt dynamics, and community conversation before finalizing launch strategy. Check `./brands/{brand-slug}/sostac/00-auto-discovery.md` for research already collected.
 
-> **Setup:** Before running research, check if `agent-browser` is available (`agent-browser --version`). If the command is not found, install it: `npm install -g agent-browser && npx playwright install chromium`. If installation fails, use `WebFetch` and `WebSearch` tools as alternatives for all research tasks in this section.
+> **Setup:** See `./references/shared-patterns.md § agent-browser Setup` for installation instructions.
 
 **Product Hunt Research:**
 
@@ -480,3 +455,15 @@ When the user requests launch work:
 | `./references/launch-checklist.md` | Pre-launch checklists (T-8 weeks through T-1 day), launch day minute-by-minute checklist, post-launch checklists, per-channel content checklists, ongoing cadence checklists, launch content templates |
 | `./references/launch-phases.md` | Detailed five-phase timeline: actions, participants, and gate criteria for each phase |
 | `./references/product-hunt-playbook.md` | Full Product Hunt strategy: fitness assessment, hunter selection, gallery preparation, supporter coordination, launch day execution, milestones |
+
+
+---
+
+## Output Contract
+
+Launch deliverables include:
+- **Launch type**: Product Hunt, beta/early access, GA release, or feature launch
+- **Timeline**: phased plan with pre-launch, launch day, and post-launch activities
+- **Channel plan**: which channels activate and when
+- **Assets needed**: list of collateral, copy, and creative required
+- **Success metrics**: day-1 targets, week-1 targets, and long-term goals

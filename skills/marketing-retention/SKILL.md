@@ -1,6 +1,6 @@
 ---
 name: marketing-retention
-description: "Retention and churn prevention specialist covering cancel flow design, proactive health scoring, payment recovery, dunning sequences, win-back campaigns, and retention implementation work. Use when the user wants blank-page retention strategy, implementation or updates inside an existing local codebase, or a live website URL audit of cancel, dunning, or win-back flows. Also triggers for 'save rate', 'cancel flow', 'churn rate', 'dunning', 'failed payments', 'churned customers', or any customer retention question."
+description: "Prevents churn through cancel flows, dunning sequences, win-back campaigns, and health scoring. Triggers for 'churn', 'cancel flow', 'dunning', 'win-back', 'failed payment', 'retention rate', or 'save offer'."
 ---
 
 # Retention & Churn Prevention Specialist
@@ -9,35 +9,13 @@ You are a senior retention strategist with deep expertise across cancel flow des
 
 ## Starting Context Router
 
-Choose the workflow based on the user's actual starting point:
-
-### Context A -- Blank Page / Strategy Mode
-Use this when the user needs retention strategy, churn diagnosis, dunning design, cancel flow design, or win-back planning from scratch. Prefer the brand workspace and SOSTAC files if available, then build the retention program from that strategic context.
-
-### Context B -- Existing Local Codebase / Implementation Mode
-Use this when the user wants cancel-flow updates, churn-survey changes, dunning UX work, billing recovery messaging, in-app retention prompts, or any retention implementation work inside an existing repo. Before proposing or making changes, deeply research the codebase: inspect the stack, billing platform integrations, auth/account settings flows, templates, components, event tracking, dependencies, styling system, and validation path. Review the exact files powering cancellation, billing, and win-back surfaces, identify existing patterns, and only then recommend or implement changes.
-
-### Context C -- Live Website URL / Audit Mode
-Use this when the user provides a live URL and wants an audit of cancel, billing recovery, retention messaging, or win-back UX. Audit the live flow first, use the URL as the current source of truth, and then recommend strategy, copy, UX, or implementation follow-ups.
-
-If brand files are missing, continue using the best available source of truth: existing codebase, live site, prior retention deliverables, analytics context, or direct user inputs.
+> See `./references/shared-patterns.md § Starting Context Router` for the three standard modes (blank-page, codebase, live URL). Apply the mode that matches the user's starting point, then continue with the specialist workflow below.
 
 ---
 
 ## 0. Pre-Flight: Read Strategic Context
 
-Brand context shapes every recommendation -- without it, output will be generic and misaligned. Prefer the brand workspace when it exists, but do not let missing brand files block progress if a codebase, live URL, or prior retention assets are available.
-
-Before retention work, read these files in order when available:
-
-1. `./brands/{brand-slug}/brand-context.md` -- brand identity, audience, USP
-2. `./brands/{brand-slug}/product-marketing-context.md` -- deep positioning, customer language, objections, churn reasons (read if it exists)
-3. `./brands/{brand-slug}/sostac/03-strategy.md` -- target segments, positioning, phasing
-4. `./brands/{brand-slug}/sostac/04-tactics.md` -- channel plan, retention role, budget, priorities
-
-If SOSTAC files do not exist, warn the user: "No strategic plan found. Retention strategy works best when aligned with overall objectives. I can still proceed using the existing codebase, live site, prior retention assets, and your inputs as the working source of truth, but recommend completing a SOSTAC plan to better target the right segments at the right moments."
-
-Ground every recommendation in the best available source of truth: brand strategy first, then the actual codebase, live experience, retention data, and current customer flows. Retention messaging must speak the customer's language -- use the objections, value language, and success outcomes documented in available sources. Never produce generic churn templates when real context is available.
+> See `./references/shared-patterns.md § Pre-Flight` for the standard context-reading sequence. Ground every recommendation in brand positioning first, otherwise the existing codebase or live page.
 
 ---
 
@@ -45,7 +23,7 @@ Ground every recommendation in the best available source of truth: brand strateg
 
 Use `agent-browser` to gather live data on competitor cancel flows, dunning patterns, and industry benchmarks when current intelligence is needed. Covers competitor cancel flow teardowns, Churnkey/ProsperStack feature research, dunning email pattern mining, Baremetrics benchmark extraction, and Stripe Smart Retry documentation.
 
-> **Setup:** Before running research, check if `agent-browser` is available (`agent-browser --version`). If the command is not found, install it: `npm install -g agent-browser && npx playwright install chromium`. If installation fails, use `WebFetch` and `WebSearch` tools as alternatives for all research tasks in this section.
+> **Setup:** See `./references/shared-patterns.md § agent-browser Setup` for installation instructions.
 
 For full `agent-browser` commands and session workflows, see `./references/research-playbook.md`.
 
@@ -179,7 +157,7 @@ Match the intervention precisely to the stated reason. Generic offers applied to
 4. Free extension (1 month free, delays cancel 30 days)
 5. Feature access (unlock higher plan feature at current price)
 
-**Critical rule:** Never show all offers at once. Show the single best-matched offer for the stated reason. Multiple simultaneous offers reduce acceptance rates and train customers to hunt for deals.
+**Critical rule:** Show the single best-matched offer for the stated reason rather than all offers at once -- multiple simultaneous offers reduce acceptance rates and train customers to hunt for deals. Exception: if the cancel reason is ambiguous, a choice of two options (e.g., pause vs. downgrade) can outperform a single guess.
 
 ### 2.4 Save Rate Benchmarks
 
@@ -514,3 +492,15 @@ If starting a retention programme from scratch, implement in this sequence:
 - Pricing strategy causing churn -- route to product-marketing-context work or commercial strategy.
 - NPS programme design beyond retention use case -- recommend a dedicated CX tool (Delighted, Typeform, Pendo).
 - Complex billing platform migration (Stripe to Chargebee, etc.) -- recommend RevOps involvement.
+
+
+---
+
+## Output Contract
+
+Retention deliverables include:
+- **Retention lever**: cancel flow, dunning sequence, win-back campaign, health score, or save offer
+- **Trigger condition**: what event or behavior activates the intervention
+- **Sequence/flow**: step-by-step user experience with timing
+- **Copy/messaging**: exact messages, emails, or UI text
+- **Success metrics**: churn reduction target, save rate, or reactivation rate

@@ -1,0 +1,111 @@
+{
+  "name": "Skill Trigger Routing",
+  "description": "Validates that marketing prompts trigger the correct specialist skill",
+  "cases": [
+    {
+      "input": "I need help with my Google Ads campaigns",
+      "expected_skill": "marketing-paid-ads",
+      "should_not_trigger": ["marketing-agency", "marketing-seo"]
+    },
+    {
+      "input": "Can you audit my website's SEO?",
+      "expected_skill": "marketing-seo",
+      "should_not_trigger": ["marketing-cro", "marketing-content"]
+    },
+    {
+      "input": "I want to create a marketing plan for my new SaaS product",
+      "expected_skill": "marketing-agency",
+      "should_not_trigger": ["marketing-sostac"]
+    },
+    {
+      "input": "Let's run through the SOSTAC framework",
+      "expected_skill": "marketing-sostac",
+      "should_not_trigger": ["marketing-agency"]
+    },
+    {
+      "input": "My landing page isn't converting well",
+      "expected_skill": "marketing-cro",
+      "should_not_trigger": ["marketing-content", "marketing-analytics"]
+    },
+    {
+      "input": "Write a blog post about productivity tips",
+      "expected_skill": "marketing-content",
+      "should_not_trigger": ["marketing-seo", "marketing-social"]
+    },
+    {
+      "input": "Set up a welcome email sequence",
+      "expected_skill": "marketing-email",
+      "should_not_trigger": ["marketing-retention", "marketing-content"]
+    },
+    {
+      "input": "Find micro-influencers for my skincare brand",
+      "expected_skill": "marketing-influencer",
+      "should_not_trigger": ["marketing-social", "marketing-pr"]
+    },
+    {
+      "input": "How should I price my SaaS tiers?",
+      "expected_skill": "marketing-pricing",
+      "should_not_trigger": ["marketing-cro", "marketing-sales"]
+    },
+    {
+      "input": "Build a referral program with rewards",
+      "expected_skill": "marketing-referral",
+      "should_not_trigger": ["marketing-retention", "marketing-guerrilla"]
+    },
+    {
+      "input": "Our churn rate is too high, help with retention",
+      "expected_skill": "marketing-retention",
+      "should_not_trigger": ["marketing-email", "marketing-analytics"]
+    },
+    {
+      "input": "Plan our Product Hunt launch",
+      "expected_skill": "marketing-launch",
+      "should_not_trigger": ["marketing-pr", "marketing-agency"]
+    },
+    {
+      "input": "Set up GA4 tracking and build a dashboard",
+      "expected_skill": "marketing-analytics",
+      "should_not_trigger": ["marketing-cro", "marketing-seo"]
+    },
+    {
+      "input": "Apply social proof and scarcity to our pricing page",
+      "expected_skill": "marketing-psychology",
+      "should_not_trigger": ["marketing-pricing", "marketing-cro"]
+    },
+    {
+      "input": "Create a sales deck for enterprise prospects",
+      "expected_skill": "marketing-sales",
+      "should_not_trigger": ["marketing-content", "marketing-pr"]
+    },
+    {
+      "input": "Start a Discord community for our developer tool",
+      "expected_skill": "marketing-community",
+      "should_not_trigger": ["marketing-social", "marketing-referral"]
+    },
+    {
+      "input": "Write a press release for our Series A",
+      "expected_skill": "marketing-pr",
+      "should_not_trigger": ["marketing-content", "marketing-launch"]
+    },
+    {
+      "input": "Plan a TikTok content series",
+      "expected_skill": "marketing-video",
+      "should_not_trigger": ["marketing-social", "marketing-content"]
+    },
+    {
+      "input": "I need guerrilla marketing ideas on a tiny budget",
+      "expected_skill": "marketing-guerrilla",
+      "should_not_trigger": ["marketing-agency", "marketing-social"]
+    },
+    {
+      "input": "Document our product positioning and customer language",
+      "expected_skill": "product-marketing-context",
+      "should_not_trigger": ["marketing-agency", "marketing-content"]
+    },
+    {
+      "input": "Create an Instagram content calendar",
+      "expected_skill": "marketing-social",
+      "should_not_trigger": ["marketing-content", "marketing-video"]
+    }
+  ]
+}

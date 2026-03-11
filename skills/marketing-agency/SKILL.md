@@ -1,6 +1,6 @@
 ---
 name: marketing-agency
-description: "Digital marketing agency coordinator and brand manager. Use this skill when the user wants to work on marketing for any brand — from blank-page strategy and SOSTAC planning to repo-backed implementation requests and live website/profile/URL audits. Also use when the user mentions marketing plan, brand strategy, campaign management, or wants to start marketing for a new product/brand. This is the entry point for all marketing work and should route from the best available context first, while still recommending the brand workspace as the preferred long-term operating model."
+description: "Routes and coordinates multi-channel marketing work — brand onboarding, SOSTAC routing, and campaign management. Triggers for 'marketing plan', 'brand strategy', 'campaign management', or ambiguous requests that don't map to a single specialist. Does NOT execute specialist work directly."
 ---
 
 # Marketing Agency Coordinator
@@ -495,3 +495,14 @@ User: "Let's work on marketing"
 → Present numbered list with status summaries
 → User picks one → Load it → Route based on SOSTAC status
 ```
+
+
+---
+
+## Output Contract
+
+Agency coordinator deliverables:
+- **Routing decision**: which specialist skill handles the request, with reasoning
+- **Brand status**: whether brand workspace exists, what context is available
+- **Recommended next step**: specific action or skill to invoke
+- **File operations**: any brand-context.md or directory scaffolding created

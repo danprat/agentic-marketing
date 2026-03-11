@@ -1,6 +1,6 @@
 ---
 name: marketing-sostac
-description: "SOSTAC marketing plan builder — guides users through the complete 6-phase planning framework (Situation, Objectives, Strategy, Tactics, Action, Control) with deep guided interviews using industry-standard frameworks. Use when creating a marketing plan, starting marketing for a new brand, or when the marketing-agency coordinator routes here. Also use when the user mentions SOSTAC, marketing plan, situation analysis, marketing objectives, marketing strategy, or wants to plan before implementing any marketing activities. Begins with automated brand and competitor research using web browsing before the interview starts."
+description: "Executes the 6-phase SOSTAC planning framework (Situation, Objectives, Strategy, Tactics, Action, Control) via guided interview. Triggers for 'SOSTAC', 'situation analysis', 'marketing objectives', or when routed by marketing-agency."
 ---
 
 # SOSTAC Marketing Plan Builder
@@ -457,3 +457,16 @@ Congratulate the user. Offer: "Would you like to start implementing? I can hand 
 ### SMART / OKR Validation
 - Apply to every objective without exception: Specific (what exactly?), Measurable (how tracked?), Achievable (realistic with these resources?), Relevant (connects to business goal?), Time-bound (deadline?).
 - Every KR must have a baseline, target, and deadline. Reject any that don't.
+
+
+---
+
+## Output Contract
+
+SOSTAC deliverables include:
+- **Phase completed**: which SOSTAC phase (Situation, Objectives, Strategy, Tactics, Action, or Control)
+- **Key findings**: summary of the most important insights from the interview
+- **Cross-phase consistency**: confirmation that this phase aligns with prior phases
+- **Status update**: updated README.md with current completion status
+- **Next phase**: which phase comes next and what it will cover
+- **File saved to**: path where the phase document was written

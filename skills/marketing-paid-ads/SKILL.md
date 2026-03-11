@@ -1,6 +1,6 @@
 ---
 name: marketing-paid-ads
-description: "Paid advertising specialist covering Google Ads, Meta Ads (Facebook/Instagram), LinkedIn Ads, TikTok Ads, X/Twitter Ads, Pinterest Ads, and programmatic advertising. Use when the user wants blank-page paid media strategy, campaign planning, audience architecture, budgets, or creative direction; needs implementation or updates inside an existing local codebase for pixels, conversion tracking, landing pages, feeds, or ad-related instrumentation; or wants live website URL audits of landing pages, tracking readiness, offers, or funnel issues affecting paid performance. Also triggers for PPC, SEM, display ads, retargeting, lookalike audiences, Performance Max, Advantage+, or ad creative optimization."
+description: "Plans and manages paid media across Google, Meta, LinkedIn, TikTok, and programmatic channels. Triggers for 'PPC', 'paid ads', 'Google Ads', 'Meta Ads', 'retargeting', 'ad creative', 'ad budget', or 'SEM'."
 ---
 
 # Paid Advertising Specialist
@@ -13,39 +13,13 @@ For modern and emerging practices across all platforms, consult `./references/be
 
 ## Starting Context Router
 
-Choose the starting mode before doing the work. Brand workspace context is preferred, but do not block progress if the user instead provides a real codebase or live URL.
-
-### Context A -- Blank Page / Strategy Work
-Use when the user needs paid media strategy, campaign architecture, audience planning, budget allocation, creative angle generation, or funnel design from scratch. Read brand and SOSTAC context first when available, then align recommendations to offer, economics, and channel role.
-
-### Context B -- Existing Local Codebase / Implementation Work
-Use when the user wants paid ads changes made or specified in an existing repository, storefront, app, CMS, or landing page codebase. Before proposing or making changes, deeply research the codebase: inspect the stack, landing page templates/components, feed or catalog setup, pixel and conversion tracking patterns, analytics instrumentation, consent handling, destination URLs, dependencies/integrations, and the validation path for confirming events and landing page behavior after implementation. Match existing implementation patterns before changing tracking or page experience.
-
-### Context C -- Live Website URL Audit
-Use when the user provides a public site or landing page URL for paid performance review. Audit the live experience first: offer clarity, landing page-message match, CTA flow, friction, mobile behavior, page speed, and observable tracking readiness. If brand files are missing, use the live site, offer, and landing page behavior as the working source of truth.
+> See `./references/shared-patterns.md § Starting Context Router` for the three standard modes (blank-page, codebase, live URL). Apply the mode that matches the user's starting point, then continue with the specialist workflow below.
 
 ---
 
 ## 0. Pre-Flight: Read Strategic Context
 
-Brand context shapes every recommendation and remains the preferred source of truth. Skipping it when available is the single most common cause of wasted ad spend in generated plans.
-
-Before ANY paid ads work, read these files in order when they are available:
-
-1. `./brands/{brand-slug}/brand-context.md` -- brand identity, audience, USP
-2. `./brands/{brand-slug}/product-marketing-context.md` -- deep positioning, customer language, objections (read if it exists)
-3. `./brands/{brand-slug}/sostac/01-situation.md` -- current state, budget, competitors
-4. `./brands/{brand-slug}/sostac/02-objectives.md` -- goals, KPIs, targets
-5. `./brands/{brand-slug}/sostac/03-strategy.md` -- target segments, positioning, phasing
-6. `./brands/{brand-slug}/sostac/04-tactics.md` -- channel plan, paid ads role, budget allocation
-
-Read `./brands/{brand-slug}/sostac/00-auto-discovery.md` if it exists -- auto-discovery may have already gathered Meta Ad Library and Google Transparency data.
-
-If SOSTAC files do not exist, warn the user: "No strategic plan found. Paid ads work best when aligned with an overall strategy. I can still proceed using the available codebase, live site, and observable offer and tracking setup, but recommend completing a SOSTAC plan for targeted results and proper budget allocation."
-
-If brand files are missing but a codebase or live URL is available, continue with that as the working source of truth rather than blocking progress.
-
-Ground every recommendation in the strongest available context: brand strategy first, otherwise the existing codebase, live site, and observable offer and tracking setup. Never give generic ad advice when better context is available.
+> See `./references/shared-patterns.md § Pre-Flight` for the standard context-reading sequence. Ground every recommendation in brand positioning first, otherwise the existing codebase or live page.
 
 ---
 
@@ -53,7 +27,7 @@ Ground every recommendation in the strongest available context: brand strategy f
 
 Use `agent-browser` to gather live competitor ad data before building campaigns. Start a named session to share context across commands.
 
-> **Setup:** Before running research, check if `agent-browser` is available (`agent-browser --version`). If the command is not found, install it: `npm install -g agent-browser && npx playwright install chromium`. If installation fails, use `WebFetch` and `WebSearch` tools as alternatives for all research tasks in this section.
+> **Setup:** See `./references/shared-patterns.md § agent-browser Setup` for installation instructions.
 
 ### 1. Meta Ad Library -- Competitor Ad Research
 
@@ -361,7 +335,7 @@ Per round, record:
 - What hooks perform best on which platform?
 - At what frequency (impressions/user) does fatigue begin?
 
-This log is permanent — it compounds value over time. Never delete losing entries; they prevent repeating failed experiments.
+This log is permanent — it compounds value over time. Keep losing entries; they prevent repeating failed experiments and reveal patterns over time.
 
 ### 6.7 Creative Testing Methodology
 
@@ -416,7 +390,7 @@ This log is permanent — it compounds value over time. Never delete losing entr
 
 ### 7.6 Scaling Strategies
 
-- **Vertical Scaling**: Increase budget 15-20% every 3-5 days on winning campaigns. Never more than 2x in a single change. Monitor CPA drift after each increase.
+- **Vertical Scaling**: Increase budget 15-20% every 3-5 days on winning campaigns. Avoid increasing more than 2x in a single change -- large jumps reset platform learning and spike CPA. Monitor CPA drift after each increase.
 - **Horizontal Scaling**: Duplicate winning campaigns to new audiences. Test new platforms. Expand to new geographies. Launch new creative angles to same audiences.
 - **Creative Scaling**: The number one scaling bottleneck is creative fatigue. Produce 5-10 new creatives per week when scaling aggressively. Rotate creative every 7-14 days on Meta and TikTok.
 
@@ -474,3 +448,17 @@ When the user requests paid ads work:
 - Budget under $500/month -- recommend focusing on 1 platform only.
 - Heavily regulated industry (pharma, finance, alcohol) -- flag platform-specific ad policies.
 - SEO may be more cost-effective -- route to SEO specialist for organic opportunities.
+
+
+---
+
+## Output Contract
+
+Paid ads deliverables include:
+- **Platform**: Google, Meta, LinkedIn, TikTok, etc.
+- **Campaign type**: search, display, video, shopping, etc.
+- **Audience definition**: targeting parameters
+- **Ad copy/creative**: headlines, descriptions, CTAs per ad format
+- **Budget recommendation**: daily/monthly spend with reasoning
+- **KPIs**: target CPA, ROAS, or CTR benchmarks
+- **File saved to**: path where the deliverable was written

@@ -1,6 +1,6 @@
 ---
 name: marketing-psychology
-description: "Applies behavioral science, cognitive biases, and psychological principles to marketing strategy, copy, pricing, and conversion optimization. Use when the user wants to improve persuasion in their copy, apply mental models to marketing decisions, understand why customers behave as they do, use psychology to improve conversion rates, or make any marketing more effective using behavioral science. Also triggers for 'loss aversion', 'social proof', 'scarcity', 'cognitive bias', 'Cialdini', 'Jobs to Be Done', 'behavioral design', or 'why do customers not buy'."
+description: "Applies behavioral science, cognitive biases, and persuasion frameworks to marketing decisions. Triggers for 'cognitive bias', 'loss aversion', 'social proof', 'scarcity', 'Cialdini', 'behavioral science', or 'persuasion framework'."
 ---
 
 # Marketing Psychology Specialist
@@ -9,31 +9,13 @@ You are a senior behavioral strategist with deep expertise in cognitive science,
 
 ## Starting Context Router
 
-Before applying any psychological framework, identify the strongest context you are working from:
-
-- **Blank page / early-stage brief** — infer likely decision friction from the category, audience, and offer, then frame recommendations as strategic hypotheses to validate.
-- **Existing repo, product, marketing assets, or internal docs** — use them to understand the current buyer journey, messaging, and behavior triggers, without slipping into implementation-heavy product work.
-- **Live URL or public presence** — assess the public experience as the customer sees it, then diagnose persuasion gaps, trust gaps, and friction points at the strategy and messaging layer.
-
-If some context is missing, continue with the best available evidence instead of blocking progress. The goal is to explain and improve buyer behavior, decision framing, and persuasion strategy — not to become a general implementation or UX execution skill.
+> See `./references/shared-patterns.md § Starting Context Router` for the three standard modes (blank-page, codebase, live URL). Apply the mode that matches the user's starting point, then continue with the specialist workflow below.
 
 ---
 
 ## 0. Pre-Flight: Read Strategic Context
 
-Brand context shapes every recommendation -- without it, output will be generic and misaligned.
-
-Before ANY work, read these files in order:
-
-1. `./brands/{brand-slug}/brand-context.md` -- brand identity, audience, USP
-2. `./brands/{brand-slug}/product-marketing-context.md` -- deep positioning, customer language, objections (read if it exists)
-3. `./brands/{brand-slug}/sostac/03-strategy.md` -- target segments, positioning, phasing (read if it exists)
-
-If SOSTAC files do not exist, continue using the best available brand context, assets, docs, or public presence rather than pausing the work.
-
-Ground every psychological principle in the brand's actual audience and product — generic psychology advice is less useful than applied recommendations.
-
-The `product-marketing-context.md` file is especially critical for this skill. It reveals the customer's existing mental models, language, objections, and beliefs — which determines which psychological levers are most potent for this specific brand.
+> See `./references/shared-patterns.md § Pre-Flight` for the standard context-reading sequence. Ground every recommendation in brand positioning first, otherwise the existing codebase or live page.
 
 ---
 
@@ -474,3 +456,15 @@ Psychology informs every marketing channel. When delivering recommendations, fla
 - Prioritized: top three changes, not an overwhelming list.
 - Brand-grounded: every recommendation references the specific audience, product, or context from the pre-flight files.
 - Honest about trade-offs and ethical lines.
+
+
+---
+
+## Output Contract
+
+Psychology deliverables include:
+- **Principle applied**: which cognitive bias or persuasion framework is used
+- **Context**: where in the funnel or user journey to apply it
+- **Implementation**: specific copy, design, or UX changes that leverage the principle
+- **Ethical check**: confirmation the technique is transparent and non-manipulative
+- **Expected effect**: what behavioral shift the principle should produce
