@@ -2,17 +2,19 @@
 
 ## Overview
 
-Covers technical SEO, content SEO, local SEO, link building, and AI search optimization.
+Covers technical SEO, content SEO, programmatic SEO (pSEO), local SEO, link building, and AI search optimization (GEO / Google AI Overviews).
 
 ## When to use it
 
 Use `/marketing-seo` when you need:
-- an SEO audit
+- a technical or content SEO audit
 - keyword research
 - content briefs for search
-- schema ideas
+- programmatic SEO strategy and templates
+- schema markup
 - local SEO recommendations
 - GEO or AI Overview readiness work
+- link building strategy or digital PR for backlinks
 
 ## Inputs to prepare
 
@@ -22,32 +24,46 @@ Use `/marketing-seo` when you need:
 - competitors
 - any existing analytics or ranking data
 
+## Output path resolution
+
+The skill routes output based on whether work is part of a campaign or standalone:
+
+| Mode | When to use | Output path |
+|---|---|---|
+| Campaign | Work tied to a specific launch or push | `brands/{brand-slug}/campaigns/{type}-{campaign-slug}/channels/seo/` |
+| Standalone | Evergreen or independent work | `brands/{brand-slug}/channels/seo/` |
+| Legacy fallback | Old workspace structure detected | `brands/{brand-slug}/content/seo/` |
+
+If unsure which mode applies, the skill will ask.
+
 ## Deliverables
 
-- SEO audits
+- SEO audits (technical and content)
 - keyword research docs
 - monthly action plans
 - content briefs
 - schema files
+- programmatic SEO data contracts, page archetypes, and template specs
+- AI Overview / GEO optimization recommendations
 
-## Output locations
+## Framework files
 
-```text
-brands/{brand-slug}/content/seo/
-```
+22 individual framework files, indexed in `frameworks-index.csv`:
 
-Including common subfolders such as:
-- `content-briefs/`
-- `schema/`
-- `link-building/`
-- `local-seo/`
+- Technical audit, core web vitals, site architecture
+- Schema markup, sitemap, robots.txt
+- Internal linking, JavaScript SEO
+- International SEO
+- Programmatic SEO (pSEO): opportunity mapping, page archetypes, template spec, data contract, indexation, internal linking, launch strategy, monitoring, anti-cannibalization, refresh/pruning
+- AI Overview optimization
+- Algorithm update guidance
 
 ## Related skills
 
-- `marketing-content`
-- `marketing-analytics`
-- `marketing-cro`
-- `marketing-pr`
+- `marketing-content` — content creation from SEO briefs
+- `marketing-analytics` — search performance tracking
+- `marketing-cro` — landing page optimization for search traffic
+- `marketing-pr` — digital PR for link building
 
 ## Sample prompts
 
@@ -64,4 +80,9 @@ For Northstar AI, build keyword research around recruiting automation, interview
 ```text
 /marketing-seo
 Use our SOSTAC plan and product marketing context to create three high-intent SEO briefs.
+```
+
+```text
+/marketing-seo
+Design a programmatic SEO strategy for our location-based landing pages.
 ```

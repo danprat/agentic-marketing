@@ -24,6 +24,30 @@ brands/{brand-slug}/sostac/
 └── plan-summary.md
 ```
 
+## Channel-oriented skills (standalone mode)
+
+For evergreen or independent work, outputs go to the `channels/` subtree:
+
+### SEO
+```text
+brands/{brand-slug}/channels/seo/
+```
+
+### Social
+```text
+brands/{brand-slug}/channels/social/
+```
+
+### Video
+```text
+brands/{brand-slug}/channels/video/
+```
+
+### Analytics
+```text
+brands/{brand-slug}/channels/analytics/
+```
+
 ## Content-oriented skills
 
 ### Content
@@ -36,22 +60,15 @@ brands/{brand-slug}/content/
 brands/{brand-slug}/content/email/
 ```
 
-### SEO
-```text
-brands/{brand-slug}/content/seo/
-```
-
-### Social
-```text
-brands/{brand-slug}/content/social/
-```
-
-### Video
-```text
-brands/{brand-slug}/content/video/
-```
-
 ## Campaign-oriented skills
+
+For work tied to a specific campaign, outputs go under:
+
+```text
+brands/{brand-slug}/campaigns/{type}-{campaign-slug}/channels/{channel}/
+```
+
+Or for simple campaigns without slug namespacing:
 
 ### CRO
 ```text
@@ -114,6 +131,11 @@ brands/{brand-slug}/campaigns/sales/
 brands/{brand-slug}/analytics/
 ```
 
-## Important exception
+## Legacy paths
 
-`product-marketing-context.md` lives at the brand root, not under `campaigns/` or `content/`, because it is shared by every specialist.
+Some skills support a legacy fallback when old directory structures are detected (e.g., `brands/{brand-slug}/content/seo/`). When detected, the skill will suggest migrating to the newer structure.
+
+## Important exceptions
+
+- `product-marketing-context.md` lives at the brand root, not under `campaigns/` or `content/`, because it is shared by every specialist.
+- SOSTAC files live under `brands/{brand-slug}/sostac/` regardless of campaign structure.

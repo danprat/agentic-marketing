@@ -28,4 +28,21 @@ If brand files are missing but a codebase or live URL is available, continue wit
 
 ## agent-browser Setup
 
-Before running browser-based research, check if `agent-browser` is available (`agent-browser --version`). If the command is not found, install it: `npm install -g agent-browser && npx playwright install chromium`. If installation fails, use `WebFetch` and `WebSearch` tools as alternatives for all research tasks.
+Before running browser-based research, check if `agent-browser` is available (`agent-browser --version`). If the command is not found, install it:
+
+```bash
+npm install -g agent-browser && npx playwright install chromium
+```
+
+If installation fails, use `WebFetch` and `WebSearch` tools as alternatives for all research tasks.
+
+## Reference Lookup Protocol
+
+All skills use this pattern to avoid loading all framework files into context:
+
+1. Read `./references/frameworks-index.csv` — lightweight index (10–40 rows)
+2. Match the user's situation to the `best_for` column
+3. Read ONLY the matched framework file(s) from `./references/frameworks/`
+4. Never bulk-read all framework files
+
+General references (shared-patterns.md, best-practices.md) are read directly — not indexed.

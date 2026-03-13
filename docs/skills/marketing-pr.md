@@ -23,10 +23,32 @@ Use `/marketing-pr` when you need:
 ## Deliverables
 
 - press releases
+- cold pitch emails and pitch types guide
 - media lists
-- pitch angles
-- outreach plans
+- HARO and Connectively responses
+- follow-up sequences
+- podcast pitches
+- speaking engagement pitches
+- media kits
+- crisis statements
+- spokesperson preparation guides
 - performance summaries
+
+## Framework files
+
+12 individual framework files, indexed in `frameworks-index.csv`:
+
+- Cold pitch template
+- Pitch types guide (news, data, opinion, etc.)
+- Pitch checklist
+- HARO/Connectively response template
+- Follow-up sequence
+- Podcast pitch template
+- Speaking pitch template
+- Press release template
+- Media kit checklist
+- Crisis statement templates
+- Spokesperson preparation
 
 ## Output locations
 

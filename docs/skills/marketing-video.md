@@ -23,12 +23,29 @@ Use `/marketing-video` when you need:
 
 ## Deliverables
 
-- scripts
-- calendars
+- short-form and long-form scripts
+- hook formulas
+- CTA frameworks
+- editorial calendars
 - YouTube strategy docs
-- briefs
-- storyboards
-- ad scripts
+- briefs and storyboards
+- video ad scripts
+- thumbnail design guidance
+- platform optimization specs
+- video SEO checklist
+- retention pattern analysis
+
+## Framework files
+
+9 individual framework files, indexed in `frameworks-index.csv`:
+
+- Video hook formulas
+- Script frameworks (short-form and long-form)
+- CTA frameworks
+- Platform optimization (YouTube, TikTok, Reels, LinkedIn)
+- Thumbnail design guide
+- Retention patterns
+- Video SEO checklist
 
 ## Output locations
 

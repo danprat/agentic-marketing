@@ -2,32 +2,47 @@
 
 ## Overview
 
-Coordinates product, feature, or company launches across channels.
+Coordinates product, feature, or company launches across channels. Covers strategy, sequencing, execution, and post-launch review.
 
 ## When to use it
 
 Use `/marketing-launch` when you need:
-- launch strategy
+- launch strategy or GTM plan
 - announcement sequencing
-- launch-day planning
+- launch-day planning and checklist
 - Product Hunt support
-- launch content coordination
+- beta or early access program coordination
+- cross-channel launch content coordination
+- post-launch review
 
 ## Inputs to prepare
 
 - launch date or window
 - audience
 - product or feature details
-- assets and proof
+- assets and proof (screenshots, demos, testimonials)
 - KPI targets
 
 ## Deliverables
 
 - launch strategy
 - launch brief
-- schedule
-- launch content pack
-- performance review structure
+- pre-launch and launch-day checklists
+- per-channel content checklist
+- ongoing announcement cadence
+- post-launch review checklist
+- launch content pack (ready to hand off to email, social, PR, paid ads)
+
+## Framework files
+
+7 individual framework files, indexed in `frameworks-index.csv`:
+
+- Pre-launch checklist (comprehensive)
+- Launch-day checklist
+- Post-launch checklist
+- Per-channel content checklist (email, social, paid, PR, sales)
+- Launch content templates
+- Ongoing announcement cadence
 
 ## Output locations
 
@@ -37,11 +52,11 @@ brands/{brand-slug}/campaigns/launch/
 
 ## Related skills
 
-- `marketing-pr`
-- `marketing-email`
-- `marketing-social`
-- `marketing-paid-ads`
-- `marketing-sales`
+- `marketing-pr` — press release and journalist pitch
+- `marketing-email` — launch email sequences
+- `marketing-social` — social announcement content
+- `marketing-paid-ads` — paid amplification of launch
+- `marketing-sales` — launch enablement for sales team
 
 ## Sample prompts
 
@@ -58,4 +73,9 @@ For Northstar AI, build a 30-day go-to-market plan for our recruiting scorecard 
 ```text
 /marketing-launch
 Use our completed SOSTAC plan to create the cross-channel launch brief, then identify which assets should be handed off to email, social, PR, and paid ads.
+```
+
+```text
+/marketing-launch
+We're launching on Product Hunt in 2 weeks. Build the full pre-launch checklist and content plan.
 ```

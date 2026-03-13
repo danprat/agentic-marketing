@@ -23,9 +23,32 @@ Use `/marketing-content` when you need:
 ## Deliverables
 
 - content strategy documents
-- monthly calendars
+- monthly editorial calendars
 - content briefs
 - blog and long-form drafts
+- case studies and whitepapers
+- ebooks and lead magnets
+- AI-assisted content workflows
+- content repurposing plans
+- conversion-focused copy for landing and pricing pages
+- topic cluster maps
+
+## Framework files
+
+11 individual framework files, indexed in `frameworks-index.csv`:
+
+- Content brief template
+- Editorial calendar
+- Content funnel mapping (TOFU/MOFU/BOFU)
+- Content repurposing workflow
+- Topic cluster model
+- Hub-Hero-Help framework
+- Skyscraper technique
+- AI content workflow
+- Case study framework
+- Content scoring model
+- Conversion copywriting
+- Framework selection guide
 
 ## Output locations
 

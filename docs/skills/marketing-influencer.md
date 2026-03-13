@@ -22,10 +22,28 @@ Use `/marketing-influencer` when you need:
 
 ## Deliverables
 
-- influencer shortlists
-- outreach plans
-- campaign structures
-- partnership recommendations
+- influencer shortlists and scoring sheets
+- cold DM and outreach sequences
+- creative briefs
+- contract outlines
+- campaign reporting templates
+- ambassador tier structures
+- negotiation guides
+- follow-up sequences
+
+## Framework files
+
+10 individual framework files, indexed in `frameworks-index.csv`:
+
+- Influencer scoring rubric
+- Cold DMs and outreach sequence
+- Follow-up sequence
+- Creative brief
+- Contract outline
+- Negotiation guide
+- Campaign reporting template
+- Ambassador tier structure
+- Response time standards
 
 ## Output locations
 

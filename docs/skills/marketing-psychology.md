@@ -25,6 +25,22 @@ Use `/marketing-psychology` when you need:
 - persuasion recommendations
 - annotated messaging guidance
 - framing and offer suggestions
+- rewritten copy examples with before/after
+- full Cialdini principles application
+- cognitive bias audit of copy or UX
+- strategic mental model recommendations (Jobs-to-be-Done, etc.)
+- psychology-by-context checklists (landing page, checkout, email, pricing, etc.)
+
+## Framework files
+
+6 individual framework files, indexed in `frameworks-index.csv`:
+
+- Cialdini's six principles (with application examples)
+- Expanded cognitive biases reference
+- Copy rewrite examples (before/after)
+- Psychology by context (by marketing surface)
+- Quick reference table
+- Strategic mental models
 
 ## Output locations
 

@@ -23,10 +23,32 @@ Use `/marketing-analytics` when you need:
 
 ## Deliverables
 
-- tracking plans
-- audits
-- reporting docs
-- measurement recommendations
+- tracking plans and event naming specs
+- UTM standards and conventions
+- GA4 setup guides
+- attribution model recommendations
+- dashboard design specs
+- A/B test design
+- funnel analysis
+- cohort analysis
+- customer LTV models
+- marketing mix modeling guidance
+- data quality audits
+
+## Framework files
+
+10 individual framework files, indexed in `frameworks-index.csv`:
+
+- GA4 setup
+- UTM standards
+- Attribution models
+- Dashboard design
+- A/B test design
+- Funnel analysis
+- Cohort analysis
+- Customer LTV
+- Marketing mix modeling
+- Data quality
 
 ## Output locations
 

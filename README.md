@@ -109,21 +109,21 @@ Digital marketing agency coordinator. The recommended starting point for any mar
 ### Strategy
 
 #### `marketing-sostac`
-Full SOSTAC marketing plan builder. Runs a deep guided interview through all 6 phases and produces a structured, cross-validated plan saved to `brands/{brand-slug}/sostac/`. Starts with automated web research before the first question is asked.
+Full SOSTAC marketing plan builder. Researches first, then delivers strategic recommendations for each phase — validated with the user rather than discovered through interview. Every phase follows a **Research → Recommend → Validate** sequence. Outputs are saved to `brands/{brand-slug}/sostac/`.
 
-| Phase | Question | Output |
-|-------|----------|--------|
-| 0 — Auto-Discovery | Automated research | `00-auto-discovery.md` |
-| 1 — Situation | Where are we now? | `01-situation.md` |
-| 2 — Objectives | Where do we want to be? | `02-objectives.md` |
-| 3 — Strategy | How do we get there? | `03-strategy.md` |
-| 4 — Tactics | Details of strategy | `04-tactics.md` |
-| 5 — Action | Who does what, when? | `05-action.md` |
-| 6 — Control | How do we monitor? | `06-control.md` |
+| Phase | What happens | Output |
+|-------|-------------|--------|
+| 0 — Auto-Discovery | Automated web research before first user interaction | `00-auto-discovery.md` |
+| 1 — Situation | Competitive analysis and market research; user validates | `01-situation.md` |
+| 2 — Objectives | Benchmarked OKR/KPI recommendations; user refines | `02-objectives.md` |
+| 3 — Strategy | Positioning and channel strategy; user confirms | `03-strategy.md` |
+| 4 — Tactics | Channel-level execution plan; user adjusts priorities | `04-tactics.md` |
+| 5 — Action | Roled roadmap and ownership; user finalizes | `05-action.md` |
+| 6 — Control | KPI dashboards and review cadences | `06-control.md` |
 
-Frameworks: SWOT+TOWS, PESTLE, Porter's Five Forces, TAM/SAM/SOM, JTBD, OKR, RACE, STP, Ansoff, Moore's positioning, AARRR, ICE scoring, 7P, RACI, PDCA, Balanced Scorecard.
+Frameworks: SWOT+TOWS, PESTLE, Porter's Five Forces, TAM/SAM/SOM, JTBD, OKR, RACE, STP, Ansoff, positioning statement, AARRR, ICE scoring, 7P, RACI, PDCA, Balanced Scorecard, Blue Ocean, Kotter change model, and more — 38 individual framework files indexed in `frameworks-index.csv`.
 
-See [`skills/marketing-sostac/README.md`](skills/marketing-sostac/README.md) for full documentation.
+See [`skills/marketing-sostac/references/overview.md`](skills/marketing-sostac/references/overview.md) for full documentation.
 
 ---
 
@@ -142,7 +142,7 @@ Social media specialist. Covers all platforms: Instagram, TikTok, LinkedIn, X/Tw
 Paid advertising specialist. Google Ads, Meta Ads, LinkedIn Ads, TikTok Ads, X Ads, Pinterest Ads, and programmatic. Covers campaign setup, angle-based creative generation, platform-specific ad specs, creative iteration logging, audience targeting, ROAS optimization, retargeting, and conversion tracking.
 
 #### `marketing-seo`
-SEO specialist. Technical SEO audits, content SEO, keyword research, link building, local SEO, schema markup, site speed, and AI search optimization (GEO / Google AI Overviews). Includes evidence-based citation boost statistics for maximizing AI Overview visibility. Covers full organic search strategy from crawl to rank.
+SEO specialist. Technical SEO audits, content SEO, keyword research, programmatic SEO (pSEO), link building, local SEO, schema markup, site speed, and AI search optimization (GEO / Google AI Overviews). Includes evidence-based citation boost statistics for maximizing AI Overview visibility. Campaign vs standalone path resolution keeps ongoing and evergreen work organized. Covers full organic search strategy from crawl to rank.
 
 #### `marketing-video`
 Video marketing strategist. Short-form (TikTok, Reels, YouTube Shorts) and long-form (YouTube). Covers channel strategy, video scripting, hooks, thumbnail optimization, video SEO, live streaming, video ad scripts, and production workflow.
@@ -224,14 +224,24 @@ Each skill follows a consistent layout:
 
 ```
 skill-name/
-├── SKILL.md              # Instructions loaded into Claude's context
+├── SKILL.md                    # Instructions loaded into Claude's context
 └── references/
-    ├── frameworks.md     # Methodology detail for frameworks used
-    ├── best-practices.md # Execution best practices
-    └── *.md              # Additional domain-specific references
+    ├── frameworks-index.csv    # Lightweight index of all framework files (~10–40 rows)
+    ├── frameworks/             # Individual framework files (one per methodology)
+    │   ├── framework-a.md
+    │   └── framework-b.md
+    ├── shared-patterns.md      # Shared context-router and pre-flight patterns
+    ├── best-practices.md       # Execution best practices
+    └── *.md                    # Additional domain-specific references
 ```
 
-Skills use progressive context loading — only `SKILL.md` is in context when the skill is active; reference files are read on demand. This keeps each invocation lean while giving deep methodology access when needed.
+Skills use **progressive disclosure** — only `SKILL.md` loads into context when the skill is active. Reference files are read on demand using a CSV-indexed lookup:
+
+1. Read `frameworks-index.csv` (~10–40 rows) — lightweight index with a `best_for` column
+2. Match the user's situation to the index
+3. Read only the matched framework file(s) from `frameworks/`
+
+This reduces token consumption by 80–90% per framework lookup compared to loading a single monolithic file. Individual framework files are preserved for rollback in skills that had them.
 
 ---
 

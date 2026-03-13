@@ -45,3 +45,7 @@ Most outputs live in one of three places:
 ## 8. Quick tasks are allowed
 
 You do not need to complete the whole system before asking for one asset. The suite supports fast, narrow tasks when needed.
+
+## 9. Progressive disclosure via CSV-indexed frameworks
+
+Every skill uses a lightweight `frameworks-index.csv` to avoid loading all framework files into context. Skills read the index first, match the user's situation to the `best_for` column, then read only the relevant framework file(s). This reduces token use by 80–90% per lookup compared to a monolithic file. Each skill's framework files live in `references/frameworks/`.

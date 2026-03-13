@@ -2,7 +2,7 @@
 
 ## Overview
 
-Creates email strategy and assets across lifecycle, nurture, outbound, launch, and retention.
+Creates email strategy and assets across lifecycle, nurture, outbound, launch, and retention. Does not own cancel flows or dunning sequences — those belong to `marketing-retention`.
 
 ## When to use it
 
@@ -10,8 +10,13 @@ Use `/marketing-email` when you need:
 - welcome or nurture sequences
 - newsletters
 - launch emails
-- win-back or retention emails
-- cold outbound sequences
+- cold/outbound B2B email sequences
+- transactional or lifecycle emails
+- ESP setup or deliverability advice
+- email automation workflows
+- general re-engagement emails
+
+For cancel flows and dunning sequences, use `marketing-retention` instead.
 
 ## Inputs to prepare
 
@@ -23,10 +28,26 @@ Use `/marketing-email` when you need:
 
 ## Deliverables
 
-- sequences
-- templates
+- email sequences (welcome, nurture, launch, win-back, cold outbound)
+- newsletter templates
 - campaign plans
-- automation recommendations
+- automation workflow recommendations
+- subject line options
+
+## Framework files
+
+12 individual framework files, indexed in `frameworks-index.csv`:
+
+- Welcome series (SaaS and ecommerce)
+- B2B lead nurture
+- Newsletter framework
+- Product launch sequence
+- Abandoned cart series
+- Post-purchase series
+- Re-engagement series
+- Win-back and sunset flow
+- Subject line formulas
+- Quick reference tables
 
 ## Output locations
 
@@ -36,10 +57,10 @@ brands/{brand-slug}/content/email/
 
 ## Related skills
 
-- `marketing-content`
-- `marketing-retention`
-- `marketing-sales`
-- `marketing-launch`
+- `marketing-content` — long-form content that feeds email
+- `marketing-retention` — cancel flows, dunning, and lifecycle recovery
+- `marketing-sales` — sales outreach email templates
+- `marketing-launch` — launch email sequencing
 
 ## Sample prompts
 
@@ -56,4 +77,9 @@ For Acorn Legal, create a 4-email nurture sequence for firms that requested a de
 ```text
 /marketing-email
 Use our product marketing context and launch plan to draft the announcement emails for our new feature release.
+```
+
+```text
+/marketing-email
+Build a cold outbound sequence targeting HR managers at mid-size companies.
 ```

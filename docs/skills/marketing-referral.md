@@ -24,9 +24,32 @@ Use `/marketing-referral` when you need:
 ## Deliverables
 
 - referral program strategy
-- incentive structure docs
-- rollout plans
-- affiliate recommendations
+- in-app referral prompt copy
+- incentive structure and KPI targets
+- referral email templates
+- referral landing page copy
+- partner pitch emails
+- co-marketing agreement templates
+- partner tier structure
+- affiliate onboarding guide
+- referral A/B test plans
+- launch checklist
+
+## Framework files
+
+12 individual framework files, indexed in `frameworks-index.csv`:
+
+- In-app referral prompts
+- Incentive calculator
+- Referral KPI targets
+- Referral email templates
+- Referral landing page copy
+- Partner pitch emails
+- Co-marketing agreement template
+- Partner tier structure
+- Affiliate onboarding guide
+- Referral A/B tests
+- Referral launch checklist
 
 ## Output locations
 

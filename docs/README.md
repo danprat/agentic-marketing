@@ -75,3 +75,5 @@ If you only need one asset right now, start with a specialist directly. The suit
 ## Design principle
 
 Most skills are not just prompt generators. They are file-producing workflows. The outputs are meant to accumulate inside `brands/{brand-slug}/` so future sessions can resume from real artifacts instead of memory.
+
+Skills use **progressive disclosure** — each SKILL.md stays lean while hundreds of framework files are available on demand. A lightweight `frameworks-index.csv` in each skill lets Claude match your situation to the right framework file without loading everything into context.
